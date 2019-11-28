@@ -1,2 +1,8 @@
 # TheLastShip
-- Unity project for Indie Class
+
+The Last Ship is a 3D person horde survival game that places the player in a single ship in outer space defending another larger ship from organic space monsters. The players goal is to hold off the attacking creatures long enough for the ship to make it to safety. 
+
+- Indie game project currently being developed in Unity.
+- Unity Version: 2019.1.10f1
+
+## Controls
