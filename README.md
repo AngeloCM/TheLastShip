@@ -1,4 +1,4 @@
-# TheLastShip
+# The Last Ship
 
 The Last Ship is a 3D person horde survival game that places the player in a single ship in outer space defending another larger ship from organic space monsters. The players goal is to hold off the attacking creatures long enough for the ship to make it to safety. 
 
