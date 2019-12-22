@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,32 +45,57 @@ public class PlayerController : MonoBehaviour
 
         RotateShip();
 
-        AccelerateShip();
+        if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.classic)
+        {
+            AccelerateShipClassic();
 
-        if (Input.GetButton("Fire1"))
-        {
-            Shoot();
+            if (Input.GetButton("Fire1"))
+            {
+                Shoot();
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                shotTimer = 0f;
+            }
         }
-        if (Input.GetButtonUp("Fire1"))
+
+        else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontline)
         {
-            shotTimer = 0f;
+            AccelerateShipFrontline();
+
+            if (Input.GetButton("FireFrontline"))
+            {
+                Shoot();
+            }
+            if (Input.GetButtonUp("FireFrontline"))
+            {
+                shotTimer = 0f;
+            }
         }
     }
 
     private void RotateShip()
     {
+        if (GameSettings.InvertYLook)
+        {
+            pitch = Input.GetAxis("Vertical") * Time.deltaTime * RotationSpeed;
+        }
+        else
+        {
+            pitch = -Input.GetAxis("Vertical") * Time.deltaTime * RotationSpeed;
+        }
+        
         yaw = Input.GetAxis("Horizontal") * Time.deltaTime * RotationSpeed;
-        pitch = Input.GetAxis("Vertical") * Time.deltaTime * RotationSpeed;
-        roll = -Input.GetAxis("Triggers") * Time.deltaTime * RotationSpeed;
+        roll = -Input.GetAxis("RollClassic") * Time.deltaTime * RotationSpeed;
 
         this.transform.Rotate(new Vector3(0f, yaw, 0f));
         this.transform.Rotate(new Vector3(pitch, 0f, 0f));
         this.transform.Rotate(new Vector3(0f, 0f, roll));
     }
 
-    private void AccelerateShip()
+    private void AccelerateShipClassic()
     {
-        if (Input.GetButton("Throttle"))
+        if (Input.GetButton("ThrottleClassic"))
         {
             if (currentSpeed < TopSpeed)
             {
@@ -79,7 +105,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Brake"))
+        if (Input.GetButton("BrakeClassic"))
         {
             if (currentSpeed > 0f)
             {
@@ -89,6 +115,33 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        rb.velocity = transform.forward * currentSpeed;
+    }
+    
+    private void AccelerateShipFrontline()
+    {
+        if (Input.GetAxisRaw("ThrottleFrontline") < -0.5f)
+        {
+            if (currentSpeed < TopSpeed)
+            {
+                currentSpeed += AccelerationValue * Time.deltaTime;
+
+                if (currentSpeed > TopSpeed) currentSpeed = TopSpeed;
+            }
+        }
+
+        if (Input.GetAxisRaw("ThrottleFrontline") > 0.5f)
+        {
+            if (currentSpeed > 0f)
+            {
+                currentSpeed -= AccelerationValue * Time.deltaTime;
+
+                if (currentSpeed < 0f) currentSpeed = 0f;
+            }
+        }
+
+        //Debug.Log(Input.GetAxisRaw("ThrottleFrontline"));
+
         rb.velocity = transform.forward * currentSpeed;
     }
 
