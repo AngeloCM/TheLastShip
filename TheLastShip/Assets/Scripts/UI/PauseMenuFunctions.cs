@@ -32,6 +32,7 @@ public class PauseMenuFunctions : MonoBehaviour
     {
         if (scheme == "classic") GameSettings.CurrentControlScheme = GameSettings.ControlScheme.classic;
         if (scheme == "frontline") GameSettings.CurrentControlScheme = GameSettings.ControlScheme.frontline;
+        if (scheme == "frontlineBeta") GameSettings.CurrentControlScheme = GameSettings.ControlScheme.frontlineBeta;
     }
 
     public void SetInvertYLook()

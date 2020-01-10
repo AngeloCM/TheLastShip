@@ -72,6 +72,20 @@ public class PlayerController : MonoBehaviour
                 shotTimer = 0f;
             }
         }
+
+        else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontlineBeta)
+        {
+            AccelerateShipFrontlineBeta();
+
+            if (Input.GetButton("FireFrontline")) // Fire button is the same as frontline
+            {
+                Shoot();
+            }
+            if (Input.GetButtonUp("FireFrontline"))
+            {
+                shotTimer = 0f;
+            }
+        }
     }
 
     private void RotateShip()
@@ -86,7 +100,15 @@ public class PlayerController : MonoBehaviour
         }
         
         yaw = Input.GetAxis("Horizontal") * Time.deltaTime * RotationSpeed;
-        roll = -Input.GetAxis("RollClassic") * Time.deltaTime * RotationSpeed;
+
+        if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.classic || GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontline)
+        {
+            roll = -Input.GetAxis("RollClassic") * Time.deltaTime * RotationSpeed; // Roll is the same between classic and frontline
+        }
+        else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontlineBeta)
+        {
+            roll = -Input.GetAxis("RollFrontlineBeta") * Time.deltaTime * RotationSpeed;
+        }
 
         this.transform.Rotate(new Vector3(0f, yaw, 0f));
         this.transform.Rotate(new Vector3(pitch, 0f, 0f));
@@ -141,6 +163,31 @@ public class PlayerController : MonoBehaviour
         }
 
         //Debug.Log(Input.GetAxisRaw("ThrottleFrontline"));
+
+        rb.velocity = transform.forward * currentSpeed;
+    }
+    
+    private void AccelerateShipFrontlineBeta() // The RollClassic axis is the triggers, which will be used here for throttle instead.
+    {
+        if (Input.GetAxisRaw("RollClassic") > 0.5f)
+        {
+            if (currentSpeed < TopSpeed)
+            {
+                currentSpeed += AccelerationValue * Time.deltaTime;
+
+                if (currentSpeed > TopSpeed) currentSpeed = TopSpeed;
+            }
+        }
+
+        if (Input.GetAxisRaw("RollClassic") < -0.5f)
+        {
+            if (currentSpeed > 0f)
+            {
+                currentSpeed -= AccelerationValue * Time.deltaTime;
+
+                if (currentSpeed < 0f) currentSpeed = 0f;
+            }
+        }
 
         rb.velocity = transform.forward * currentSpeed;
     }
