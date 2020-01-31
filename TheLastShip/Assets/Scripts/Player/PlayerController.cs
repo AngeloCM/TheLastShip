@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("The top speed at which the player can travel forward."), Range(5f, 1000f)]
     public float TopSpeed = 100f;
 
+    [SerializeField, Tooltip("The minimum speed at which the player can move."), Range(0f, 1000f)]
+    public float MinSpeed = 100f;
+
     [SerializeField, Tooltip("The speed at which the player's ship rotates."), Range(1f, 500f)]
     public float RotationSpeed = 100f;
 
@@ -27,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private float yaw, pitch, roll;
 
-    private float currentSpeed;
+    public float CurrentSpeed { get; private set; }
 
     private float shotTimer;
 
@@ -119,77 +122,77 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("ThrottleClassic"))
         {
-            if (currentSpeed < TopSpeed)
+            if (CurrentSpeed < TopSpeed)
             {
-                currentSpeed += AccelerationValue * Time.deltaTime;
+                CurrentSpeed += AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed > TopSpeed) currentSpeed = TopSpeed;
+                if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
             }
         }
 
         if (Input.GetButton("BrakeClassic"))
         {
-            if (currentSpeed > 0f)
+            if (CurrentSpeed > MinSpeed)
             {
-                currentSpeed -= AccelerationValue * Time.deltaTime;
+                CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed < 0f) currentSpeed = 0f;
+                if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
             }
         }
         
-        rb.velocity = transform.forward * currentSpeed;
+        rb.velocity = transform.forward * CurrentSpeed;
     }
     
     private void AccelerateShipFrontline()
     {
         if (Input.GetAxisRaw("ThrottleFrontline") < -0.5f)
         {
-            if (currentSpeed < TopSpeed)
+            if (CurrentSpeed < TopSpeed)
             {
-                currentSpeed += AccelerationValue * Time.deltaTime;
+                CurrentSpeed += AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed > TopSpeed) currentSpeed = TopSpeed;
+                if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
             }
         }
 
         if (Input.GetAxisRaw("ThrottleFrontline") > 0.5f)
         {
-            if (currentSpeed > 0f)
+            if (CurrentSpeed > MinSpeed)
             {
-                currentSpeed -= AccelerationValue * Time.deltaTime;
+                CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed < 0f) currentSpeed = 0f;
+                if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
             }
         }
 
         //Debug.Log(Input.GetAxisRaw("ThrottleFrontline"));
 
-        rb.velocity = transform.forward * currentSpeed;
+        rb.velocity = transform.forward * CurrentSpeed;
     }
     
     private void AccelerateShipFrontlineBeta() // The RollClassic axis is the triggers, which will be used here for throttle instead.
     {
         if (Input.GetAxisRaw("RollClassic") > 0.5f)
         {
-            if (currentSpeed < TopSpeed)
+            if (CurrentSpeed < TopSpeed)
             {
-                currentSpeed += AccelerationValue * Time.deltaTime;
+                CurrentSpeed += AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed > TopSpeed) currentSpeed = TopSpeed;
+                if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
             }
         }
 
         if (Input.GetAxisRaw("RollClassic") < -0.5f)
         {
-            if (currentSpeed > 0f)
+            if (CurrentSpeed > MinSpeed)
             {
-                currentSpeed -= AccelerationValue * Time.deltaTime;
+                CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
-                if (currentSpeed < 0f) currentSpeed = 0f;
+                if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
             }
         }
 
-        rb.velocity = transform.forward * currentSpeed;
+        rb.velocity = transform.forward * CurrentSpeed;
     }
 
     private void Shoot()
