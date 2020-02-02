@@ -8,6 +8,7 @@ public static class GameSettings
     {
         classic,
         frontline,
+        frontlineBeta,
     }
 
     public static ControlScheme CurrentControlScheme = ControlScheme.classic;
