@@ -20,8 +20,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("The cooldown in seconds between basic shots."), Range(0.01f, 2f)]
     public float ShotCooldown = 0.3f;
 
+    [SerializeField, Tooltip("The time in seconds it takes to charge a secondary (charge) shot."), Range(0.01f, 2f)]
+    public float SecondaryChargeTime = 1f;
+
     [SerializeField, Tooltip("The prefab for the player's basic projectile.")]
     public GameObject PlayerShotPrefab;
+
+    [SerializeField, Tooltip("The prefab for the player's secondary (charge) projectile.")]
+    public GameObject PlayerSecondaryShotPrefab;
 
     [SerializeField, Tooltip("The transform at which to spawn a player shot.")]
     public Transform PlayerShotTransform;
@@ -34,10 +40,25 @@ public class PlayerController : MonoBehaviour
 
     private float shotTimer;
 
+    private float chargeTimer; // The current charge time of the player's secondary shot.
+
+    private GameObject currentChargeShot;
+
+    private float chargeShotMinScale = 0.5f;
+    private float chargeShotMaxScale = 2f;
+
+    private bool firing; // Keeps track of whether player is firing, so they can only use one fire mode at a time.
+    private bool firingPrimary; // Keeps track of whether player is firing primary fire, so it may continuously fire.
+    private bool chargingSecondary; // Keeps track of whether player is firing secondary fire, so it may charge.
+
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+
+        firing = false;
+        firingPrimary = false;
+        chargingSecondary = false;
 
         shotTimer = 0f;
     }
@@ -52,12 +73,25 @@ public class PlayerController : MonoBehaviour
         {
             AccelerateShipClassic();
 
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && !firing)
             {
-                Shoot();
+                firingPrimary = true;
             }
             if (Input.GetButtonUp("Fire1"))
             {
+                firing = false;
+                firingPrimary = false;
+                shotTimer = 0f;
+            }
+
+            if (Input.GetButton("Fire2") && !firing)
+            {
+                chargingSecondary = true;
+            }
+            if (Input.GetButtonUp("Fire2") && currentChargeShot != null)
+            {
+                ReleaseSecondaryFire();
+
                 shotTimer = 0f;
             }
         }
@@ -66,12 +100,25 @@ public class PlayerController : MonoBehaviour
         {
             AccelerateShipFrontline();
 
-            if (Input.GetButton("FireFrontline"))
+            if (Input.GetButton("FireFrontline") && !firing)
             {
-                Shoot();
+                firingPrimary = true;
             }
             if (Input.GetButtonUp("FireFrontline"))
             {
+                firing = false;
+                firingPrimary = false;
+                shotTimer = 0f;
+            }
+
+            if (Input.GetButton("AltFireFrontline") && !firing)
+            {
+                chargingSecondary = true;
+            }
+            if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+            {
+                ReleaseSecondaryFire();
+
                 shotTimer = 0f;
             }
         }
@@ -80,14 +127,37 @@ public class PlayerController : MonoBehaviour
         {
             AccelerateShipFrontlineBeta();
 
-            if (Input.GetButton("FireFrontline")) // Fire button is the same as frontline
+            if (Input.GetButton("FireFrontline") && !firing) // Fire button is the same as frontline
             {
-                Shoot();
+                firingPrimary = true;
             }
             if (Input.GetButtonUp("FireFrontline"))
             {
+                firing = false;
+                firingPrimary = false;
                 shotTimer = 0f;
             }
+
+            if (Input.GetButton("AltFireFrontline") && !firing)
+            {
+                chargingSecondary = true;
+            }
+            if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+            {
+                ReleaseSecondaryFire();
+
+                shotTimer = 0f;
+            }
+        }
+
+        if (firingPrimary)
+        {
+            Shoot();
+        }
+
+        if (chargingSecondary)
+        {
+            ChargeSecondaryFire();
         }
     }
 
@@ -197,13 +267,58 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
+        firing = true;
+
         if (shotTimer <= 0f)
         {
-            Instantiate(PlayerShotPrefab, PlayerShotTransform);
+            // Instantiate two shots on the left and right blasters.
+            Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformLeft"));
+            Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformRight"));
 
             shotTimer = ShotCooldown;
         }
 
         shotTimer -= Time.deltaTime;
+    }
+
+    private void ChargeSecondaryFire()
+    {
+        if (!firing)
+        {
+            currentChargeShot = Instantiate(PlayerSecondaryShotPrefab, PlayerShotTransform);
+        }
+
+        firing = true;
+
+        // Scale the charge shot up gradually to indicate its progress towards full charge.
+        float chargeShotCurrentScale = chargeShotMinScale + (chargeShotMaxScale - chargeShotMinScale) * (chargeTimer / SecondaryChargeTime);
+
+        currentChargeShot.transform.localScale = new Vector3(chargeShotCurrentScale, chargeShotCurrentScale, chargeShotCurrentScale);
+
+        if (chargeTimer >= SecondaryChargeTime / 3)
+        {
+            currentChargeShot.GetComponent<SecondaryShot>().ReadyToFire = true;
+        }
+
+        if (chargeTimer >= SecondaryChargeTime)
+        {
+            currentChargeShot.GetComponent<SecondaryShot>().FullyCharged = true;
+        }
+        else
+        {
+            chargeTimer += Time.deltaTime;
+        }
+    }
+
+    private void ReleaseSecondaryFire()
+    {
+        firing = false;
+        chargingSecondary = false;
+
+        chargeTimer = 0f;
+
+        currentChargeShot.GetComponent<SecondaryShot>().Fired = true;
+
+        currentChargeShot = null; // Set to null so we can check if there is a shot currently being charged
     }
 }
