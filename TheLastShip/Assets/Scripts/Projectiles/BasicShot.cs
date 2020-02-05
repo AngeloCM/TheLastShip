@@ -10,6 +10,9 @@ public class BasicShot : MonoBehaviour
     [SerializeField, Tooltip("The time in seconds it takes for a shot to despawn automatically."), Range(5f, 20f)]
     public float DespawnTime = 5f;
 
+    [SerializeField, Tooltip("The damage a basic shot deals to an enemy."), Range(1, 10)]
+    public int BasicShotDamage = 1;
+
     private Vector3 shotDir;
 
     private Rigidbody rb;
@@ -47,7 +50,7 @@ public class BasicShot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Destroy an enemy that has been collided with.
+        // Destroy an enemy that has been collided with. Will change once enemies have health.
         if (other.tag == "Enemy" || other.tag == "enemy")
         {
             // TODO: Lessen enemy's health and only destroy if health <= 0
