@@ -37,7 +37,7 @@ public class ThrusterBarScript : MonoBehaviour
             {
                 Accelerate();
             }
-            if (this.setAcceleration > playerController.CurrentSpeed)
+            if (this.setCurrentSpeed > playerController.CurrentSpeed)
             {
                 Decelerate();
             }
