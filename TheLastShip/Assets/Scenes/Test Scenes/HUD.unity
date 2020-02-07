@@ -1196,5 +1196,10 @@ PrefabInstance:
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 6102473637338148373}
+    - target: {fileID: 398979360767558140, guid: 8f699671a30707247979ced4a346b720,
+        type: 3}
+      propertyPath: updateSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f699671a30707247979ced4a346b720, type: 3}

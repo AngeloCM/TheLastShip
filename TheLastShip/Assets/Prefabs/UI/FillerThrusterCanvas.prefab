@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74debbdd603e0d48ab1132ba696cccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateSpeedSeconds: 0.4
+  updateSpeedSeconds: 0
   EnterNameOfBarHere: thrusterBar
 --- !u!114 &5593162519795800531
 MonoBehaviour:

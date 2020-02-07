@@ -9,10 +9,18 @@ public class ProgressBarScript : MonoBehaviour
     public float CurrentProgress;
     public float SetMinValue = 0f;
 
+    public GameObject starting;
+    public GameObject ending;
+
+
+
     private BarManager barManager;
 
     private void Awake()
     {
+        starting = this.GetComponent<GameObject>();
+        ending = this.GetComponent<GameObject>();
+
     }
 
     // Start is called before the first frame update
@@ -43,6 +51,10 @@ public class ProgressBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(this.starting.transform.position != this.ending.transform.position)
+        {
+
+        }
         Debug.Log(CurrentProgress);
     }
 }
