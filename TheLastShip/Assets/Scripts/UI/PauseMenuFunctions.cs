@@ -17,6 +17,8 @@ public class PauseMenuFunctions : MonoBehaviour
         {
             Time.timeScale = 1f;
 
+            GameSettings.IsPaused = false;
+
             this.gameObject.SetActive(false);
         }
     }
@@ -24,6 +26,8 @@ public class PauseMenuFunctions : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 0f;
+
+        GameSettings.IsPaused = true;
 
         classicControlsButton.Select();
     }

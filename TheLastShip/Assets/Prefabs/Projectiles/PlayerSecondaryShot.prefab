@@ -121,9 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f7e68f7f0828e4da9280bb72fa1c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotSpeed: 150
+  ShotSpeed: 250
   DespawnTime: 8
   UnchargedShotDamage: 3
   ChargedShotDamage: 10
   Fired: 0
-  Charged: 0
+  FullyCharged: 0
+  ReadyToFire: 0

@@ -36,7 +36,23 @@ public class PlayerController : MonoBehaviour
 
     private float yaw, pitch, roll;
 
-    public float CurrentSpeed { get; private set; }
+    public enum TurnDirection // An enum for the direction the ship is currently turning
+    {
+        up, down, right, left, none
+    }
+
+    [HideInInspector]
+    public TurnDirection CurrentTurnDirection; // Keeps track of current turn direction. Used by PlayerShipMovement.cs
+
+    public float CurrentSpeed { get; private set; } // Current speed the player is traveling at.
+
+    public enum AccelerationState
+    {
+        accelerating, coasting, decelerating
+    }
+
+    [HideInInspector]
+    public AccelerationState CurrentAcceleration;
 
     private float shotTimer;
 
@@ -59,6 +75,9 @@ public class PlayerController : MonoBehaviour
         firing = false;
         firingPrimary = false;
         chargingSecondary = false;
+
+        CurrentTurnDirection = TurnDirection.none;
+        CurrentAcceleration = AccelerationState.coasting;
 
         shotTimer = 0f;
     }
@@ -186,6 +205,51 @@ public class PlayerController : MonoBehaviour
         this.transform.Rotate(new Vector3(0f, yaw, 0f));
         this.transform.Rotate(new Vector3(pitch, 0f, 0f));
         this.transform.Rotate(new Vector3(0f, 0f, roll));
+
+        // Update the turn direction (for PlayerShipMovement)
+        UpdateTurnDirection();
+    }
+
+    private void UpdateTurnDirection()
+    {
+        if (Input.GetAxis("Horizontal") > 0 && Mathf.Abs(Input.GetAxis("Horizontal")) > Mathf.Abs(Input.GetAxis("Vertical")))
+        {
+            CurrentTurnDirection = TurnDirection.right;
+        }
+
+        if (Input.GetAxis("Horizontal") < 0 && Mathf.Abs(Input.GetAxis("Horizontal")) > Mathf.Abs(Input.GetAxis("Vertical")))
+        {
+            CurrentTurnDirection = TurnDirection.left;
+        }
+
+        if (Input.GetAxis("Vertical") > 0 && Mathf.Abs(Input.GetAxis("Vertical")) > Mathf.Abs(Input.GetAxis("Horizontal")))
+        {
+            if (GameSettings.InvertYLook)
+            {
+                CurrentTurnDirection = TurnDirection.down;
+            }
+            else
+            {
+                CurrentTurnDirection = TurnDirection.up;
+            }
+        }
+
+        if (Input.GetAxis("Vertical") < 0 && Mathf.Abs(Input.GetAxis("Vertical")) > Mathf.Abs(Input.GetAxis("Horizontal")))
+        {
+            if (GameSettings.InvertYLook)
+            {
+                CurrentTurnDirection = TurnDirection.up;
+            }
+            else
+            {
+                CurrentTurnDirection = TurnDirection.down;
+            }
+        }
+
+        if (Input.GetAxis("Vertical") == 0 && Input.GetAxis("Horizontal") == 0)
+        {
+            CurrentTurnDirection = TurnDirection.none;
+        }
     }
 
     private void AccelerateShipClassic()
@@ -197,6 +261,7 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed += AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
+                else CurrentAcceleration = AccelerationState.accelerating;
             }
         }
 
@@ -207,7 +272,13 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
+                else CurrentAcceleration = AccelerationState.decelerating;
             }
+        }
+
+        if (!Input.GetButton("ThrottleClassic") && !Input.GetButton("BrakeClassic"))
+        {
+            CurrentAcceleration = AccelerationState.coasting;
         }
         
         rb.velocity = transform.forward * CurrentSpeed;
@@ -222,6 +293,7 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed += AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
+                else CurrentAcceleration = AccelerationState.accelerating;
             }
         }
 
@@ -232,12 +304,16 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
+                else CurrentAcceleration = AccelerationState.accelerating;
             }
         }
 
-        //Debug.Log(Input.GetAxisRaw("ThrottleFrontline"));
+        if (Input.GetAxisRaw("ThrottleFrontline") < 0.5f && Input.GetAxisRaw("ThrottleFrontline") > -0.5f)
+        {
+            CurrentAcceleration = AccelerationState.coasting;
+        }
 
-        rb.velocity = transform.forward * CurrentSpeed;
+            rb.velocity = transform.forward * CurrentSpeed;
     }
     
     private void AccelerateShipFrontlineBeta() // The RollClassic axis is the triggers, which will be used here for throttle instead.
@@ -249,6 +325,7 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed += AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed > TopSpeed) CurrentSpeed = TopSpeed;
+                else CurrentAcceleration = AccelerationState.accelerating;
             }
         }
 
@@ -259,7 +336,13 @@ public class PlayerController : MonoBehaviour
                 CurrentSpeed -= AccelerationValue * Time.deltaTime;
 
                 if (CurrentSpeed < MinSpeed) CurrentSpeed = MinSpeed;
+                else CurrentAcceleration = AccelerationState.decelerating;
             }
+        }
+
+        if (Input.GetAxisRaw("RollClassic") < 0.5f && Input.GetAxisRaw("RollClassic") > -0.5f)
+        {
+            CurrentAcceleration = AccelerationState.coasting;
         }
 
         rb.velocity = transform.forward * CurrentSpeed;
