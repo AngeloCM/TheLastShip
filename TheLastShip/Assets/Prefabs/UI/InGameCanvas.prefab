@@ -357,8 +357,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1942082754551752374}
   - {fileID: 515356130873729625}
+  - {fileID: 1942082754551752374}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -602,7 +602,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1185773637663114057}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -732,6 +732,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1185773637663114057}
     m_Modifications:
+    - target: {fileID: 201032835127020320, guid: cbda76fe3465735449fad81c5a26f3fc,
+        type: 3}
+      propertyPath: classicControlsButton
+      value: 
+      objectReference: {fileID: 1820086691751047772}
+    - target: {fileID: 201032835127020320, guid: cbda76fe3465735449fad81c5a26f3fc,
+        type: 3}
+      propertyPath: invertYLookToggle
+      value: 
+      objectReference: {fileID: 611469079}
     - target: {fileID: 2998567913119229516, guid: cbda76fe3465735449fad81c5a26f3fc,
         type: 3}
       propertyPath: m_Name
@@ -775,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 598179829923266407, guid: cbda76fe3465735449fad81c5a26f3fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 598179829923266407, guid: cbda76fe3465735449fad81c5a26f3fc,
         type: 3}
@@ -842,16 +852,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 201032835127020320, guid: cbda76fe3465735449fad81c5a26f3fc,
-        type: 3}
-      propertyPath: classicControlsButton
-      value: 
-      objectReference: {fileID: 1820086691751047772}
-    - target: {fileID: 201032835127020320, guid: cbda76fe3465735449fad81c5a26f3fc,
-        type: 3}
-      propertyPath: invertYLookToggle
-      value: 
-      objectReference: {fileID: 611469079}
     - target: {fileID: 863775960668154765, guid: cbda76fe3465735449fad81c5a26f3fc,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
