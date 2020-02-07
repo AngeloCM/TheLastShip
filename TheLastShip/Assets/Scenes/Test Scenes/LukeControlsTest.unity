@@ -278,6 +278,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1177640915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 40360096672153373, guid: afae1227a7c392d4fbfaecdbc7978071,
+    type: 3}
+  m_PrefabInstance: {fileID: 40360096028858181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1177640916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177640915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa6d237c18970142aea595dfeb7957c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerShipModel: {fileID: 1625536805}
+  PlayerShipTargetLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1556379175
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +389,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1625536805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1771291064586632576, guid: afae1227a7c392d4fbfaecdbc7978071,
+    type: 3}
+  m_PrefabInstance: {fileID: 40360096028858181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2122161280
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,26 +671,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942082754551752374, guid: d77aa472b738c0743925ba919c0bd2c2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942082754551752374, guid: d77aa472b738c0743925ba919c0bd2c2,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -360
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942082754551752374, guid: d77aa472b738c0743925ba919c0bd2c2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942082754551752374, guid: d77aa472b738c0743925ba919c0bd2c2,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77aa472b738c0743925ba919c0bd2c2, type: 3}
