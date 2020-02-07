@@ -378,6 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bf6727c2fc53f4aaf7d0821bd1d34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  classicControlsButton: {fileID: 0}
+  invertYLookToggle: {fileID: 0}
 --- !u!1 &5150816960344266975
 GameObject:
   m_ObjectHideFlags: 0
