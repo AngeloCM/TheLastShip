@@ -4,30 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ProgressBarScript : MonoBehaviour
 {
-    [SerializeField]
-    public float SetMaxValue;
+    //[SerializeField]
+    //public float SetMaxValue;
     public float CurrentProgress;
     public float SetMinValue = 0f;
 
-    public GameObject starting;
-    public GameObject ending;
 
+    public GameObject Starting;
+    public GameObject Ending;
+    public GameObject CargoHold;
+   
 
-
+    private const float minDistance = 0.2f;
+    private float setMaxValue;
+    private float setMinValue;
     private BarManager barManager;
+    private float previousDistance;
 
     private void Awake()
     {
-        starting = this.GetComponent<GameObject>();
-        ending = this.GetComponent<GameObject>();
-
+        //Starting = this.GetComponent<GameObject>();
+        //Ending = this.GetComponent<GameObject>();
+        //CargoHold = this.GetComponent<GameObject>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        setMaxValue = Vector3.Distance(this.Starting.transform.position, this.Ending.transform.position);
+        setMinValue = 0f;
         barManager = this.GetComponent<BarManager>();
-        barManager.SetBarManager(SetMaxValue, 0f);
+        barManager.SetBarManager(setMaxValue, setMinValue);
         SetProgressBar(barManager.GetNormalizedValue());
     }
 
@@ -51,10 +58,17 @@ public class ProgressBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.starting.transform.position != this.ending.transform.position)
-        {
+        ProgressBarMovement();
+        //Debug.Log(CurrentProgress);
+    }
 
-        }
-        Debug.Log(CurrentProgress);
+    public void ProgressBarMovement()
+    {
+        float difference = Vector3.Distance(this.CargoHold.transform.position, this.Ending.transform.position);
+        float distance = setMaxValue - difference;
+
+        
+        IncreaseProgress(distance - previousDistance);        
+        previousDistance = distance;
     }
 }
