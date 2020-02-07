@@ -9,7 +9,7 @@ public class BarManager : MonoBehaviour
     private float currentValue;
     private float minValue = 0;
     [SerializeField]
-    private float updateSpeedSeconds = 0.2f;
+    private float updateSpeedSeconds;
     [SerializeField]
     public string EnterNameOfBarHere;
 
@@ -27,6 +27,11 @@ public class BarManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void SetUpdateSpeedSecconds(float speedSeconds = 0.4f)
+    {
+        this.updateSpeedSeconds = speedSeconds;
     }
 
     public void SetBarManager(float SetMaxValue, float SetCurrentValue)

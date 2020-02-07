@@ -18,7 +18,7 @@ public class ThrusterBarScript : MonoBehaviour
         playerController = playerObj.GetComponent<PlayerController>();
 
         setMaxSpeed = playerController.TopSpeed;
-        //setCurrentSpeed = playerController.currentSpeed;
+        setCurrentSpeed = playerController.CurrentSpeed;
         setAcceleration = playerController.AccelerationValue;
         barManager.SetBarManager(setMaxSpeed, setCurrentSpeed);
     }
@@ -31,17 +31,17 @@ public class ThrusterBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(this.setCurrentSpeed != playerController.currentSpeed)
-        //{
-        //    if(this.setCurrentSpeed < playerController.currentSpeed)
-        //    {
-        //        Accelerate();
-        //    }
-        //    if(this.setAcceleration > playerController.currentSpeed)
-        //    {
-        //        Decelerate();
-        //    }
-        //}
+        if (this.setCurrentSpeed != playerController.CurrentSpeed)
+        {
+            if (this.setCurrentSpeed < playerController.CurrentSpeed)
+            {
+                Accelerate();
+            }
+            if (this.setAcceleration > playerController.CurrentSpeed)
+            {
+                Decelerate();
+            }
+        }
         Debug.Log("Max:"+ setMaxSpeed);
     }
 
@@ -50,22 +50,22 @@ public class ThrusterBarScript : MonoBehaviour
         barManager.HandleBarChange(ThrusterNormalized);
     }
 
-    //public void Accelerate()
-    //{
-    //    float difference = Mathf.Abs(setCurrentSpeed - playerController.currentSpeed);
-    //    this.setCurrentSpeed = playerController.currentSpeed;
-    //    barManager.IncreaseValue(difference);
-    //    SetThrusterBar(barManager.GetNormalizedValue());
-    //    Debug.Log("current" + setCurrentSpeed);
+    public void Accelerate()
+    {
+        float difference = Mathf.Abs(setCurrentSpeed - playerController.CurrentSpeed);
+        this.setCurrentSpeed = playerController.CurrentSpeed;
+        barManager.IncreaseValue(difference);
+        SetThrusterBar(barManager.GetNormalizedValue());
+        Debug.Log("current" + setCurrentSpeed);
 
-    //}
+    }
 
-    //public void Decelerate()
-    //{
-    //    float difference = Mathf.Abs(setCurrentSpeed - playerController.currentSpeed);
-    //    this.setCurrentSpeed = playerController.currentSpeed;
-    //    barManager.DecreaseValue(difference);
-    //    SetThrusterBar(barManager.GetNormalizedValue());
-    //    Debug.Log("current" + setCurrentSpeed);
-    //}
+    public void Decelerate()
+    {
+        float difference = Mathf.Abs(setCurrentSpeed - playerController.CurrentSpeed);
+        this.setCurrentSpeed = playerController.CurrentSpeed;
+        barManager.DecreaseValue(difference);
+        SetThrusterBar(barManager.GetNormalizedValue());
+        Debug.Log("current" + setCurrentSpeed);
+    }
 }
