@@ -40,16 +40,9 @@ public class DamageHandler : MonoBehaviour
 
     private void Update()
     {
-        if (isInKnockback)
+        if (isInKnockback) // Do knockback stuff every frame, in update, if being knocked back
         {
-            rb.velocity *= knockbackSlowingRate;
-
-            knockbackTimer += Time.deltaTime;
-
-            if (knockbackTimer >= knockbackTime) // if knockbackTime seconds have passed
-            {
-                EndKnockback();
-            }
+            UpdateDoKnockback();
         }
     }
 
@@ -62,7 +55,7 @@ public class DamageHandler : MonoBehaviour
 
     public void TakeDamageAndKnockBack(int dmg)
     {
-        this.healthBar.Damage(dmg); // Take the damage
+        TakeDamage(dmg);
 
         InitiateKnockback();
     }
@@ -84,6 +77,18 @@ public class DamageHandler : MonoBehaviour
         isInKnockback = true; // Let update do its thing with this bool
     }
 
+    private void UpdateDoKnockback()
+    {
+        rb.velocity *= knockbackSlowingRate;
+
+        knockbackTimer += Time.deltaTime;
+
+        if (knockbackTimer >= knockbackTime) // if knockbackTime seconds have passed
+        {
+            EndKnockback();
+        }
+    }
+
     private void EndKnockback()
     {
         knockbackTimer = 0f;
@@ -99,5 +104,11 @@ public class DamageHandler : MonoBehaviour
         {
             pShipMov.EndKnockbackWiggle(); // Stop the ship from wiggling
         }
+    }
+
+    // Take damage. Should be called when hit with a projectile, etc.
+    public void TakeDamage(int dmg)
+    {
+        this.healthBar.Damage(dmg); // Take the damage
     }
 }

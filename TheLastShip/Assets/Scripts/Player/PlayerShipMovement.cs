@@ -44,7 +44,7 @@ public class PlayerShipMovement : MonoBehaviour
     private Vector3 CameraTargetLocation;
 
     private bool isInKnockback;
-    private float knockbackMaxAngle = 10f;
+    private float knockbackMaxAngle = 25f;
     private bool wiggleRight;
 
     // Start is called before the first frame update
@@ -70,24 +70,30 @@ public class PlayerShipMovement : MonoBehaviour
         }
     }
 
+    // Wiggle ship to reflect knockback state.
+    // TODO: Probably should be replaced with a proper animation.
     private void UpdateWiggle()
     {
         if (wiggleRight)
         {
-            PlayerShipModel.transform.localEulerAngles = Vector3.Lerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, -knockbackMaxAngle), 0.8f);
+            PlayerShipModel.transform.localEulerAngles = Vector3.Slerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, 0f), 0.3f);
 
-            if (PlayerShipModel.transform.localEulerAngles.z <= -knockbackMaxAngle)
+            if (PlayerShipModel.transform.localEulerAngles.z > 180f || PlayerShipModel.transform.localEulerAngles.z <= (knockbackMaxAngle * 0.1f))
             {
-                wiggleRight = false;
+                PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, 0f); // Clamp
+
+                wiggleRight = false; // reverse wiggle direction
             }
         }
         else
         {
-            PlayerShipModel.transform.localEulerAngles = Vector3.Lerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, knockbackMaxAngle), 0.8f);
+            PlayerShipModel.transform.localEulerAngles = Vector3.Slerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, knockbackMaxAngle), 0.3f);
 
-            if (PlayerShipModel.transform.localEulerAngles.z >= knockbackMaxAngle)
+            if (PlayerShipModel.transform.localEulerAngles.z >= (knockbackMaxAngle * 0.9f))
             {
-                wiggleRight = true;
+                PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, knockbackMaxAngle); // Clamp
+
+                wiggleRight = true; // reverse wiggle direction
             }
         }
     }
