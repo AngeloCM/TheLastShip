@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,6 +43,10 @@ public class PlayerShipMovement : MonoBehaviour
 
     private Vector3 CameraTargetLocation;
 
+    private bool isInKnockback;
+    private float knockbackMaxAngle = 10f;
+    private bool wiggleRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +63,33 @@ public class PlayerShipMovement : MonoBehaviour
         UpdatePlayerShipLocation();
 
         UpdateCameraLocation();
+
+        if (isInKnockback)
+        {
+            UpdateWiggle();
+        }
+    }
+
+    private void UpdateWiggle()
+    {
+        if (wiggleRight)
+        {
+            PlayerShipModel.transform.localEulerAngles = Vector3.Lerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, -knockbackMaxAngle), 0.8f);
+
+            if (PlayerShipModel.transform.localEulerAngles.z <= -knockbackMaxAngle)
+            {
+                wiggleRight = false;
+            }
+        }
+        else
+        {
+            PlayerShipModel.transform.localEulerAngles = Vector3.Lerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, knockbackMaxAngle), 0.8f);
+
+            if (PlayerShipModel.transform.localEulerAngles.z >= knockbackMaxAngle)
+            {
+                wiggleRight = true;
+            }
+        }
     }
 
     private void UpdatePlayerShipLocation()
@@ -102,5 +134,17 @@ public class PlayerShipMovement : MonoBehaviour
                 CameraTargetLocation = cameraPosDecelerating;
                 break;
         }
+    }
+
+    internal void InitiateKnockbackWiggle()
+    {
+        isInKnockback = true;
+    }
+
+    internal void EndKnockbackWiggle()
+    {
+        isInKnockback = false;
+
+        PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 }

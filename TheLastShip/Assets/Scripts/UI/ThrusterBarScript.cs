@@ -42,7 +42,7 @@ public class ThrusterBarScript : MonoBehaviour
                 Decelerate();
             }
         }
-        Debug.Log("Max:"+ setMaxSpeed);
+        //Debug.Log("Max:"+ setMaxSpeed);
     }
 
     private void SetThrusterBar(float ThrusterNormalized)

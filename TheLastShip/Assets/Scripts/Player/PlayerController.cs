@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("The transform at which to spawn a player shot.")]
     public Transform PlayerShotTransform;
 
+    public bool CanMove; // Whether the player can move the ship. Assign with caution.
+
     private Rigidbody rb;
 
     private float yaw, pitch, roll;
@@ -76,6 +78,8 @@ public class PlayerController : MonoBehaviour
         firingPrimary = false;
         chargingSecondary = false;
 
+        CanMove = true;
+
         CurrentTurnDirection = TurnDirection.none;
         CurrentAcceleration = AccelerationState.coasting;
 
@@ -85,98 +89,100 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        RotateShip();
-
-        if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.classic)
+        if (CanMove)
         {
-            AccelerateShipClassic();
+            RotateShip();
 
-            if (Input.GetButton("Fire1") && !firing)
+            if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.classic)
             {
-                firingPrimary = true;
-            }
-            if (Input.GetButtonUp("Fire1"))
-            {
-                firing = false;
-                firingPrimary = false;
-                shotTimer = 0f;
-            }
+                AccelerateShipClassic();
 
-            if (Input.GetButton("Fire2") && !firing)
-            {
-                chargingSecondary = true;
-            }
-            if (Input.GetButtonUp("Fire2") && currentChargeShot != null)
-            {
-                ReleaseSecondaryFire();
+                if (Input.GetButton("Fire1") && !firing)
+                {
+                    firingPrimary = true;
+                }
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    firing = false;
+                    firingPrimary = false;
+                    shotTimer = 0f;
+                }
 
-                shotTimer = 0f;
-            }
-        }
+                if (Input.GetButton("Fire2") && !firing)
+                {
+                    chargingSecondary = true;
+                }
+                if (Input.GetButtonUp("Fire2") && currentChargeShot != null)
+                {
+                    ReleaseSecondaryFire();
 
-        else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontline)
-        {
-            AccelerateShipFrontline();
-
-            if (Input.GetButton("FireFrontline") && !firing)
-            {
-                firingPrimary = true;
-            }
-            if (Input.GetButtonUp("FireFrontline"))
-            {
-                firing = false;
-                firingPrimary = false;
-                shotTimer = 0f;
+                    shotTimer = 0f;
+                }
             }
 
-            if (Input.GetButton("AltFireFrontline") && !firing)
+            else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontline)
             {
-                chargingSecondary = true;
+                AccelerateShipFrontline();
+
+                if (Input.GetButton("FireFrontline") && !firing)
+                {
+                    firingPrimary = true;
+                }
+                if (Input.GetButtonUp("FireFrontline"))
+                {
+                    firing = false;
+                    firingPrimary = false;
+                    shotTimer = 0f;
+                }
+
+                if (Input.GetButton("AltFireFrontline") && !firing)
+                {
+                    chargingSecondary = true;
+                }
+                if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+                {
+                    ReleaseSecondaryFire();
+
+                    shotTimer = 0f;
+                }
             }
-            if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+
+            else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontlineBeta)
             {
-                ReleaseSecondaryFire();
+                AccelerateShipFrontlineBeta();
 
-                shotTimer = 0f;
+                if (Input.GetButton("FireFrontline") && !firing) // Fire button is the same as frontline
+                {
+                    firingPrimary = true;
+                }
+                if (Input.GetButtonUp("FireFrontline"))
+                {
+                    firing = false;
+                    firingPrimary = false;
+                    shotTimer = 0f;
+                }
+
+                if (Input.GetButton("AltFireFrontline") && !firing)
+                {
+                    chargingSecondary = true;
+                }
+                if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+                {
+                    ReleaseSecondaryFire();
+
+                    shotTimer = 0f;
+                }
             }
-        }
 
-        else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontlineBeta)
-        {
-            AccelerateShipFrontlineBeta();
-
-            if (Input.GetButton("FireFrontline") && !firing) // Fire button is the same as frontline
+            if (firingPrimary)
             {
-                firingPrimary = true;
+                Shoot();
             }
-            if (Input.GetButtonUp("FireFrontline"))
+
+            if (chargingSecondary)
             {
-                firing = false;
-                firingPrimary = false;
-                shotTimer = 0f;
+                ChargeSecondaryFire();
             }
-
-            if (Input.GetButton("AltFireFrontline") && !firing)
-            {
-                chargingSecondary = true;
-            }
-            if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
-            {
-                ReleaseSecondaryFire();
-
-                shotTimer = 0f;
-            }
-        }
-
-        if (firingPrimary)
-        {
-            Shoot();
-        }
-
-        if (chargingSecondary)
-        {
-            ChargeSecondaryFire();
         }
     }
 
