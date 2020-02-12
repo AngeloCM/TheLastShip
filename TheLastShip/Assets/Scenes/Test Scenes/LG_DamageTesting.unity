@@ -1179,6 +1179,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 6102473637338148374, guid: afae1227a7c392d4fbfaecdbc7978071,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 190493471}
+    - target: {fileID: 6102473637338148374, guid: afae1227a7c392d4fbfaecdbc7978071,
+        type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 1764456824}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afae1227a7c392d4fbfaecdbc7978071, type: 3}
 --- !u!114 &6102473637338148372 stripped
@@ -1199,22 +1209,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6102473637338148371}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6102473637338148374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6102473637338148373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e4815c18e74c5479c4a32082f1d950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 190493471}
-  shieldBar: {fileID: 1764456824}
-  KnockbackDamage: 4
-  KnockbackSpeed: 14
 --- !u!1001 &7790302342568087728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,6 +1221,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50774123993616755, guid: 8f699671a30707247979ced4a346b720,
+        type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 1764456824}
     - target: {fileID: 184609547222163109, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: CargoHold
