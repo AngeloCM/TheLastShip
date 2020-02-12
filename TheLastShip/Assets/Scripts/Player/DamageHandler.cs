@@ -8,6 +8,9 @@ public class DamageHandler : MonoBehaviour
     [SerializeField, Tooltip("The HealthBar script component representing this ship's health.")]
     private HealthBar healthBar;
 
+    [SerializeField, Tooltip("The ShieldBar script component representing this ship's shields.")]
+    private ShieldBar shieldBar;
+
     [SerializeField, Tooltip("The damage this ship takes when it collides with something."), Range(0, 100)]
     private int KnockbackDamage = 4;
 
@@ -109,6 +112,13 @@ public class DamageHandler : MonoBehaviour
     // Take damage. Should be called when hit with a projectile, etc.
     public void TakeDamage(int dmg)
     {
-        this.healthBar.Damage(dmg); // Take the damage
+        if (shieldBar.CheckIfShieldDelpeted())
+        {
+            healthBar.Damage(dmg);
+        }
+        else
+        {
+            shieldBar.DamageShield(dmg);
+        }
     }
 }
