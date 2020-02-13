@@ -184,6 +184,21 @@ public class PlayerController : MonoBehaviour
                 ChargeSecondaryFire();
             }
         }
+        else // If player can't move, set relevant variables to stop from shooting, etc.
+        {
+            StopFiring();
+        }
+    }
+
+    private void StopFiring()
+    {
+        if (currentChargeShot)
+            ReleaseSecondaryFire();
+
+        firing = false;
+        firingPrimary = false;
+        chargingSecondary = false;
+        shotTimer = 0f;
     }
 
     private void RotateShip()

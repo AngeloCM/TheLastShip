@@ -28,6 +28,9 @@ public class DamageHandler : MonoBehaviour
 
     private bool isInKnockback; // Whether we're in knockback. Used by update to determine when to give back control
 
+    private bool isInKnockbackInvincibility; // Whether the player is in invincibility following knockback. This handles cases where the player
+                                             // gets ping-ponged around, and should be treated as separate from shooting damage.
+
     private Vector3 collisionNormal;
 
     private void Start()
@@ -39,6 +42,7 @@ public class DamageHandler : MonoBehaviour
         pShipMov = this.GetComponent<PlayerShipMovement>();
 
         isInKnockback = false;
+        isInKnockbackInvincibility = false;
     }
 
     private void Update()
@@ -58,13 +62,18 @@ public class DamageHandler : MonoBehaviour
 
     public void TakeDamageAndKnockBack(int dmg)
     {
-        TakeDamage(dmg);
+        if (!isInKnockbackInvincibility)
+        {
+            TakeDamage(dmg);
+        }
 
         InitiateKnockback();
     }
 
     private void InitiateKnockback()
     {
+        knockbackTimer = 0f;
+
         if (pCont)
         {
             pCont.CanMove = false; // Remove control from the player
@@ -78,6 +87,8 @@ public class DamageHandler : MonoBehaviour
         rb.velocity = collisionNormal * KnockbackSpeed; // Set velocity to the normal of collision times KnockbackSpeed
 
         isInKnockback = true; // Let update do its thing with this bool
+
+        isInKnockbackInvincibility = true;
     }
 
     private void UpdateDoKnockback()
@@ -97,6 +108,8 @@ public class DamageHandler : MonoBehaviour
         knockbackTimer = 0f;
 
         isInKnockback = false;
+
+        isInKnockbackInvincibility = false;
 
         if (pCont)
         {
