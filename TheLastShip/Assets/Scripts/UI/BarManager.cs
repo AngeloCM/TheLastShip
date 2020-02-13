@@ -13,6 +13,11 @@ public class BarManager : MonoBehaviour
     [SerializeField]
     public string EnterNameOfBarHere;
 
+    public float GetCurrentValue()
+    {
+        return this.currentValue;
+    }
+
     void Awake()
     {
         barImage = transform.Find(EnterNameOfBarHere).GetComponent<Image>();

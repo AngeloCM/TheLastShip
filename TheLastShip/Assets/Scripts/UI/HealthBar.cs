@@ -7,6 +7,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     public float SetMaxHealth;
 
+    public ShieldBar shieldBar;
+
     //private Image barImage;
     private BarManager barManager;
 
@@ -32,8 +34,11 @@ public class HealthBar : MonoBehaviour
 
     public void Damage(float Damage)
     {
+        if(shieldBar.CheckIfShieldDelpeted())
+        {
         barManager.DecreaseValue(Damage);
         SetHealthBar(barManager.GetNormalizedValue());
+        }
     }
 
     public void Heal(float Heal)
