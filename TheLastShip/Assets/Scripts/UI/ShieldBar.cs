@@ -53,7 +53,7 @@ public class ShieldBar : MonoBehaviour
         RechargeShieldTimer();
         RechargeShield();
         ShieldRecharged();
-        Debug.Log(barManager.GetCurrentValue());
+        //Debug.Log(barManager.GetCurrentValue());
     }
 
     private void SetShieldBar(float ShieldNormalized)
