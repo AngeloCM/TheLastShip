@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 40360096672153375}
   - component: {fileID: 2338548140980350805}
   - component: {fileID: 1177640916}
+  - component: {fileID: 6102473637338148374}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -141,6 +142,7 @@ MonoBehaviour:
   PlayerSecondaryShotPrefab: {fileID: 5246374027109828486, guid: 04cd8b133a155f747b3cb861c9b75423,
     type: 3}
   PlayerShotTransform: {fileID: 6991136550905495391}
+  CanMove: 0
   CurrentTurnDirection: 0
   CurrentAcceleration: 0
 --- !u!54 &2338548140980350805
@@ -181,6 +183,22 @@ MonoBehaviour:
   cameraPosCoasting: {x: 0, y: 2, z: -8}
   cameraPosAccelerating: {x: 0, y: 2, z: -10}
   cameraPosDecelerating: {x: 0, y: 2, z: -7}
+--- !u!114 &6102473637338148374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40360096672153373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e4815c18e74c5479c4a32082f1d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  shieldBar: {fileID: 0}
+  KnockbackDamage: 10
+  KnockbackSpeed: 14
 --- !u!1 &2181552051587281279
 GameObject:
   m_ObjectHideFlags: 0
