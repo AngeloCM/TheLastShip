@@ -36,8 +36,9 @@ public class HealthBar : MonoBehaviour
     {
         if(shieldBar.CheckIfShieldDelpeted())
         {
-        barManager.DecreaseValue(Damage);
-        SetHealthBar(barManager.GetNormalizedValue());
+            this.shieldBar.RestartShieldTimer();
+            barManager.DecreaseValue(Damage);
+            SetHealthBar(barManager.GetNormalizedValue());
         }
     }
 
