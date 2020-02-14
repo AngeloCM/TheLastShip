@@ -56,7 +56,7 @@ public class ThrusterBarScript : MonoBehaviour
         this.setCurrentSpeed = playerController.CurrentSpeed;
         barManager.IncreaseValue(difference);
         SetThrusterBar(barManager.GetNormalizedValue());
-        Debug.Log("current" + setCurrentSpeed);
+        //Debug.Log("current" + setCurrentSpeed);
 
     }
 
@@ -66,6 +66,6 @@ public class ThrusterBarScript : MonoBehaviour
         this.setCurrentSpeed = playerController.CurrentSpeed;
         barManager.DecreaseValue(difference);
         SetThrusterBar(barManager.GetNormalizedValue());
-        Debug.Log("current" + setCurrentSpeed);
+        //Debug.Log("current" + setCurrentSpeed);
     }
 }

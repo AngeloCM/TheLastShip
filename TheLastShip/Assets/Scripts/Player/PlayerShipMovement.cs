@@ -101,7 +101,7 @@ public class PlayerShipMovement : MonoBehaviour
     private void UpdatePlayerShipLocation()
     {
         if (!GameSettings.IsPaused)
-            PlayerShipModel.transform.localPosition = Vector3.Slerp(PlayerShipModel.transform.localPosition, PlayerShipTargetLocation, 0.02f);
+            PlayerShipModel.transform.localPosition = Vector3.Lerp(PlayerShipModel.transform.localPosition, PlayerShipTargetLocation, 0.02f);
 
         switch (currentTurnDir)
         {

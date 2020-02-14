@@ -120,9 +120,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &190493471 stripped
+--- !u!114 &41865076 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 50774123993616755, guid: 8f699671a30707247979ced4a346b720,
+  m_CorrespondingSourceObject: {fileID: 3496147675528815819, guid: 8f699671a30707247979ced4a346b720,
     type: 3}
   m_PrefabInstance: {fileID: 7790302342568087728}
   m_PrefabAsset: {fileID: 0}
@@ -1462,14 +1462,14 @@ PrefabInstance:
       objectReference: {fileID: 6102473637338148373}
     - target: {fileID: 2118235748131280434, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 6102473637338148372}
-    - target: {fileID: 2118235748131280434, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 6102473637338148373}
+    - target: {fileID: 2118235748131280434, guid: 8f699671a30707247979ced4a346b720,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 6102473637338148372}
     - target: {fileID: 3496147675528815816, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: CargoHold
