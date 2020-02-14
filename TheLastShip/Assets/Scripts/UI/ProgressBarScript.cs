@@ -6,9 +6,10 @@ public class ProgressBarScript : MonoBehaviour
 {
     //[SerializeField]
     //public float SetMaxValue;
-    public float CurrentProgress;
     public float SetMinValue = 0f;
 
+
+    public Slider progressSlider;
 
     public GameObject Starting;
     public GameObject Ending;
@@ -18,14 +19,12 @@ public class ProgressBarScript : MonoBehaviour
     private const float minDistance = 0.2f;
     private float setMaxValue;
     private float setMinValue;
-    private BarManager barManager;
+    public BarManager barManager;
     private float previousDistance;
 
     private void Awake()
     {
-        //Starting = this.GetComponent<GameObject>();
-        //Ending = this.GetComponent<GameObject>();
-        //CargoHold = this.GetComponent<GameObject>();
+
     }
 
     // Start is called before the first frame update
@@ -47,6 +46,7 @@ public class ProgressBarScript : MonoBehaviour
     {
         barManager.IncreaseValue(Progress);
         SetProgressBar(barManager.GetNormalizedValue());
+        progressSlider.value = barManager.GetNormalizedValue();
     }
 
     public void DecreaseProgress(float Progress)

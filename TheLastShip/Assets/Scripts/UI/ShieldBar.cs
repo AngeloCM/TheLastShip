@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ShieldState { Damaged, Recharging, Regarched}
+public enum ShieldState { Damaged, Recharging, Recharged}
 
 public class ShieldBar : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class ShieldBar : MonoBehaviour
     public float SetMaxShield;
     [SerializeField]
     public float AmountToChargeBy;
-
+    
 
     [SerializeField]
     public float TimeItTakesToStartRecharge;
@@ -35,7 +35,7 @@ public class ShieldBar : MonoBehaviour
 
     private void Awake()
     {
-        shieldState = ShieldState.Regarched;
+        shieldState = ShieldState.Recharged;
         barManager = this.GetComponent<BarManager>();
         barManager.SetBarManager(SetMaxShield, SetMaxShield);
         SetShieldBar(barManager.GetNormalizedValue());
@@ -51,8 +51,9 @@ public class ShieldBar : MonoBehaviour
     void Update()
     {
         RechargeShieldTimer();
-        ShieldRecharged();
         RechargeShield();
+        ShieldRecharged();
+        //Debug.Log(barManager.GetCurrentValue());
     }
 
     private void SetShieldBar(float ShieldNormalized)
@@ -62,20 +63,24 @@ public class ShieldBar : MonoBehaviour
 
     public void DamageShield(float Damage)
     {
+        if(!this.CheckIfShieldDelpeted())
+        {
         this.shieldState = ShieldState.Damaged;
+        this.RestartShieldTimer();
         barManager.DecreaseValue(Damage);
         SetShieldBar(barManager.GetNormalizedValue());
-        this.LastSpawn = 0f;
+        }
     }
 
     public void RechargeShield()
     {
-        if(this.shieldState == ShieldState.Recharging)
+       
+        if (this.shieldState == ShieldState.Recharging)
         {
             barManager.IncreaseValue(AmountToChargeBy);
             SetShieldBar(barManager.GetNormalizedValue());
         }
-       
+
     }
 
     public bool CheckIfShieldDelpeted()
@@ -94,17 +99,23 @@ public class ShieldBar : MonoBehaviour
     {
         if (barManager.GetCurrentValue() == SetMaxShield)
         {
-            this.shieldState = ShieldState.Regarched;
+            this.shieldState = ShieldState.Recharged;
         }
+    }
+
+    public void RestartShieldTimer()
+    {
+        this.LastSpawn = 0f;
     }
 
     public void RechargeShieldTimer()
     {
-        if(this.shieldState == ShieldState.Damaged)
+        if (this.shieldState == ShieldState.Damaged)
         {
-            if(this.lastSpawn > TimeItTakesToStartRecharge)
+
+            if (this.lastSpawn > TimeItTakesToStartRecharge)
             {
-                this.LastSpawn = 0f;
+                this.RestartShieldTimer();
                 this.shieldState = ShieldState.Recharging;
             }
             this.lastSpawn += Time.deltaTime;

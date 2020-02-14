@@ -11,7 +11,7 @@ public static class GameSettings
         frontlineBeta,
     }
 
-    public static ControlScheme CurrentControlScheme = ControlScheme.classic;
+    public static ControlScheme CurrentControlScheme = ControlScheme.frontlineBeta; // majority favorite is frontlineBeta
 
     public static bool InvertYLook;
 

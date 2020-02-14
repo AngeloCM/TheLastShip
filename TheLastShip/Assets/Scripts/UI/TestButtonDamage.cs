@@ -23,4 +23,10 @@ public class TestButtonDamage : MonoBehaviour
         shield.DamageShield((40));
         
     }
+
+    public void FillerHealHealth()
+    {
+        filler.Heal(20);
+        
+    }
 }
