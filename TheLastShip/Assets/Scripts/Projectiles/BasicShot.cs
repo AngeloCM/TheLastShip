@@ -10,14 +10,21 @@ public class BasicShot : MonoBehaviour
     [SerializeField, Tooltip("The time in seconds it takes for a shot to despawn automatically."), Range(5f, 20f)]
     public float DespawnTime = 5f;
 
-    [SerializeField, Tooltip("The damage a basic shot deals to an enemy."), Range(1, 10)]
-    public int BasicShotDamage = 1;
+    [SerializeField, Tooltip("The damage a basic shot deals."), Range(1, 10)]
+    public int BasicShotDamage = 5;
 
     private Vector3 shotDir;
 
     private Rigidbody rb;
 
     private float timeActive;
+
+    public enum ShotSources
+    {
+        player, enemy
+    }
+
+    internal ShotSources shotSource;
 
     // Start is called before the first frame update
     void Start()
@@ -50,12 +57,26 @@ public class BasicShot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Destroy an enemy that has been collided with. Will change once enemies have health.
-        if (other.tag == "Enemy" || other.tag == "enemy")
+        if (this.shotSource == ShotSources.player)
         {
-            // TODO: Lessen enemy's health and only destroy if health <= 0
-            other.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
+            // Destroy an enemy that has been collided with. Will change once enemies have health.
+            if (other.transform.root.tag == "Enemy" || other.transform.root.tag == "enemy")
+            {
+                // TODO: Lessen enemy's health and only destroy if health <= 0
+                other.gameObject.GetComponent<EnemyHealth>().TakeDamage(BasicShotDamage);
+                this.gameObject.SetActive(false);
+            }
+        }
+
+        if (this.shotSource == ShotSources.enemy)
+        {
+            // Destroy an enemy that has been collided with. Will change once enemies have health.
+            if (other.transform.root.tag == "Player" || other.transform.root.tag == "player")
+            {
+                // TODO: Lessen enemy's health and only destroy if health <= 0
+                other.transform.root.GetComponent<DamageHandler>().TakeDamage(BasicShotDamage);
+                this.gameObject.SetActive(false);
+            }
         }
     }
 }

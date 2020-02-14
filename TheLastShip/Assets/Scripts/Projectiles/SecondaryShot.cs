@@ -11,10 +11,10 @@ public class SecondaryShot : MonoBehaviour
     public float DespawnTime = 8f;
 
     [SerializeField, Tooltip("The damage an uncharged shot deals to an enemy."), Range(1, 25)]
-    public int UnchargedShotDamage = 3;
+    public int UnchargedShotDamage = 10;
 
-    [SerializeField, Tooltip("The damage a charged shot deals to an enemy."), Range(1, 25)]
-    public int ChargedShotDamage = 10;
+    [SerializeField, Tooltip("The damage a charged shot deals to an enemy."), Range(1, 100)]
+    public int ChargedShotDamage = 40;
     
     [HideInInspector]
     public bool Fired; // Whether the shot has been fired.
@@ -82,11 +82,17 @@ public class SecondaryShot : MonoBehaviour
         if (Fired)
         {
             // Destroy an enemy that has been collided with. Will change once enemies have health.
-            if (other.tag == "Enemy" || other.tag == "enemy")
+            if (other.transform.root.tag == "Enemy" || other.transform.root.tag == "enemy")
             {
-                // TODO: Lessen enemy's health and only destroy if health <= 0
-                // TODO: Check if shot is charged, do charged damage if so, uncharged damage otherwise
-                other.gameObject.SetActive(false);
+                if (FullyCharged)
+                {
+                    other.transform.root.GetComponent<EnemyHealth>().TakeDamage(ChargedShotDamage);
+                }
+                else
+                {
+                    other.transform.root.GetComponent<EnemyHealth>().TakeDamage(UnchargedShotDamage);
+                }
+
                 this.gameObject.SetActive(false);
             }
         }

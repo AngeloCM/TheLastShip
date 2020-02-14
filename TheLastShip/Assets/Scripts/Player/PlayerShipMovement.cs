@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,6 +43,10 @@ public class PlayerShipMovement : MonoBehaviour
 
     private Vector3 CameraTargetLocation;
 
+    private bool isInKnockback;
+    private float knockbackMaxAngle = 25f;
+    private bool wiggleRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +63,39 @@ public class PlayerShipMovement : MonoBehaviour
         UpdatePlayerShipLocation();
 
         UpdateCameraLocation();
+
+        if (isInKnockback)
+        {
+            UpdateWiggle();
+        }
+    }
+
+    // Wiggle ship to reflect knockback state.
+    // TODO: Probably should be replaced with a proper animation.
+    private void UpdateWiggle()
+    {
+        if (wiggleRight)
+        {
+            PlayerShipModel.transform.localEulerAngles = Vector3.Slerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, 0f), 0.3f);
+
+            if (PlayerShipModel.transform.localEulerAngles.z > 180f || PlayerShipModel.transform.localEulerAngles.z <= (knockbackMaxAngle * 0.1f))
+            {
+                PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, 0f); // Clamp
+
+                wiggleRight = false; // reverse wiggle direction
+            }
+        }
+        else
+        {
+            PlayerShipModel.transform.localEulerAngles = Vector3.Slerp(PlayerShipModel.transform.localEulerAngles, new Vector3(0f, 0f, knockbackMaxAngle), 0.3f);
+
+            if (PlayerShipModel.transform.localEulerAngles.z >= (knockbackMaxAngle * 0.9f))
+            {
+                PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, knockbackMaxAngle); // Clamp
+
+                wiggleRight = true; // reverse wiggle direction
+            }
+        }
     }
 
     private void UpdatePlayerShipLocation()
@@ -102,5 +140,17 @@ public class PlayerShipMovement : MonoBehaviour
                 CameraTargetLocation = cameraPosDecelerating;
                 break;
         }
+    }
+
+    internal void InitiateKnockbackWiggle()
+    {
+        isInKnockback = true;
+    }
+
+    internal void EndKnockbackWiggle()
+    {
+        isInKnockback = false;
+
+        PlayerShipModel.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 }
