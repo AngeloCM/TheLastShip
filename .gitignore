@@ -7,3 +7,4 @@ Temp/
 /obj/
 obj/
 *.csproj
+*.meta
