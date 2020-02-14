@@ -376,8 +376,11 @@ public class PlayerController : MonoBehaviour
         if (shotTimer <= 0f)
         {
             // Instantiate two shots on the left and right blasters.
-            Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformLeft"));
-            Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformRight"));
+            GameObject shotL = Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformLeft"));
+            GameObject shotR = Instantiate(PlayerShotPrefab, PlayerShotTransform.Find("PlayerShotTransformRight"));
+
+            shotL.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
+            shotR.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
 
             shotTimer = ShotCooldown;
         }
