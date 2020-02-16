@@ -7,26 +7,54 @@ using UnityEngine;
 
 namespace Assets.Scripts.AI.States
 {
-    public class IdleState : FSM
+    [CreateAssetMenu(fileName = "IdleState", menuName = "Unity-FSM/States/Idle", order = 1)]
+
+    public class IdleState : AbstractFSMState
     {
+        [SerializeField]
+        float _idleDuration = 3f;
+
+        float _totalDuration;
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            StateType = FSMStateType.IDLE;
+        }
+
         public override bool EnterState()
         {
-            base.EnterState();
-            Debug.Log("ENTERED IDLE STATE");
+            EnteredState = base.EnterState();
 
-            return true;
+            if (EnteredState)
+            {
+                Debug.Log("ENTERED IDLE STATE");
+                _totalDuration = 0f;
+            }
+            
+            return EnteredState;
         }
 
         public override void UpdateState()
         {
-            throw new NotImplementedException();
+            if (EnteredState)
+            {
+                _totalDuration += Time.deltaTime;
+                Debug.Log("UPDATING IDLE STATE: " + _totalDuration + " seconds.");
+
+                if (_totalDuration >= _idleDuration)
+                {
+                    _fsm.EnterState(FSMStateType.FLY);
+                }
+            }
+            
         }
 
         public override bool ExitState()
         {
             base.ExitState();
 
-            Debug.Log("ENTERED IDLE STATE");
+            Debug.Log("EXITING IDLE STATE");
             return true;
         }
     }
