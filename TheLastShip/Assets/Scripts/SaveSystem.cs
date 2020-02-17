@@ -14,7 +14,7 @@ public class SaveSystem : MonoBehaviour
         string path = Application.persistentDataPath + "/player.exe";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        GameplayData data = new GameplayData(player);
+        //GameplayData data = new GameplayData(player);
     }
 
 
