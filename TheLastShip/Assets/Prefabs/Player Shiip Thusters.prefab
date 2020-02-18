@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4574839279824890118}
   - component: {fileID: 4574839279824890119}
   - component: {fileID: 4574839279824890116}
+  - component: {fileID: 5599601418497803208}
   m_Layer: 0
   m_Name: Player Shiip Thusters
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4574839279824890117}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1999.988, y: 0.0199, z: -0.0623}
-  m_LocalScale: {x: 0.010246771, y: 0.019648694, z: 0.014582082}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4753,3 +4754,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5599601418497803208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574839279824890117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233a509b8f352824bb949525bd2fe4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumEmissionSpeed: 8
+  minimumEmissionSpeed: 3.8
+  maximumEmissionSize: 10
+  minimumEmissionSize: 4
