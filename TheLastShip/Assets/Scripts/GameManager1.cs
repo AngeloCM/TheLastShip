@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int health;
     public float[] Playerposition;
     public float[] Cargoposition;
-   
+
     //Load next scene based on index position in the buildsettings tab.
     public void LoadByIndex(int sceneIndex)
     {
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 #endif
         Debug.Log("Application Closed");
     }
-   //Saves position of players and cargoship based on position of the last checkpoint reached.
+    //Saves position of players and cargoship based on position of the last checkpoint reached.
     public void GameplayData(PlayerController player)
     {
         // health = HealthSlider.Maxhealth;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         Playerposition[1] = player.transform.position.y;
         Playerposition[2] = player.transform.position.z;
 
-       
+
 
     }
 }
