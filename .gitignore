@@ -8,3 +8,5 @@ Temp/
 obj/
 *.csproj
 *.meta
+*.asset
+TheLastShip/Assets/WwiseSettings.xml
