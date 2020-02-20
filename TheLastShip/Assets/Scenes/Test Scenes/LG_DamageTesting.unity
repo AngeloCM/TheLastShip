@@ -1402,11 +1402,6 @@ PrefabInstance:
       propertyPath: shieldBar
       value: 
       objectReference: {fileID: 1764456824}
-    - target: {fileID: 7767952235261198086, guid: afae1227a7c392d4fbfaecdbc7978071,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afae1227a7c392d4fbfaecdbc7978071, type: 3}
 --- !u!114 &6102473637338148372 stripped
