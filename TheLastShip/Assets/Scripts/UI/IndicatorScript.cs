@@ -12,7 +12,7 @@ public class IndicatorScript : MonoBehaviour
     public OnScreenIndicator onScreenPrefab;
     public OffScreenIndicator offScreenPrefab;
     public Canvas can;
-    public List<Transform> TargetList { get; private set; }
+    public List<GameObject> TargetList { get; private set; }
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
 
@@ -29,7 +29,7 @@ public class IndicatorScript : MonoBehaviour
         void Awake()
         {
            
-            TargetList = new List<Transform>();
+            TargetList = new List<GameObject>();
 
             AddCargoShipIndicatorToTargetList();
             AddEnemyIndicatorsToTargetList();
@@ -70,7 +70,7 @@ public class IndicatorScript : MonoBehaviour
         {
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
         {
-            TargetList.Add(obj.transform);
+            TargetList.Add(obj);
         }
         Debug.Log(TargetList.Count);
     }
@@ -79,7 +79,7 @@ public class IndicatorScript : MonoBehaviour
         {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CargoShip"))
             {
-                TargetList.Add(obj.transform);
+                TargetList.Add(obj);
             }
             Debug.Log(TargetList.Count);
         }
@@ -87,14 +87,18 @@ public class IndicatorScript : MonoBehaviour
         private void PlaceIndicatorAboveTarget()
         {
             resetPool();
-            foreach (Transform t in TargetList)
+            foreach (GameObject t in TargetList)
             {
-                heading = t.position - playerReference.GetComponentInChildren<Camera>().transform.position;
+            if (t.active)
+            {
+
+
+                heading = t.transform.position - playerReference.GetComponentInChildren<Camera>().transform.position;
                 Vector3 screenPosition = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position);
 
                 if (screenPosition.z > 0 &&
-                    screenPosition.x> 0 && screenPosition.x < Screen.width &&
-                    screenPosition.y> 0 &&  screenPosition.y < Screen.height)
+                    screenPosition.x > 0 && screenPosition.x < Screen.width &&
+                    screenPosition.y > 0 && screenPosition.y < Screen.height)
                 {
 
                     OnScreenIndicator indicator = acquireIndicators();
@@ -103,11 +107,11 @@ public class IndicatorScript : MonoBehaviour
 
                 else
                 {
-                    if(screenPosition.z <0)
+                    if (screenPosition.z < 0)
                     {
-                        screenPosition *= -1;                 
+                        screenPosition *= -1;
                     }
-                    Vector3 screenCenter = new Vector3(Screen.width, Screen.height, 0)/2;
+                    Vector3 screenCenter = new Vector3(Screen.width, Screen.height, 0) / 2;
                     screenPosition -= screenCenter;
                     float angle = Mathf.Atan2(screenPosition.y, screenPosition.x);
                     angle -= 90 * Mathf.Deg2Rad;
@@ -137,7 +141,7 @@ public class IndicatorScript : MonoBehaviour
                     }
 
                     screenPosition += screenCenter;
-               
+
 
 
 
@@ -145,9 +149,10 @@ public class IndicatorScript : MonoBehaviour
                     offScreen.GetComponentInChildren<Image>().transform.position = screenPosition;
                     offScreen.GetComponentInChildren<Image>().transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
 
-               
+
 
                 }
+            }
             }
         cleanLists();
         }
@@ -199,17 +204,19 @@ public class IndicatorScript : MonoBehaviour
     {
         while(indicatorList.Count > targetIndex)
         {
-            OnScreenIndicator obj = indicatorList[indicatorList.Count - 1];
+            OnScreenIndicator obj = indicatorList[indicatorList.Count -1];
             indicatorList.Remove(obj);
             Destroy(obj.gameObject);
         }
         while (offScreenList.Count > offScreenIndex)
         {
-            OffScreenIndicator obj = offScreenList[offScreenList.Count - 1];
-            offScreenList.Remove(obj);
-            Destroy(obj.gameObject);
+            OffScreenIndicator obj2 = offScreenList[offScreenList.Count -1];
+            offScreenList.Remove(obj2);
+            Destroy(obj2.gameObject);
         }
     }
+
+
     }
 
 
