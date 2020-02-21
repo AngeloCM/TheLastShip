@@ -19,7 +19,7 @@ public class CheckPointUpdater : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider )
     {
-        if (collider.gameObject.tag == "CargoShip")
+        if (collider.transform.root.tag == "CargoShip")
         {
             SaveSystem.UpdateCheckPoint(CargoShipPosition, PlayerShipPosition, CargoShipHealth.GetCurrentValue(), PlayerShipHealth.GetCurrentValue(), CheckPointNumber);
         }

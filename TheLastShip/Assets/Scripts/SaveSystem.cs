@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public static class SaveSystem 
 {
-    public static Vector3 CargoShipPosition;
-    public static Vector3 PlayerShipPosition;
+    public static Vector3 CargoShipPosition = new Vector3(-23f, -12f, -331f);
+    public static Vector3 PlayerShipPosition = new Vector3(50f, 50f, -400f);
 
     public static float CargoShipHealth;
     public static float PlayerShipHealth;
