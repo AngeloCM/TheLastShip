@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 8641219988694627811}
   m_Layer: 0
   m_Name: CargoShipGameObject
-  m_TagString: Untagged
+  m_TagString: CargoShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

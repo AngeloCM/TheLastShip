@@ -1,21 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+
 /// <summary>
 /// Store data automatically as player reaches checkpoints.
 /// </summary>
-public class SaveSystem : MonoBehaviour
+public static class SaveSystem 
 {
-    public static void SaveCheckpoint (PlayerController player)
+    public static Vector3 CargoShipPosition;
+    public static Vector3 PlayerShipPosition;
+
+    public static float CargoShipHealth;
+    public static float PlayerShipHealth;
+
+    public static int CheckPointNumber; 
+
+    public static void UpdateCheckPoint (Vector3 cargo, Vector3 player, float cargohp, float playerhp , int checkpointnum )
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.exe";
-        FileStream stream = new FileStream(path, FileMode.Create);
+        CargoShipPosition = cargo;
+        PlayerShipPosition = player;
 
-        //GameplayData data = new GameplayData(player);
+        CargoShipHealth = cargohp;
+        PlayerShipHealth = playerhp;
+
+        CheckPointNumber = checkpointnum;
     }
-
-
 }
