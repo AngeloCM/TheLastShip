@@ -1820,6 +1820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CargoShipGameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8641219988694627811, guid: 3bc7974f13a37094ca33d0096f9891ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bc7974f13a37094ca33d0096f9891ce, type: 3}
 --- !u!1 &8641219987877110525 stripped
@@ -1828,3 +1833,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8641219987877110524}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8641219987877110526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641219987877110525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47e1c2b117591b4ebc48e370ff8f3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CargoShipSpeed: 30
