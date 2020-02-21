@@ -133,5 +133,12 @@ public class DamageHandler : MonoBehaviour
         {
             shieldBar.DamageShield(dmg);
         }
+
+        // Kill by calling DeathLossTrigger.Die on this game object if health <= 0
+        // Note that this game object must have a DeathLossTrigger
+        if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0)
+        {
+            this.GetComponent<DeathLossTrigger>().Die();
+        }
     }
 }
