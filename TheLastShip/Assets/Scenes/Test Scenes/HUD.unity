@@ -198,21 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b481f3cae49ccfb41a025d8b94e2d3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 78886cb8e25a21f4eb69655e2f8c473d,
-    type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  diffractionFlags: 11
-  engineLogging: 0
 --- !u!4 &446627669
 Transform:
   m_ObjectHideFlags: 0
@@ -654,6 +639,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e508ccb66f29c0842a905f36a29f12ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1497294627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 50774123993616755, guid: 8f699671a30707247979ced4a346b720,
+    type: 3}
+  m_PrefabInstance: {fileID: 7790302342568087728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3080f8395d8870540969dab2e6106a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1799752257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -851,6 +848,11 @@ PrefabInstance:
       propertyPath: PlayerShipHealth
       value: 
       objectReference: {fileID: 1942944907}
+    - target: {fileID: 3822003656403673024, guid: 598c4071666d580438f028a78c155882,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3822003656403673025, guid: 598c4071666d580438f028a78c155882,
         type: 3}
       propertyPath: CargoShipHealth
@@ -1010,6 +1012,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 6102473637338148374, guid: afae1227a7c392d4fbfaecdbc7978071,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1497294627}
+    - target: {fileID: 6102473637338148374, guid: afae1227a7c392d4fbfaecdbc7978071,
+        type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 1413194067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afae1227a7c392d4fbfaecdbc7978071, type: 3}
 --- !u!114 &6102473637338148372 stripped
