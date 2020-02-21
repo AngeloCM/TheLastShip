@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 /// <summary>
 /// This script controls the scenes, save data, and checkpoints.
@@ -24,11 +25,28 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject BossTrigger; //Triggers boss to appear.
 
+    private GameObject cargoShip;
+    private GameObject playerShip;
+
 
     //Select a scene to load by typing in their index number.
     public void LoadByIndex(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    private void Awake()
+    {
+        PositionShips();
+    }
+
+    private void PositionShips()
+    {
+        cargoShip = GameObject.FindGameObjectWithTag("CargoShip");
+        playerShip = GameObject.FindGameObjectWithTag("Player");
+
+        cargoShip.transform.position = SaveSystem.CargoShipPosition;
+        playerShip.transform.position = SaveSystem.PlayerShipPosition;
     }
 
     //Forces the game to close.
