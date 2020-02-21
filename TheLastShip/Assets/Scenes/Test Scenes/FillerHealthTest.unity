@@ -1568,8 +1568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87d321b32dd92e4390e22a4e47b73fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!20 &1211824604
 Camera:
   m_ObjectHideFlags: 0
@@ -1639,16 +1637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0631383c29b95f4dbef10c09abc4159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1341522834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,21 +1666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7e723b58fcf5e46b4dff02858b312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 25e3a7961735dd34d8607b57e8d52df2,
-    type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  diffractionFlags: 11
-  engineLogging: 0
 --- !u!4 &1341522836
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,8 +1884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87d321b32dd92e4390e22a4e47b73fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &1484855524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1925,16 +1896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0631383c29b95f4dbef10c09abc4159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!20 &1484855528 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 40360095967338026, guid: afae1227a7c392d4fbfaecdbc7978071,
@@ -1982,7 +1943,7 @@ GameObject:
   - component: {fileID: 1762084021}
   - component: {fileID: 1762084022}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: IndicatorObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2025,6 +1986,8 @@ MonoBehaviour:
   offScreenPrefab: {fileID: 4415204385407456704, guid: 75403ea49c85ae7438267b5842fa2c1a,
     type: 3}
   can: {fileID: 39858062}
+  enemyImage: {fileID: 21300000, guid: 6d7b5d72581e8ca48b333e83a25d1514, type: 3}
+  cargoImage: {fileID: 21300000, guid: 3db3669464633034ea94c397dabc719c, type: 3}
 --- !u!1 &1816854361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2053,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837431758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837431760}
+  - component: {fileID: 1837431759}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1837431759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837431758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ee04d1228990f4f8c9d1921da7c9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: bab71340e26b3ff47a6e5da894f8f7cc,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  diffractionFlags: 11
+  engineLogging: 0
+--- !u!4 &1837431760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837431758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890556896
 GameObject:

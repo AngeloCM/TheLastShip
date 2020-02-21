@@ -15,6 +15,8 @@ public class IndicatorScript : MonoBehaviour
     public List<GameObject> TargetList { get; private set; }
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
+    [SerializeField]
+    private Sprite enemyImage, cargoImage;
 
         //public List<ShipIndicator> indicatorPool;
         //public List<ShipIndicatorArrow> arrowIndicatorPool;
@@ -91,8 +93,6 @@ public class IndicatorScript : MonoBehaviour
             {
             if (t.active)
             {
-
-
                 heading = t.transform.position - playerReference.GetComponentInChildren<Camera>().transform.position;
                 Vector3 screenPosition = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position);
 
@@ -102,6 +102,7 @@ public class IndicatorScript : MonoBehaviour
                 {
 
                     OnScreenIndicator indicator = acquireIndicators();
+                    //indicator.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
                     indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
                 }
 
@@ -146,6 +147,7 @@ public class IndicatorScript : MonoBehaviour
 
 
                     OffScreenIndicator offScreen = acquireOffScreenIndicator();
+                    offScreen.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
                     offScreen.GetComponentInChildren<Image>().transform.position = screenPosition;
                     offScreen.GetComponentInChildren<Image>().transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
 
@@ -153,7 +155,7 @@ public class IndicatorScript : MonoBehaviour
 
                 }
             }
-            }
+          }
         cleanLists();
         }
 
@@ -213,6 +215,19 @@ public class IndicatorScript : MonoBehaviour
             OffScreenIndicator obj2 = offScreenList[offScreenList.Count -1];
             offScreenList.Remove(obj2);
             Destroy(obj2.gameObject);
+        }
+    }
+
+    private Sprite CheckWhatTagForTexture(GameObject t)
+    {
+
+        if(t.tag == "Enemy")
+        {
+            return enemyImage;
+        }
+        else
+        {
+            return cargoImage;
         }
     }
 
