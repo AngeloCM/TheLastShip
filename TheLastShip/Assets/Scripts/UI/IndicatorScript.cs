@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
    
-    public Transform playerReference;
+    private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
     public OnScreenIndicator onScreenPrefab;
@@ -30,7 +30,7 @@ public class IndicatorScript : MonoBehaviour
 
         void Awake()
         {
-           
+            playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
 
             AddCargoShipIndicatorToTargetList();

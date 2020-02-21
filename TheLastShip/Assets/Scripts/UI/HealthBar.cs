@@ -42,9 +42,8 @@ public class HealthBar : MonoBehaviour
                 barManager.DecreaseValue(Damage);
                 SetHealthBar(barManager.GetNormalizedValue());
             }
-
         }
-        else
+        else if(!shieldBar)
         {
             barManager.DecreaseValue(Damage);
             SetHealthBar(barManager.GetNormalizedValue());
