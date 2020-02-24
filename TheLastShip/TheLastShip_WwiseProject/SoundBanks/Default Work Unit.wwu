@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C0639F98-811C-4964-A9B9-A69E7EE00514}" SchemaVersion="97">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{C0639F98-811C-4964-A9B9-A69E7EE00514}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C0639F98-811C-4964-A9B9-A69E7EE00514}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MainBank" ID="{69BB6FDE-8D73-4D5B-BC1D-34BB9584DF97}">
+					<ObjectInclusionList>
+						<ObjectRef Name="plr_shoot_main" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="plr_shield_damage" ID="{3A257548-FBC3-448A-9C24-669C8310A36C}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

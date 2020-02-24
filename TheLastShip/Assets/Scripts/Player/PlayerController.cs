@@ -382,6 +382,10 @@ public class PlayerController : MonoBehaviour
             shotL.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
             shotR.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
 
+            // audio ckrueger vvv
+            PlaySoundPrimaryShot();
+            // audio ckrueger ^^^
+
             shotTimer = ShotCooldown;
         }
 
@@ -428,4 +432,21 @@ public class PlayerController : MonoBehaviour
 
         currentChargeShot = null; // Set to null so we can check if there is a shot currently being charged
     }
+
+    //ckrueger audio vvv
+    private void PlaySoundPrimaryShot()
+    {
+        AkSoundEngine.PostEvent("plr_shoot_main", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotCharge()
+    {
+
+    }
+
+    private void PlaySoundSecondaryShotRelease()
+    {
+
+    }
+    //ckrueger audio ^^^
 }

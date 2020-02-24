@@ -132,6 +132,17 @@ public class DamageHandler : MonoBehaviour
         else
         {
             shieldBar.DamageShield(dmg);
+
+            // audio ckrueger vvv
+            PlaySoundDamageShield();
+            // audio ckrueger ^^^
         }
     }
+
+    // audio ckrueger vvv
+    public void PlaySoundDamageShield()
+    {
+        AkSoundEngine.PostEvent("plr_shield_damage", gameObject);
+    }
+    // audio ckrueger ^^^
 }
