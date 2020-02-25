@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 2338548140980350805}
   - component: {fileID: 1177640916}
   - component: {fileID: 6102473637338148374}
+  - component: {fileID: 5766849027330119038}
   - component: {fileID: 4677924273161203294}
   m_Layer: 0
   m_Name: PlayerShip
@@ -227,8 +228,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   shieldBar: {fileID: 0}
-  KnockbackDamage: 10
-  KnockbackSpeed: 14
+--- !u!114 &5766849027330119038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40360096672153373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98149d626ea1ef5469084e0f97023571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackDamage: 4
+  KnockbackSpeed: 30
 --- !u!114 &4677924273161203294
 MonoBehaviour:
   m_ObjectHideFlags: 0
