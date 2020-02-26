@@ -13,9 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLR_PRIMARY_SHOOT = 614170710U;
+        static const AkUniqueID PLR_SECONDARY_CHARGE = 2898173329U;
         static const AkUniqueID PLR_SHIELD_DAMAGE = 3600127465U;
-        static const AkUniqueID PLR_SHOOT_MAIN = 3218545419U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PLAYER_SPEED = 1062779386U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

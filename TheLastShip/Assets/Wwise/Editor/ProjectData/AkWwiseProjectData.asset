@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586190952722431281
+    m_lastTime: -8586189124738744881
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,8 +56,44 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586191080201615477
+    m_lastTime: -8586189124738654854
     List:
+    - name: plr_primary_shoot
+      guid: c3643320be651044894ce6b81d34e78e
+      id: 614170710
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_primary_shoot
+        ObjectType: 3
+      Path: Default Work Unit\plr_primary_shoot
+      maxAttenuation: 0
+      maxDuration: 0.30966
+      minDuration: 0.30522
+    - name: plr_secondary_charge
+      guid: fd5e653ec68fb945bca2485694e14aa9
+      id: 2898173329
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_charge
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: plr_secondary_charge_stop
+      guid: 46fd0a82a5a21046a4005f281fd601ca
+      id: 33059316
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_charge_stop
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_charge_stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: plr_shield_damage
       guid: 4875253ac3fb8a449c24669c8310a36c
       id: 3600127465
@@ -70,25 +106,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.038821
       minDuration: 0.776795
-    - name: plr_shoot_main
-      guid: c3643320be651044894ce6b81d34e78e
-      id: 3218545419
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: plr_shoot_main
-        ObjectType: 3
-      Path: Default Work Unit\plr_shoot_main
-      maxAttenuation: 0
-      maxDuration: 0.30966
-      minDuration: 0.30522
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3b741db44f968f41bb1ba71752cd7b03
     GuidInternal: 
-    m_lastTime: -8586196968350508119
-    List: []
+    m_lastTime: -8586189165272725947
+    List:
+    - name: Player_Speed
+      guid: 4900e5ac92c90f46b35826c9c01dcc6b
+      id: 1062779386
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Player_Speed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit

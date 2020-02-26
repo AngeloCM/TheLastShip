@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="plr_shoot_main" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}">
+				<Event Name="plr_primary_shoot" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}">
 					<ChildrenList>
 						<Action Name="" ID="{F57D1295-E956-4771-9840-ABA8E7690FD9}" ShortID="756629039">
 							<ReferenceList>
@@ -20,6 +20,31 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Shield Hit" ID="{6127ED1F-43ED-4796-B503-977D0987D6E4}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plr_secondary_charge" ID="{3E655EFD-8FC6-45B9-BCA2-485694E14AA9}">
+					<ChildrenList>
+						<Action Name="" ID="{32DB9845-4874-4368-9518-2A6E6F041DC2}" ShortID="557076350">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Secondary Charge and Hold" ID="{8149A919-346F-4179-9F82-50A2B0493150}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plr_secondary_charge_stop" ID="{820AFD46-A2A5-4610-A400-5F281FD601CA}">
+					<ChildrenList>
+						<Action Name="" ID="{714DC222-7A56-4D52-BA3D-76C30F5CC64A}" ShortID="320266232">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Secondary Charge and Hold" ID="{8149A919-346F-4179-9F82-50A2B0493150}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

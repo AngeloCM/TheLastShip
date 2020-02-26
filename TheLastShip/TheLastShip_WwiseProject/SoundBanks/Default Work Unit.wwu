@@ -5,8 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="MainBank" ID="{69BB6FDE-8D73-4D5B-BC1D-34BB9584DF97}">
 					<ObjectInclusionList>
-						<ObjectRef Name="plr_shoot_main" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="plr_primary_shoot" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_shield_damage" ID="{3A257548-FBC3-448A-9C24-669C8310A36C}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="plr_secondary_charge" ID="{3E655EFD-8FC6-45B9-BCA2-485694E14AA9}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="plr_secondary_charge_stop" ID="{820AFD46-A2A5-4610-A400-5F281FD601CA}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

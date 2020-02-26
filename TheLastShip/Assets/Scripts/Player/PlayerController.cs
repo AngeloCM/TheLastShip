@@ -187,6 +187,10 @@ public class PlayerController : MonoBehaviour
         else // If player can't move, set relevant variables to stop from shooting, etc.
         {
             StopFiring();
+
+            // audio ckrueger vvv
+            StopSoundSecondaryShotCharge();
+            // audio ckrueger ^^^
         }
     }
 
@@ -401,6 +405,10 @@ public class PlayerController : MonoBehaviour
 
         firing = true;
 
+        // audio ckrueger vvv
+        PlaySoundSecondaryShotCharge();
+        // audio ckrueger ^^^
+
         // Scale the charge shot up gradually to indicate its progress towards full charge.
         float chargeShotCurrentScale = chargeShotMinScale + (chargeShotMaxScale - chargeShotMinScale) * (chargeTimer / SecondaryChargeTime);
 
@@ -409,6 +417,10 @@ public class PlayerController : MonoBehaviour
         if (chargeTimer >= SecondaryChargeTime / 3)
         {
             currentChargeShot.GetComponent<SecondaryShot>().ReadyToFire = true;
+
+            // audio ckrueger vvv
+            PlaySoundSecondaryShotCharge();
+            // audio ckrueger ^^^
         }
 
         if (chargeTimer >= SecondaryChargeTime)
@@ -431,22 +443,26 @@ public class PlayerController : MonoBehaviour
         currentChargeShot.GetComponent<SecondaryShot>().Fired = true;
 
         currentChargeShot = null; // Set to null so we can check if there is a shot currently being charged
+
+        // audio ckrueger vvv
+        // PLAY SOUND SECONDARY FIRE HERE //////////////////////////////////////////////
+        // audio ckrueger ^^^
     }
 
     //ckrueger audio vvv
     private void PlaySoundPrimaryShot()
     {
-        AkSoundEngine.PostEvent("plr_shoot_main", gameObject);
+        AkSoundEngine.PostEvent("plr_primary_shoot", gameObject);
     }
 
     private void PlaySoundSecondaryShotCharge()
     {
-
+        AkSoundEngine.PostEvent("plr_secondary_charge", gameObject);
     }
 
-    private void PlaySoundSecondaryShotRelease()
+    private void StopSoundSecondaryShotCharge()
     {
-
+        AkSoundEngine.PostEvent("plr_secondary_charge_stop)", gameObject);
     }
     //ckrueger audio ^^^
 }
