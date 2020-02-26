@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 7997607682363521341}
   - component: {fileID: 7997607682363521330}
   - component: {fileID: 7997607682363521337}
+  - component: {fileID: 2040720445}
+  - component: {fileID: 5266156511585464164}
   m_Layer: 0
   m_Name: EnemyPlaceholder
   m_TagString: Enemy
@@ -137,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604b89c69a42b9d47b39b468982bafe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 150
+  MaxHealth: 50
 --- !u!114 &7997607682363521337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +155,30 @@ MonoBehaviour:
   enemyShot: {fileID: 6417318124552731960, guid: 825330eb399b46044adcb029da720982,
     type: 3}
   shotSpawn: {fileID: 7997607680992213189}
+--- !u!114 &2040720445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997607682363521331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2935e7c022b11a4d9b49e2f1558826f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!114 &5266156511585464164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997607682363521331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47aba3fc94879145aeafb9b54b282c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 2850293969703777462, guid: ff02eaf29eb854f408e46f91bff8dc65,
+    type: 3}

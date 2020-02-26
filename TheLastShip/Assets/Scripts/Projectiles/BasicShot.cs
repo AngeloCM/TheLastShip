@@ -64,6 +64,8 @@ public class BasicShot : MonoBehaviour
             {
                 // TODO: Lessen enemy's health and only destroy if health <= 0
                 other.gameObject.GetComponent<EnemyHealth>().TakeDamage(BasicShotDamage);
+
+                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
                 this.gameObject.SetActive(false);
             }
         }
@@ -76,6 +78,8 @@ public class BasicShot : MonoBehaviour
             {
                 // TODO: Lessen enemy's health and only destroy if health <= 0
                 other.transform.root.GetComponent<DamageHandler>().TakeDamage(BasicShotDamage);
+
+                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
                 this.gameObject.SetActive(false);
             }
         }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8218784657595153384}
   - component: {fileID: 4130709822290719167}
   - component: {fileID: 9078351263910326351}
+  - component: {fileID: 1353043203866011506}
   m_Layer: 0
   m_Name: EnemyBasicShot
   m_TagString: Untagged
@@ -126,3 +127,17 @@ MonoBehaviour:
   ShotSpeed: 20
   DespawnTime: 5
   BasicShotDamage: 5
+--- !u!114 &1353043203866011506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417318124552731960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47aba3fc94879145aeafb9b54b282c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 3367357516694639467, guid: 76baefd6cb2d4b44aabe16c373cf5653,
+    type: 3}

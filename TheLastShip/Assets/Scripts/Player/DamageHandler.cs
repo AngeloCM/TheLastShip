@@ -34,6 +34,9 @@ public class DamageHandler : MonoBehaviour
         // Note that this game object must have a DeathLossTrigger
         if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0)
         {
+
+            this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
+
             this.GetComponent<DeathLossTrigger>().Die();
         }
     }

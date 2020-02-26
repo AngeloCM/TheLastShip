@@ -196,6 +196,10 @@ public class SecondaryShot : MonoBehaviour
     // Set a few variables so that Update knows to expand the shot
     private void BeginExpand()
     {
+        this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
+
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
         hasCollided = true;
 
         isExpanding = true;
