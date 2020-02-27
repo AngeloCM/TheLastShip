@@ -21,6 +21,8 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             // todo: Die -- should have animation/explosion/etc.
+
+            this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
             this.gameObject.SetActive(false);
         }
     }

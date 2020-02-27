@@ -64,6 +64,8 @@ public class BasicShot : MonoBehaviour
             {
                 // TODO: Lessen enemy's health and only destroy if health <= 0
                 other.gameObject.GetComponent<EnemyHealth>().TakeDamage(BasicShotDamage);
+
+                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
                 this.gameObject.SetActive(false);
             }
         }
@@ -71,10 +73,13 @@ public class BasicShot : MonoBehaviour
         if (this.shotSource == ShotSources.enemy)
         {
             // Destroy an enemy that has been collided with. Will change once enemies have health.
-            if (other.transform.root.tag == "Player" || other.transform.root.tag == "player")
+            if (other.transform.root.tag == "Player" || other.transform.root.tag == "player" ||
+                other.transform.root.tag == "CargoShip")
             {
                 // TODO: Lessen enemy's health and only destroy if health <= 0
                 other.transform.root.GetComponent<DamageHandler>().TakeDamage(BasicShotDamage);
+
+                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
                 this.gameObject.SetActive(false);
             }
         }

@@ -9,6 +9,7 @@ public class TestButtonDamage : MonoBehaviour
     public ThrusterBarScript thruster;
     public ProgressBarScript progress;
     public ShieldBar shield;
+    public HealthBar cargo;
     void Awake()
     {
 
@@ -21,12 +22,13 @@ public class TestButtonDamage : MonoBehaviour
     {
         filler.Damage(17);
         shield.DamageShield((40));
-        
+        cargo.Damage(17);
     }
 
     public void FillerHealHealth()
     {
         filler.Heal(20);
+        cargo.Heal(20);
         
     }
 }
