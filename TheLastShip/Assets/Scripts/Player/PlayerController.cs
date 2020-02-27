@@ -84,6 +84,10 @@ public class PlayerController : MonoBehaviour
         CurrentAcceleration = AccelerationState.coasting;
 
         shotTimer = 0f;
+
+        // audio ckrueger vvv
+        PlaySoundPlayerEngine();
+        // audio ckrueger ^^^
     }
 
     // Update is called once per frame
@@ -187,7 +191,16 @@ public class PlayerController : MonoBehaviour
         else // If player can't move, set relevant variables to stop from shooting, etc.
         {
             StopFiring();
+
+            // audio ckrueger vvv
+            StopSoundSecondaryShotCharge();
+            // audio ckrueger ^^^
         }
+
+        // audio ckrueger vvv
+        // adjusts engine sound according to CurrentSpeed
+        AkSoundEngine.SetRTPCValue("Player_Speed", CurrentSpeed);
+        // audio ckrueger ^^^
     }
 
     private void StopFiring()
@@ -382,6 +395,10 @@ public class PlayerController : MonoBehaviour
             shotL.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
             shotR.GetComponent<BasicShot>().shotSource = BasicShot.ShotSources.player;
 
+            // audio ckrueger vvv
+            PlaySoundPrimaryShot();
+            // audio ckrueger ^^^
+
             shotTimer = ShotCooldown;
         }
 
@@ -397,6 +414,10 @@ public class PlayerController : MonoBehaviour
 
         firing = true;
 
+        // audio ckrueger vvv
+        PlaySoundSecondaryShotCharge();
+        // audio ckrueger ^^^
+
         // Scale the charge shot up gradually to indicate its progress towards full charge.
         float chargeShotCurrentScale = chargeShotMinScale + (chargeShotMaxScale - chargeShotMinScale) * (chargeTimer / SecondaryChargeTime);
 
@@ -405,6 +426,10 @@ public class PlayerController : MonoBehaviour
         if (chargeTimer >= SecondaryChargeTime / 3)
         {
             currentChargeShot.GetComponent<SecondaryShot>().ReadyToFire = true;
+
+            // audio ckrueger vvv
+            PlaySoundSecondaryShotCharge();
+            // audio ckrueger ^^^
         }
 
         if (chargeTimer >= SecondaryChargeTime)
@@ -427,5 +452,38 @@ public class PlayerController : MonoBehaviour
         currentChargeShot.GetComponent<SecondaryShot>().Fired = true;
 
         currentChargeShot = null; // Set to null so we can check if there is a shot currently being charged
+
+        // audio ckrueger vvv
+        StopSoundSecondaryShotCharge();
+        // PLAY SOUND SECONDARY FIRE HERE //////////////////////////////////////////////
+        // audio ckrueger ^^^
     }
+
+    //ckrueger audio vvv
+    private void PlaySoundPrimaryShot()
+    {
+        AkSoundEngine.PostEvent("plr_primary_shoot", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge", gameObject);
+    }
+
+    private void StopSoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge_stop", gameObject);
+    }
+
+    private void PlaySoundPlayerEngine()
+    {
+        AkSoundEngine.PostEvent("plr_engine", gameObject);
+        Debug.Log("engine sound playing");
+    }
+
+    private void StopSoundPlayerEngine()
+    {
+        AkSoundEngine.PostEvent("plr_engine_stop", gameObject);
+    }
+    //ckrueger audio ^^^
 }

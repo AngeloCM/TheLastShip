@@ -40,4 +40,11 @@ public class DamageHandler : MonoBehaviour
             this.GetComponent<DeathLossTrigger>().Die();
         }
     }
+
+    // audio ckrueger vvv
+    public void PlaySoundDamageShield()
+    {
+        AkSoundEngine.PostEvent("plr_shield_damage", gameObject);
+    }
+    // audio ckrueger ^^^
 }

@@ -12,14 +12,164 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1586fb1ce5172784894d19889bd22067, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 960c43bf3aa6e44d86656f77bcec1e15
+    GuidInternal: 
+    m_lastTime: -8586196968352609426
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 3443d6d83dfb6f4bbc7d26eb20fcfc58
+    GuidInternal: 
+    m_lastTime: -8586196968352669444
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 989f63c01c816449a9b9a69e7ee00514
+    GuidInternal: 
+    m_lastTime: -8586188342330292951
+    List:
+    - name: MainBank
+      guid: de6fbb69738d5b4dbc1d34bb9584df97
+      id: 2880737896
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MainBank
+        ObjectType: 7
+      Path: Default Work Unit\MainBank
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b5faa3601eaa96449e1a53d331ca064a
+    GuidInternal: 
+    m_lastTime: -8586188349420515673
+    List:
+    - name: plr_engine
+      guid: 6ccedd8e2cf6184db21868a6173f54b5
+      id: 1670947946
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_engine
+        ObjectType: 3
+      Path: Default Work Unit\plr_engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: plr_engine_stop
+      guid: 10540ab1b34da74e9bd22dd82dd3cc0e
+      id: 181840089
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_engine_stop
+        ObjectType: 3
+      Path: Default Work Unit\plr_engine_stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: plr_primary_shoot
+      guid: c3643320be651044894ce6b81d34e78e
+      id: 614170710
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_primary_shoot
+        ObjectType: 3
+      Path: Default Work Unit\plr_primary_shoot
+      maxAttenuation: 0
+      maxDuration: 0.30966
+      minDuration: 0.30522
+    - name: plr_secondary_charge
+      guid: fd5e653ec68fb945bca2485694e14aa9
+      id: 2898173329
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_charge
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: plr_secondary_charge_stop
+      guid: 46fd0a82a5a21046a4005f281fd601ca
+      id: 33059316
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_charge_stop
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_charge_stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: plr_shield_damage
+      guid: 4875253ac3fb8a449c24669c8310a36c
+      id: 3600127465
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_shield_damage
+        ObjectType: 3
+      Path: Default Work Unit\plr_shield_damage
+      maxAttenuation: 0
+      maxDuration: 1.038821
+      minDuration: 0.776795
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 3b741db44f968f41bb1ba71752cd7b03
+    GuidInternal: 
+    m_lastTime: -8586188334682073779
+    List:
+    - name: Player_Speed
+      guid: 4900e5ac92c90f46b35826c9c01dcc6b
+      id: 1062779386
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Player_Speed
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 23fefae99adcf04f8742be9b26960cc2
+    GuidInternal: 
+    m_lastTime: -8586196968350779089
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 97f7b21567fc2f4d9fc6822c06f9ab20
+    GuidInternal: 
+    m_lastTime: -8586196968352239343
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0c605c37ab9f8845a30a1aa52acc4185
+    GuidInternal: 
+    m_lastTime: -8586196968351099159
+    List: []
+  ExpandedItems:
+  - /TheLastShip_WwiseProject
+  - /TheLastShip_WwiseProject/Events
+  - /TheLastShip_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
