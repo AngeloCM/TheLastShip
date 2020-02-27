@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586189124738744881
+    m_lastTime: -8586188342330292951
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,8 +56,32 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586189124738654854
+    m_lastTime: -8586188349420515673
     List:
+    - name: plr_engine
+      guid: 6ccedd8e2cf6184db21868a6173f54b5
+      id: 1670947946
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_engine
+        ObjectType: 3
+      Path: Default Work Unit\plr_engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: plr_engine_stop
+      guid: 10540ab1b34da74e9bd22dd82dd3cc0e
+      id: 181840089
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_engine_stop
+        ObjectType: 3
+      Path: Default Work Unit\plr_engine_stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: plr_primary_shoot
       guid: c3643320be651044894ce6b81d34e78e
       id: 614170710
@@ -92,8 +116,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\plr_secondary_charge_stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: plr_shield_damage
       guid: 4875253ac3fb8a449c24669c8310a36c
       id: 3600127465
@@ -111,7 +135,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3b741db44f968f41bb1ba71752cd7b03
     GuidInternal: 
-    m_lastTime: -8586189165272725947
+    m_lastTime: -8586188334682073779
     List:
     - name: Player_Speed
       guid: 4900e5ac92c90f46b35826c9c01dcc6b

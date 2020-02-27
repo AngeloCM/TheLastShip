@@ -1,18 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
+	33059316	plr_secondary_charge_stop			\Default Work Unit\plr_secondary_charge_stop	
+	181840089	plr_engine_stop			\Default Work Unit\plr_engine_stop	
 	614170710	plr_primary_shoot			\Default Work Unit\plr_primary_shoot	
+	1670947946	plr_engine			\Default Work Unit\plr_engine	
 	2898173329	plr_secondary_charge			\Default Work Unit\plr_secondary_charge	
 	3600127465	plr_shield_damage			\Default Work Unit\plr_shield_damage	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1062779386	Player_Speed			\Default Work Unit\Player_Speed	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	16333983	sx_plr_engine_slower	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_engine_slower_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_slower		1382752
 	170695096	sx_plr_shield_hit_1	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_shield_hit_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_1		176104
 	259940942	sx_plr_main_cannon_5	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_main_cannon_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_5		54688
 	270555747	sx_plr_main_cannon_4	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_main_cannon_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_4		54688
+	291291475	sx_plr_engine_whine	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_engine_whine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_whine		491544
 	330943432	sx_plr_shield_hit_4	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_shield_hit_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_4		143240
 	341271279	sx_plr_main_cannon_3	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_main_cannon_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_3		54688
 	402433319	sx_plr_main_cannon_1	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_main_cannon_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_1		54688
 	623822031	sx_plr_secondary_charge	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_secondary_charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_charge		231424
 	657373504	sx_plr_shield_hit_2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_shield_hit_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_2		183312
 	695854333	sx_plr_secondary_loop	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_secondary_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_loop		234228
+	828196131	sx_plr_engine_faster	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_engine_faster_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_faster		1382752
 	868942418	sx_plr_main_cannon_2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_main_cannon_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_2		54688
 	1008552407	sx_plr_shield_hit_3	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\SFX\sx_plr_shield_hit_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_3		175540
 

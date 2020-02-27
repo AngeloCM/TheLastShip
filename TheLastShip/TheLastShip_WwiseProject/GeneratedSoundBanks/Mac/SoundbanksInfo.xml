@@ -21,6 +21,23 @@
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1670947946" Name="plr_engine" ObjectPath="\Events\Default Work Unit\plr_engine" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="16333983" Language="SFX">
+							<ShortName>sx_plr_engine_slower.wav</ShortName>
+							<Path>SFX\sx_plr_engine_slower_D79FB2B7.wem</Path>
+						</File>
+						<File Id="291291475" Language="SFX">
+							<ShortName>sx_plr_engine_whine.wav</ShortName>
+							<Path>SFX\sx_plr_engine_whine_D79FB2B7.wem</Path>
+						</File>
+						<File Id="828196131" Language="SFX">
+							<ShortName>sx_plr_engine_faster.wav</ShortName>
+							<Path>SFX\sx_plr_engine_faster_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="181840089" Name="plr_engine_stop" ObjectPath="\Events\Default Work Unit\plr_engine_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="614170710" Name="plr_primary_shoot" ObjectPath="\Events\Default Work Unit\plr_primary_shoot" DurationType="OneShot" DurationMin="0.305220" DurationMax="0.309660">
 					<IncludedMemoryFiles>
 						<File Id="259940942" Language="SFX">
@@ -57,6 +74,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="33059316" Name="plr_secondary_charge_stop" ObjectPath="\Events\Default Work Unit\plr_secondary_charge_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" DurationType="OneShot" DurationMin="0.776795" DurationMax="1.038821">
 					<IncludedMemoryFiles>
 						<File Id="170695096" Language="SFX">
@@ -78,6 +96,9 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="1062779386" Name="Player_Speed" ObjectPath="\Game Parameters\Default Work Unit\Player_Speed"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

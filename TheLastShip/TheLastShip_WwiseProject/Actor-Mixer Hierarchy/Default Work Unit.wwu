@@ -287,6 +287,13 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<BlendContainer Name="Engine Speed" ID="{AD439372-D30C-440C-BE93-3B24F32B1F73}" ShortID="508018522">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53530E0F-64D1-41A6-AB80-7792DEE8EBEA}"/>
@@ -354,6 +361,11 @@
 						<Sound Name="sx_plr_engine_whine" ID="{A38901C0-BA31-4E00-B4FB-33AAB263C301}" ShortID="944625153">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -393,16 +405,16 @@
 									<CrossfadingInfo>
 										<LeftEdgePos>0</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>99.9995</RightEdgePos>
+										<RightEdgePos>141.99929</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="sx_plr_engine_faster" ID="{5E4EFB92-C7B3-46AE-AE3E-EA6F19E83A28}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>0.0005</LeftEdgePos>
+										<LeftEdgePos>0.00071</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>100</RightEdgePos>
+										<RightEdgePos>142</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
@@ -429,7 +441,7 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>100</XPos>
+														<XPos>142</XPos>
 														<YPos>857</YPos>
 														<Flags>37</Flags>
 													</Point>

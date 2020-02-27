@@ -84,6 +84,10 @@ public class PlayerController : MonoBehaviour
         CurrentAcceleration = AccelerationState.coasting;
 
         shotTimer = 0f;
+
+        // audio ckrueger vvv
+        PlaySoundPlayerEngine();
+        // audio ckrueger ^^^
     }
 
     // Update is called once per frame
@@ -192,6 +196,11 @@ public class PlayerController : MonoBehaviour
             StopSoundSecondaryShotCharge();
             // audio ckrueger ^^^
         }
+
+        // audio ckrueger vvv
+        // adjusts engine sound according to CurrentSpeed
+        AkSoundEngine.SetRTPCValue("Player_Speed", CurrentSpeed);
+        // audio ckrueger ^^^
     }
 
     private void StopFiring()
@@ -445,6 +454,7 @@ public class PlayerController : MonoBehaviour
         currentChargeShot = null; // Set to null so we can check if there is a shot currently being charged
 
         // audio ckrueger vvv
+        StopSoundSecondaryShotCharge();
         // PLAY SOUND SECONDARY FIRE HERE //////////////////////////////////////////////
         // audio ckrueger ^^^
     }
@@ -462,7 +472,18 @@ public class PlayerController : MonoBehaviour
 
     private void StopSoundSecondaryShotCharge()
     {
-        AkSoundEngine.PostEvent("plr_secondary_charge_stop)", gameObject);
+        AkSoundEngine.PostEvent("plr_secondary_charge_stop", gameObject);
+    }
+
+    private void PlaySoundPlayerEngine()
+    {
+        AkSoundEngine.PostEvent("plr_engine", gameObject);
+        Debug.Log("engine sound playing");
+    }
+
+    private void StopSoundPlayerEngine()
+    {
+        AkSoundEngine.PostEvent("plr_engine_stop", gameObject);
     }
     //ckrueger audio ^^^
 }

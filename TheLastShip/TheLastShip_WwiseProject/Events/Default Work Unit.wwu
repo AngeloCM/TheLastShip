@@ -50,6 +50,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="plr_engine" ID="{8EDDCE6C-F62C-4D18-B218-68A6173F54B5}">
+					<ChildrenList>
+						<Action Name="" ID="{7A57A488-71AD-48F4-99A8-2891DE469499}" ShortID="287103160">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine Speed" ID="{AD439372-D30C-440C-BE93-3B24F32B1F73}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plr_engine_stop" ID="{B10A5410-4DB3-4EA7-9BD2-2DD82DD3CC0E}">
+					<ChildrenList>
+						<Action Name="" ID="{444C1EF4-AFF6-4BC0-975F-FCDEF7A8EB56}" ShortID="1003446332">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine Speed" ID="{AD439372-D30C-440C-BE93-3B24F32B1F73}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
