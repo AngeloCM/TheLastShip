@@ -23,6 +23,10 @@ public class DamageHandler : MonoBehaviour
             else
             {
                 shieldBar.DamageShield(dmg);
+
+                // audio ckrueger vvv
+                PlaySoundDamageShield();
+                // audio ckrueger ^^^
             }
         }
         else
