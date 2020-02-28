@@ -37,7 +37,7 @@ public class IndicatorScript : MonoBehaviour
         {
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
-
+        AddCargoShipIndicatorToTargetList();
         }
 
         // Start is called before the first frame update
