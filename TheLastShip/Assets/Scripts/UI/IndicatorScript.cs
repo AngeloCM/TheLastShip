@@ -12,14 +12,16 @@ public class IndicatorScript : MonoBehaviour
     public OnScreenIndicator onScreenPrefab;
     public OffScreenIndicator offScreenPrefab;
     public Canvas can;
-    public List<GameObject> TargetList { get; private set; }
+    public List<GameObject> TargetList { get; set; }
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
     [SerializeField]
     private Sprite enemyImage, cargoImage;
 
-        //public List<ShipIndicator> indicatorPool;
-        //public List<ShipIndicatorArrow> arrowIndicatorPool;
+    //public List<ShipIndicator> indicatorPool;
+    //public List<ShipIndicatorArrow> arrowIndicatorPool;
+    [SerializeField]
+    private float radialDistanceForIcon;
 
         private Vector3 heading;
         private Text textReference;
@@ -33,8 +35,6 @@ public class IndicatorScript : MonoBehaviour
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
 
-            AddCargoShipIndicatorToTargetList();
-            AddEnemyIndicatorsToTargetList();
         }
 
         // Start is called before the first frame update
@@ -50,16 +50,17 @@ public class IndicatorScript : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
+        ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
 
-            //if(TargetList.Count < enemyAi.EnemyList.Count)
-            //{
+        //if(TargetList.Count < enemyAi.EnemyList.Count)
+        //{
 
-            //}
+        //}
+        AddCargoShipIndicatorToTargetList();
+        AddEnemyIndicatorsToTargetList();
 
 
-
-            if (playerReference != null)
+        if (playerReference != null)
             {
                 if (TargetList.Count > 0)
                 {
@@ -70,20 +71,21 @@ public class IndicatorScript : MonoBehaviour
 
         private void AddEnemyIndicatorsToTargetList()
         {
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            TargetList.Add(obj);
+
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                if(!TargetList.Contains(obj))
+                    TargetList.Add(obj);
+            }
         }
-        Debug.Log(TargetList.Count);
-    }
 
         private void AddCargoShipIndicatorToTargetList()
         {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CargoShip"))
             {
-                TargetList.Add(obj);
+                if(!TargetList.Contains(obj))
+                    TargetList.Add(obj);
             }
-            Debug.Log(TargetList.Count);
         }
 
         private void PlaceIndicatorAboveTarget()
@@ -122,7 +124,7 @@ public class IndicatorScript : MonoBehaviour
 
                     screenPosition = screenCenter + new Vector3(cos * 150, sin * 150, 0);
                     float m = cos / sin;
-                    Vector3 screenBounds = screenCenter * 0.9f;
+                    Vector3 screenBounds = screenCenter * radialDistanceForIcon;
                     if (cos > 0)
                     {
                         screenPosition = new Vector3(screenBounds.y / m, screenBounds.y, 0);
