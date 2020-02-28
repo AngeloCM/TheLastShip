@@ -80,36 +80,14 @@ public class SecondaryShot : MonoBehaviour
         {
             // Detach this gameobject from the ShotTransform
             this.gameObject.transform.parent = null;
-            
-            // Update the shot direction to follow TargetEnemy if it exists and if the shot is fully charged
-            if (TargetEnemy != null && FullyCharged)
-            {
-                currentDistanceFromEnemy = Vector3.Distance(this.transform.position, TargetEnemy.transform.position);
 
-                Vector3 directionOfEnemy = Vector3.Normalize(TargetEnemy.transform.position - this.transform.position);
-
-                if (currentDistanceFromEnemy < distanceFromEnemyLastFrame)
-                {
-                    shotDir = Vector3.RotateTowards(shotDir, Vector3.Lerp(shotDir, directionOfEnemy, homingStrength * 0.5f), Vector3.Angle(shotDir, directionOfEnemy), 1f);
-                }
-
-                // Ensure this happens after all comparisons between the two vectors are made.
-                distanceFromEnemyLastFrame = currentDistanceFromEnemy;
-            }
-
+            UpdateAttemptHomeOnEnemy();
 
             // Move forward unless the shot has collided with an enemy, in which case we want the shot to sit still and expand.
             if (!hasCollided) rb.velocity = shotDir * ShotSpeed;
             else rb.velocity = Vector3.zero;
 
-            // Keep track of the time this shot has been active in the scene.
-            timeActive += Time.deltaTime;
-
-            // Deactivate this shot if it has been around for DespawnTime seconds.
-            if (timeActive >= DespawnTime)
-            {
-                this.gameObject.SetActive(false);
-            }
+            UpdateCheckToDeactivate();
         }
         else if (Fired) 
         {
@@ -124,19 +102,7 @@ public class SecondaryShot : MonoBehaviour
             // Also, keep shotDir as forward so the shot goes forward at first
             shotDir = this.transform.forward;
 
-            // Update target enemy via a forward Raycast while this shot is active but not fired
-            RaycastHit hit;
-
-            if (TargetEnemy == null)
-            {
-                if (Physics.Raycast(this.transform.position, transform.TransformDirection(Vector3.forward), out hit, 500f))
-                {
-                    if (hit.transform.root.gameObject.tag == "Enemy" || hit.transform.root.gameObject.tag == "enemy")
-                    {
-                        this.TargetEnemy = hit.transform.root.gameObject;
-                    }
-                }
-            }
+            UpdateAttemptLockOnEnemy();
         }
 
         // Expand the scale of this shot if it's set to expand, until it hits the ChargedShotExplodeScale set on the prefab
@@ -155,6 +121,68 @@ public class SecondaryShot : MonoBehaviour
             if (lingerTimer >= postExpandLingerTime)
             {
                 this.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void UpdateCheckToDeactivate()
+    {
+        // Keep track of the time this shot has been active in the scene.
+        timeActive += Time.deltaTime;
+
+        // Deactivate this shot if it has been around for DespawnTime seconds.
+        if (timeActive >= DespawnTime)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private void UpdateAttemptLockOnEnemy()
+    {
+        // Update target enemy via a forward Raycast while this shot is active but not fired
+        RaycastHit hit;
+
+        if (TargetEnemy == null)
+        {
+            if (Physics.Raycast(this.transform.position, transform.TransformDirection(Vector3.forward), out hit, 500f))
+            {
+                if (hit.transform.root.gameObject.tag == "Enemy" || hit.transform.root.gameObject.tag == "enemy")
+                {
+                    this.TargetEnemy = hit.transform.root.gameObject;
+                }
+            }
+        }
+
+        // If the targeted enemy gets destroyed, set to null so we can keep looking
+        if (TargetEnemy != null && !TargetEnemy.activeInHierarchy)
+        {
+            TargetEnemy = null;
+        }
+    }
+
+    private void UpdateAttemptHomeOnEnemy()
+    {
+        // Update the shot direction to follow TargetEnemy if it exists and if the shot is fully charged
+        if (TargetEnemy != null && FullyCharged)
+        {
+            currentDistanceFromEnemy = Vector3.Distance(this.transform.position, TargetEnemy.transform.position);
+
+            Vector3 directionOfEnemy = Vector3.Normalize(TargetEnemy.transform.position - this.transform.position);
+
+            if (currentDistanceFromEnemy < distanceFromEnemyLastFrame)
+            {
+                shotDir = Vector3.RotateTowards(shotDir, Vector3.Lerp(shotDir, directionOfEnemy, homingStrength * 0.5f), Vector3.Angle(shotDir, directionOfEnemy), 1f);
+            }
+
+            // Ensure this happens after all comparisons between the two vectors are made.
+            distanceFromEnemyLastFrame = currentDistanceFromEnemy;
+
+            // Ensure this happens after all other shotDir assignments. Default to forward if enemy was killed.
+            if (!TargetEnemy.activeInHierarchy)
+            {
+                shotDir = this.transform.forward;
+
+                TargetEnemy = null;
             }
         }
     }
@@ -184,7 +212,7 @@ public class SecondaryShot : MonoBehaviour
                     {
                         BeginExpand();
                     }
-                    else // Just delete the shot if it's not fully charged
+                    else if (!FullyCharged) // Just delete the shot if it's not fully charged
                     {
                         this.gameObject.SetActive(false);
                     }

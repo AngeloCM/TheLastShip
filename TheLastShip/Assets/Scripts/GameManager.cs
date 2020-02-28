@@ -84,8 +84,6 @@ public class GameManager : MonoBehaviour
             Instantiate(enemySpawnerPrefab, new Vector3(-640f, 0, 800f), Quaternion.Euler(0f, 90f, 0f));
 
             eventsExecutedThisSequence++;
-
-            Debug.Log("Enemy wave 1 spawned");
         }
 
         if (eventsExecutedThisSequence < 2 && sequenceTime >= 40f)
@@ -93,8 +91,6 @@ public class GameManager : MonoBehaviour
             Instantiate(enemySpawnerPrefab, new Vector3(640f, 0, 1600f), Quaternion.Euler(0f, -90f, 0f));
 
             eventsExecutedThisSequence++;
-
-            Debug.Log("Enemy wave 2 spawned");
         }
     }
 
