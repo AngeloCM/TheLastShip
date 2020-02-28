@@ -21,6 +21,9 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField, Tooltip("The velocity of the enemy")]
         public float movSpeed = 5f;
 
+        [SerializeField, Tooltip("The time to wait in Idle State")]
+        public float totalDurationIdle = 2f;
+
         public void Awake()
         {
             _navMeshAgent = this.GetComponent<NavMeshAgent>();
