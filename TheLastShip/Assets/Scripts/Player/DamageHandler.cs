@@ -24,9 +24,16 @@ public class DamageHandler : MonoBehaviour
             {
                 shieldBar.DamageShield(dmg);
 
-                // audio ckrueger vvv
-                PlaySoundDamageShield();
-                // audio ckrueger ^^^
+                if (this.gameObject.GetComponent<PlayerAudioTriggers>() != null)
+                {
+                    // audio ckrueger vvv
+                    this.gameObject.GetComponent<PlayerAudioTriggers>().PlaySoundDamageShield();
+                    // audio ckrueger ^^^
+                }
+                else if (this.gameObject.GetComponent<CargoAudioTriggers>() != null)
+                {
+                    // Cole sound trigger for cargo ship getting hit
+                }
             }
         }
         else
@@ -44,11 +51,4 @@ public class DamageHandler : MonoBehaviour
             this.GetComponent<DeathLossTrigger>().Die();
         }
     }
-
-    // audio ckrueger vvv
-    public void PlaySoundDamageShield()
-    {
-        AkSoundEngine.PostEvent("plr_shield_damage", gameObject);
-    }
-    // audio ckrueger ^^^
 }
