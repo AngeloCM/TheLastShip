@@ -5,14 +5,16 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
-   
+
+
+
     private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
     public OnScreenIndicator onScreenPrefab;
     public OffScreenIndicator offScreenPrefab;
     public Canvas can;
-    public List<GameObject> TargetList { get; private set; }
+    public static List<GameObject> TargetList { get; private set; }
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
     [SerializeField]
@@ -50,14 +52,7 @@ public class IndicatorScript : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
-
-            //if(TargetList.Count < enemyAi.EnemyList.Count)
-            //{
-
-            //}
-
-
+        ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
 
             if (playerReference != null)
             {
@@ -70,10 +65,10 @@ public class IndicatorScript : MonoBehaviour
 
         private void AddEnemyIndicatorsToTargetList()
         {
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            TargetList.Add(obj);
-        }
+        //foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
+        //{
+        //    TargetList.Add(obj);
+        //}
         Debug.Log(TargetList.Count);
     }
 
