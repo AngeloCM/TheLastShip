@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 5766849027330119038}
   - component: {fileID: 4677924273161203294}
   - component: {fileID: 6102473637338148380}
+  - component: {fileID: 3038462204111785032}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -269,6 +270,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 2899710044128662432, guid: 8d0f3d3fdaa9a684e992bd5da3bda2cc,
     type: 3}
+--- !u!114 &3038462204111785032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40360096672153373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba0d1e8b9fcacd4ebb422570290d955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2181552051587281279
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +555,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+    - target: {fileID: 3580591971349187127, guid: 87af37ae6ac686b4bb207058cc48c201,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087329638928557293, guid: 87af37ae6ac686b4bb207058cc48c201,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87af37ae6ac686b4bb207058cc48c201, type: 3}
