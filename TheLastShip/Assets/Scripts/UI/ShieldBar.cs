@@ -6,6 +6,9 @@ public enum ShieldState { Damaged, Recharging, Recharged}
 
 public class ShieldBar : MonoBehaviour
 {
+    public delegate void CheckDamageShield();
+    public static event CheckDamageShield flashingDamage;
+
     [SerializeField]
     private float SetMaxShield;
     [SerializeField]
@@ -65,6 +68,7 @@ public class ShieldBar : MonoBehaviour
     {
         if(!this.CheckIfShieldDelpeted())
         {
+            flashingDamage?.Invoke();
         this.shieldState = ShieldState.Damaged;
         this.RestartShieldTimer();
         barManager.DecreaseValue(Damage);
