@@ -7,13 +7,13 @@ public enum ShieldState { Damaged, Recharging, Recharged}
 public class ShieldBar : MonoBehaviour
 {
     [SerializeField]
-    public float SetMaxShield;
+    private float SetMaxShield;
     [SerializeField]
-    public float AmountToChargeBy;
+    private float AmountToChargeBy;
     
 
     [SerializeField]
-    public float TimeItTakesToStartRecharge;
+    private float TimeItTakesToStartRecharge;
 
     protected float lastSpawn;
 
