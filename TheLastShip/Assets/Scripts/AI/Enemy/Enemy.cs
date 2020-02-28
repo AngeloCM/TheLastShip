@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 namespace Assets.Scripts.AI.EnemyCode
 {
-    [RequireComponent(typeof(NavMeshAgent), typeof(FiniteStateMachine))]
+    [RequireComponent(typeof(FiniteStateMachine))]
 
     public class Enemy : MonoBehaviour
     {
@@ -18,7 +18,11 @@ namespace Assets.Scripts.AI.EnemyCode
         NavMeshAgent _navMeshAgent;
         FiniteStateMachine _finiteStateMachine;
 
+        [SerializeField, Tooltip("The velocity of the enemy")]
+        public float movSpeed = 5f;
 
+        [SerializeField, Tooltip("The time to wait in Idle State")]
+        public float totalDurationIdle = 2f;
 
         public void Awake()
         {
@@ -33,7 +37,7 @@ namespace Assets.Scripts.AI.EnemyCode
 
         public void Update()
         {
-            
+
         }
 
         public EnemyFlyPoint[] FlyPoints

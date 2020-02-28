@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.AI.EnemyCode;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace Assets.Scripts.AI.States
     {
         EnemyFlyPoint[] _flyPoints;
         int _flyPointIndex;
+        float updateTime = 0f;
 
         public override void OnEnable()
         {
@@ -45,8 +47,6 @@ namespace Assets.Scripts.AI.States
                     {
                         _flyPointIndex = (_flyPointIndex + 1) % _flyPoints.Length;
                     }
-
-                    SetDestination(_flyPoints[_flyPointIndex]);
                     EnteredState = true;
                 }
             }
@@ -58,20 +58,24 @@ namespace Assets.Scripts.AI.States
         {
             if (EnteredState)
             {
+                updateTime += Time.deltaTime;
+
                 //Logic
-                if (Vector3.Distance(_navMeshAgent.transform.position, _flyPoints[_flyPointIndex].transform.position) <= 1f)
+                if (Vector3.Distance(_enemy.transform.position, _flyPoints[_flyPointIndex].transform.position) <= 1f)
                 {
                     _fsm.EnterState(FSMStateType.IDLE);
+                }
+                else
+                {
+                    SetDestination(_flyPoints[_flyPointIndex]);
                 }
             }
         }
 
         private void SetDestination(EnemyFlyPoint destination)
         {
-            if (_navMeshAgent != null && destination != null)
-            {
-                _navMeshAgent.SetDestination(destination.transform.position);
-            }
+            _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, destination.transform.position, _enemy.movSpeed * updateTime);
+            updateTime = 0;
         }
     }
 }
