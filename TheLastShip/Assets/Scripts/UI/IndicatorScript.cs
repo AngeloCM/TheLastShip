@@ -5,14 +5,17 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
-   
+
+
+
     private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
     public OnScreenIndicator onScreenPrefab;
     public OffScreenIndicator offScreenPrefab;
     public Canvas can;
-    public List<GameObject> TargetList { get; set; }
+    public static List<GameObject> TargetList { get; private set; }
+
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
     [SerializeField]
@@ -34,7 +37,7 @@ public class IndicatorScript : MonoBehaviour
         {
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
-
+        AddCargoShipIndicatorToTargetList();
         }
 
         // Start is called before the first frame update
@@ -52,13 +55,6 @@ public class IndicatorScript : MonoBehaviour
         {
         ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
 
-        //if(TargetList.Count < enemyAi.EnemyList.Count)
-        //{
-
-        //}
-        AddCargoShipIndicatorToTargetList();
-        AddEnemyIndicatorsToTargetList();
-
 
         if (playerReference != null)
             {
@@ -71,13 +67,13 @@ public class IndicatorScript : MonoBehaviour
 
         private void AddEnemyIndicatorsToTargetList()
         {
+        //foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
+        //{
+        //    TargetList.Add(obj);
+        //}
+        Debug.Log(TargetList.Count);
+    }
 
-            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
-            {
-                if(!TargetList.Contains(obj))
-                    TargetList.Add(obj);
-            }
-        }
 
         private void AddCargoShipIndicatorToTargetList()
         {
