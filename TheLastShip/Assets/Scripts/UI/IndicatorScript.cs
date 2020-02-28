@@ -6,8 +6,8 @@ using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
 
-
-
+    [SerializeField]
+    private float minDistanceForOnScreenIndicator = 250f;
     private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
@@ -71,7 +71,6 @@ public class IndicatorScript : MonoBehaviour
         //{
         //    TargetList.Add(obj);
         //}
-        Debug.Log(TargetList.Count);
     }
 
 
@@ -93,15 +92,18 @@ public class IndicatorScript : MonoBehaviour
             {
                 heading = t.transform.position - playerReference.GetComponentInChildren<Camera>().transform.position;
                 Vector3 screenPosition = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position);
-
+                float checkDistance = Vector3.Distance(playerReference.transform.position, t.transform.position);
                 if (screenPosition.z > 0 &&
                     screenPosition.x > 0 && screenPosition.x < Screen.width &&
                     screenPosition.y > 0 && screenPosition.y < Screen.height)
                 {
-
+                    Debug.Log(checkDistance);
+                    if(checkDistance >= minDistanceForOnScreenIndicator)
+                    {
                     OnScreenIndicator indicator = acquireIndicators();
                     //indicator.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
                     indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
+                    }
                 }
 
                 else
