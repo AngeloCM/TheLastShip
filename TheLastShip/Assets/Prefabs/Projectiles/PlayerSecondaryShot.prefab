@@ -127,7 +127,7 @@ MonoBehaviour:
   DespawnTime: 8
   UnchargedShotDamage: 10
   ChargedShotDamage: 40
-  ChargedShotExplodeScale: 30
+  ChargedShotExplodeScale: 70
   homingStrength: 0.1
   Fired: 0
   FullyCharged: 0

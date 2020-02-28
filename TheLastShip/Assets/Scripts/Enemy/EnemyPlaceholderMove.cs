@@ -16,7 +16,7 @@ public class EnemyPlaceholderMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += this.transform.forward;       
+        //this.transform.position += this.transform.forward;       
     }
 
     private void OnCollisionEnter(Collision collision)
