@@ -31,7 +31,6 @@ namespace Assets.Scripts.AI
             {
                 state.SetExecutingFSM(this);
                 state.SetExecutingNPC(enemy);
-                state.SetNavMeshAgent(navMeshAgent);
                 _fsmStates.Add(state.StateType, state);
             }
         }

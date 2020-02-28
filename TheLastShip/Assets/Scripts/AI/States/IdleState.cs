@@ -11,7 +11,6 @@ namespace Assets.Scripts.AI.States
 
     public class IdleState : AbstractFSMState
     {
-        [SerializeField]
         float _idleDuration = 3f;
 
         float _totalDuration;
