@@ -156,7 +156,7 @@ Transform:
   m_Father: {fileID: 2040720443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &603048953
+--- !u!1 &532513256
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,9 +164,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 603048955}
-  - component: {fileID: 603048954}
-  - component: {fileID: 603048956}
+  - component: {fileID: 532513258}
+  - component: {fileID: 532513257}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -174,19 +173,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &603048954
+--- !u!114 &532513257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603048953}
+  m_GameObject: {fileID: 532513256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f497df856ccb51041bcd6a0cb19def79, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ee04d1228990f4f8c9d1921da7c9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 64f13e2fdee8ebf47a757cbe11a6f0e4,
+  InitializationSettings: {fileID: 11400000, guid: bab71340e26b3ff47a6e5da894f8f7cc,
     type: 2}
   basePath: 
   language: 
@@ -201,13 +200,13 @@ MonoBehaviour:
   maxSoundPropagationDepth: 0
   diffractionFlags: 11
   engineLogging: 0
---- !u!4 &603048955
+--- !u!4 &532513258
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603048953}
+  m_GameObject: {fileID: 532513256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -215,31 +214,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &603048956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603048953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c8ee018ed97db468ea03b3ed9c31df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 66a8be2cf9cd81c4e8484d9de9e2acd7,
-      type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!224 &770765030 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7790302342832315349, guid: 8f699671a30707247979ced4a346b720,
@@ -944,8 +918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1bba91d07ec54a91e21dc0da66180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &2016641916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -958,16 +930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10def402cf540f7409861549c12c9f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &2018964097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1600,7 @@ PrefabInstance:
     - target: {fileID: 3747898228264415054, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3747898228264415090, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
@@ -1649,6 +1611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285501904807856603, guid: 8f699671a30707247979ced4a346b720,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7790302342832315345, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
