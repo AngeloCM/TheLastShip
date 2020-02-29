@@ -169,7 +169,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /TheLastShip_WwiseProject
-  - /TheLastShip_WwiseProject/Events
-  - /TheLastShip_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
