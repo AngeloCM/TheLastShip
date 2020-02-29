@@ -18,16 +18,23 @@ namespace Assets.Scripts.AI.EnemyCode
         NavMeshAgent _navMeshAgent;
         FiniteStateMachine _finiteStateMachine;
 
+        [SerializeField, Tooltip("Reference to the Player")]
+        public GameObject PlayerReference;
+
         [SerializeField, Tooltip("The velocity of the enemy")]
         public float movSpeed = 5f;
 
         [SerializeField, Tooltip("The time to wait in Idle State")]
         public float totalDurationIdle = 2f;
 
+        [SerializeField, Tooltip("The distance between the Player and Enemy to Atack the Player")]
+        public float DistanceToAttackPlayer = 20f;
+
         public void Awake()
         {
             _navMeshAgent = this.GetComponent<NavMeshAgent>();
             _finiteStateMachine = this.GetComponent<FiniteStateMachine>();
+            PlayerReference = GameObject.FindGameObjectWithTag("Player");
         }
 
         public void Start()
