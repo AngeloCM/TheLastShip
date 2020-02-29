@@ -61,8 +61,9 @@ namespace Assets.Scripts.AI.States
                 updateTime += Time.deltaTime;
 
                 //Logic
-                if (Vector3.Distance(_enemy.transform.position, _flyPoints[_flyPointIndex].transform.position) <= 1f)
+                if (Vector3.Distance(_enemy.transform.position, _flyPoints[_flyPointIndex].transform.position) <= 10f)
                 {
+                    Debug.Log("Here");
                     _fsm.EnterState(FSMStateType.IDLE);
                 }
                 else
@@ -74,6 +75,7 @@ namespace Assets.Scripts.AI.States
 
         private void SetDestination(EnemyFlyPoint destination)
         {
+            Debug.Log("Destination: " + destination.transform.position);
             _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, destination.transform.position, _enemy.movSpeed * updateTime);
             updateTime = 0;
         }
