@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
+
+    public delegate void CheckDamageHealth();
+    public static event CheckDamageHealth flashingDamage;
+
     [SerializeField]
     public float SetMaxHealth;
 
@@ -38,6 +42,7 @@ public class HealthBar : MonoBehaviour
         {
             if(shieldBar.CheckIfShieldDelpeted())
             {
+                flashingDamage?.Invoke();
                 this.shieldBar.RestartShieldTimer();
                 barManager.DecreaseValue(Damage);
                 SetHealthBar(barManager.GetNormalizedValue());
