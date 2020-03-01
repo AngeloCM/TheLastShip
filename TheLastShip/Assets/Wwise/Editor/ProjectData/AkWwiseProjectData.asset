@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1586fb1ce5172784894d19889bd22067, type: 3}
+  m_Script: {fileID: 11500000, guid: fac2ef3d7c57fbc47b8ecbd7fb4672a9, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
@@ -169,7 +169,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /TheLastShip_WwiseProject
-  - /TheLastShip_WwiseProject/Events
-  - /TheLastShip_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
