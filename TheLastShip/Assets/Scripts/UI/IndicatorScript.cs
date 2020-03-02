@@ -5,21 +5,26 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
-   
+
+    [SerializeField]
+    private float minDistanceForOnScreenIndicator = 250f;
     private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
     public OnScreenIndicator onScreenPrefab;
     public OffScreenIndicator offScreenPrefab;
     public Canvas can;
-    public List<GameObject> TargetList { get; private set; }
+    public static List<GameObject> TargetList { get; private set; }
+
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
     [SerializeField]
     private Sprite enemyImage, cargoImage;
 
-        //public List<ShipIndicator> indicatorPool;
-        //public List<ShipIndicatorArrow> arrowIndicatorPool;
+    //public List<ShipIndicator> indicatorPool;
+    //public List<ShipIndicatorArrow> arrowIndicatorPool;
+    [SerializeField]
+    private float radialDistanceForIcon;
 
         private Vector3 heading;
         private Text textReference;
@@ -32,9 +37,7 @@ public class IndicatorScript : MonoBehaviour
         {
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
-
-            AddCargoShipIndicatorToTargetList();
-            AddEnemyIndicatorsToTargetList();
+        AddCargoShipIndicatorToTargetList();
         }
 
         // Start is called before the first frame update
@@ -50,16 +53,10 @@ public class IndicatorScript : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
-
-            //if(TargetList.Count < enemyAi.EnemyList.Count)
-            //{
-
-            //}
+        ///Will ccompaare this script's list to the enemy list to see how many are alive, then add those that are not alive to THIS script's list
 
 
-
-            if (playerReference != null)
+        if (playerReference != null)
             {
                 if (TargetList.Count > 0)
                 {
@@ -70,20 +67,20 @@ public class IndicatorScript : MonoBehaviour
 
         private void AddEnemyIndicatorsToTargetList()
         {
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            TargetList.Add(obj);
-        }
-        Debug.Log(TargetList.Count);
+        //foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy"))
+        //{
+        //    TargetList.Add(obj);
+        //}
     }
+
 
         private void AddCargoShipIndicatorToTargetList()
         {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CargoShip"))
             {
-                TargetList.Add(obj);
+                if(!TargetList.Contains(obj))
+                    TargetList.Add(obj);
             }
-            Debug.Log(TargetList.Count);
         }
 
         private void PlaceIndicatorAboveTarget()
@@ -95,15 +92,18 @@ public class IndicatorScript : MonoBehaviour
             {
                 heading = t.transform.position - playerReference.GetComponentInChildren<Camera>().transform.position;
                 Vector3 screenPosition = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position);
-
+                float checkDistance = Vector3.Distance(playerReference.transform.position, t.transform.position);
                 if (screenPosition.z > 0 &&
                     screenPosition.x > 0 && screenPosition.x < Screen.width &&
                     screenPosition.y > 0 && screenPosition.y < Screen.height)
                 {
-
+                    Debug.Log(checkDistance);
+                    if(checkDistance >= minDistanceForOnScreenIndicator)
+                    {
                     OnScreenIndicator indicator = acquireIndicators();
                     //indicator.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
                     indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
+                    }
                 }
 
                 else
@@ -122,7 +122,7 @@ public class IndicatorScript : MonoBehaviour
 
                     screenPosition = screenCenter + new Vector3(cos * 150, sin * 150, 0);
                     float m = cos / sin;
-                    Vector3 screenBounds = screenCenter * 0.9f;
+                    Vector3 screenBounds = screenCenter * radialDistanceForIcon;
                     if (cos > 0)
                     {
                         screenPosition = new Vector3(screenBounds.y / m, screenBounds.y, 0);

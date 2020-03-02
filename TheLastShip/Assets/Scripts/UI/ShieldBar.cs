@@ -69,8 +69,8 @@ public class ShieldBar : MonoBehaviour
         if(!this.CheckIfShieldDelpeted())
         {
             flashingDamage?.Invoke();
-        this.shieldState = ShieldState.Damaged;
-        this.RestartShieldTimer();
+         this.shieldState = ShieldState.Damaged;
+         this.RestartShieldTimer();
         barManager.DecreaseValue(Damage);
         SetShieldBar(barManager.GetNormalizedValue());
         }

@@ -19,7 +19,6 @@ public enum FSMStateType
 
 public abstract class AbstractFSMState : ScriptableObject
 {
-    protected NavMeshAgent _navMeshAgent;
     protected Enemy _enemy;
     protected FiniteStateMachine _fsm;
 
@@ -34,17 +33,13 @@ public abstract class AbstractFSMState : ScriptableObject
 
     public virtual bool EnterState()
     {
-        bool sucessNavMesh = true;
         bool sucessEnemy = true;
         ExecutionState = ExecutionState.ACTIVE;
-
-        //Does the nav mesh agent exist?
-        sucessNavMesh = (_navMeshAgent != null);
 
         //Does the executing agent exist?
         sucessEnemy = (_enemy != null);
 
-        return sucessNavMesh & sucessEnemy;
+        return sucessEnemy;
     }
 
     public abstract void UpdateState();
@@ -53,14 +48,6 @@ public abstract class AbstractFSMState : ScriptableObject
     {
         ExecutionState = ExecutionState.COMPLETED;
         return true;
-    }
-
-    public virtual void SetNavMeshAgent(NavMeshAgent navMeshAgent)
-    {
-        if (navMeshAgent != null)
-        {
-            _navMeshAgent = navMeshAgent;
-        }
     }
 
     public virtual void SetExecutingFSM(FiniteStateMachine fsm)

@@ -11,9 +11,6 @@ namespace Assets.Scripts.AI.States
 
     public class IdleState : AbstractFSMState
     {
-        [SerializeField]
-        float _idleDuration = 3f;
-
         float _totalDuration;
 
         public override void OnEnable()
@@ -42,7 +39,7 @@ namespace Assets.Scripts.AI.States
                 _totalDuration += Time.deltaTime;
                 Debug.Log("UPDATING IDLE STATE: " + _totalDuration + " seconds.");
 
-                if (_totalDuration >= _idleDuration)
+                if (_totalDuration >= _enemy.totalDurationIdle)
                 {
                     _fsm.EnterState(FSMStateType.FLY);
                 }
