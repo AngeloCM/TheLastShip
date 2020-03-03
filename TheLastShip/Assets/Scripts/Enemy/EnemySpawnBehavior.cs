@@ -24,7 +24,7 @@ public class EnemySpawnBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class EnemySpawnBehavior : MonoBehaviour
             {
                 for (int i = 0; i < numOfEnemiesPerSpawn; i++)
                 {
-                    Instantiate(enemyPrefab, this.transform.position + (UnityEngine.Random.onUnitSphere * 20), this.transform.rotation);
+                    IndicatorScript.TargetList.Add(Instantiate(enemyPrefab, this.transform.position + (UnityEngine.Random.onUnitSphere * 20), this.transform.rotation));
                 }
 
                 wavesSpawned++;
