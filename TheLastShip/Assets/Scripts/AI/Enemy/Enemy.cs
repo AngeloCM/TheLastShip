@@ -22,13 +22,16 @@ namespace Assets.Scripts.AI.EnemyCode
         public GameObject PlayerReference;
 
         [SerializeField, Tooltip("The velocity of the enemy")]
-        public float movSpeed = 5f;
+        public float movSpeed = 100f;
 
         [SerializeField, Tooltip("The time to wait in Idle State")]
         public float totalDurationIdle = 2f;
 
         [SerializeField, Tooltip("The distance between the Player and Enemy to Atack the Player")]
-        public float DistanceToAttackPlayer = 20f;
+        public float DistanceToAttackPlayer = 300f;
+
+        [SerializeField, Tooltip("The distance between the Player and Enemy to Explode Enemy on Player")]
+        public float DistanceToExplode = 50f;
 
         public void Awake()
         {

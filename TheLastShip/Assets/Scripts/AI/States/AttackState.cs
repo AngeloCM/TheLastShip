@@ -34,12 +34,12 @@ namespace Assets.Scripts.AI.States
                 updateTime += Time.deltaTime;
                 _enemy.PlayerReference.transform.position = _enemy.PlayerReference.transform.position;
 
-                if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) > 20f)
+                if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) > _enemy.DistanceToAttackPlayer)
                 {
                     Debug.Log("Too Far");
                     _fsm.EnterState(FSMStateType.FLY);
                 }
-                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < 2f)
+                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < 50f)
                 {
                     Destroy(_enemy.gameObject);
                 }
