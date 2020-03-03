@@ -72,7 +72,6 @@ namespace Assets.Scripts.AI.States
                 }
                 else
                 {
-                    Debug.Log("Between: " + Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position));
                     SetDestination(_flyPoints[_flyPointIndex]);
                 }
             }

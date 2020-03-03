@@ -36,10 +36,9 @@ namespace Assets.Scripts.AI.States
 
                 if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) > _enemy.DistanceToAttackPlayer)
                 {
-                    Debug.Log("Too Far");
                     _fsm.EnterState(FSMStateType.FLY);
                 }
-                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < 50f)
+                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < _enemy.DistanceToExplode)
                 {
                     Destroy(_enemy.gameObject);
                 }

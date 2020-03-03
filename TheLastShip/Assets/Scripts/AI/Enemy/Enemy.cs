@@ -27,6 +27,9 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField, Tooltip("The time to wait in Idle State")]
         public float totalDurationIdle = 2f;
 
+        [SerializeField, Tooltip("The distance between the Waypoint and the Enemy, so the enemy understand that he reached the waypoint.")]
+        public float DistanceToTouchWaypoint = 2f;
+
         [SerializeField, Tooltip("The distance between the Player and Enemy to Atack the Player")]
         public float DistanceToAttackPlayer = 300f;
 
