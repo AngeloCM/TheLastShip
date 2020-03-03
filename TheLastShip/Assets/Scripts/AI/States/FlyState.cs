@@ -47,6 +47,7 @@ namespace Assets.Scripts.AI.States
                     {
                         _flyPointIndex = (_flyPointIndex + 1) % _flyPoints.Length;
                     }
+
                     EnteredState = true;
                 }
             }
@@ -61,9 +62,13 @@ namespace Assets.Scripts.AI.States
                 updateTime += Time.deltaTime;
 
                 //Logic
-                if (Vector3.Distance(_enemy.transform.position, _flyPoints[_flyPointIndex].transform.position) <= 1f)
+                if (Vector3.Distance(_enemy.transform.position, _flyPoints[_flyPointIndex].transform.position) <= _enemy.DistanceToTouchWaypoint)
                 {
                     _fsm.EnterState(FSMStateType.IDLE);
+                }
+                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) <= _enemy.DistanceToAttackPlayer)
+                {
+                    _fsm.EnterState(FSMStateType.ATTACK);
                 }
                 else
                 {
@@ -76,6 +81,14 @@ namespace Assets.Scripts.AI.States
         {
             _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, destination.transform.position, _enemy.movSpeed * updateTime);
             updateTime = 0;
+        }
+
+        public override bool ExitState()
+        {
+            base.ExitState();
+
+            Debug.Log("EXITING FLY STATE");
+            return true;
         }
     }
 }
