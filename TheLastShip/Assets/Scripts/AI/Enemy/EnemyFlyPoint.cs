@@ -15,9 +15,9 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField]
         protected float _connectivityRadius = 50f;
 
-        List<EnemyFlyPoint> _connections;
+        public List<EnemyFlyPoint> _connections;
 
-        public void Start()
+        public void Awake()
         {
             //Garb all waypoiunts objects in scene
             GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("FlyPoint");

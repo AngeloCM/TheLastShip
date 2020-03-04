@@ -15,6 +15,8 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField]
         EnemyFlyPoint[] _flyPoints;
 
+        EnemyFlyPoint enemyFlyPoint;
+
         NavMeshAgent _navMeshAgent;
         FiniteStateMachine _finiteStateMachine;
 
@@ -45,8 +47,10 @@ namespace Assets.Scripts.AI.EnemyCode
 
         public void Start()
         {
-            
+            AttachFlyPoints();
         }
+
+        
 
         public void Update()
         {
@@ -58,6 +62,14 @@ namespace Assets.Scripts.AI.EnemyCode
             get
             {
                 return _flyPoints;
+            }
+        }
+
+        private void AttachFlyPoints()
+        {
+            for (int i = 0; i < _flyPoints.Length; i++)
+            {
+                _flyPoints[i] = enemyFlyPoint._connections.ElementAt(i);
             }
         }
     }
