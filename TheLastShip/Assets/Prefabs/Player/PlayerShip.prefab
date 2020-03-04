@@ -535,6 +535,11 @@ PrefabInstance:
       propertyPath: VelocityModule.inWorldSpace
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6087329638928557292, guid: 87af37ae6ac686b4bb207058cc48c201,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 4.92
+      objectReference: {fileID: 0}
     - target: {fileID: 6087329638928557293, guid: 87af37ae6ac686b4bb207058cc48c201,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -599,6 +604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: VelocityModule.inWorldSpace
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8097708785159328683, guid: 87af37ae6ac686b4bb207058cc48c201,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 9078156920932612756, guid: 87af37ae6ac686b4bb207058cc48c201,
         type: 3}
