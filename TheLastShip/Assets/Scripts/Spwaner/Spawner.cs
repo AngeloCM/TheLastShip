@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.AI.EnemyCode;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,8 @@ namespace Assets.Scripts.Spwaner
             for (int i = 0; i < AmountOfEnemies; i++)
             {
                 SpawnIndex = UnityEngine.Random.Range(0, Spawn.Length);
-                Instantiate(SwarmEnemy_prefab, Spawn[SpawnIndex].transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(SwarmEnemy_prefab, Spawn[SpawnIndex].transform.position, Quaternion.identity);
+                enemy.GetComponent<Enemy>().enabled = true;
             }        
         }
     }

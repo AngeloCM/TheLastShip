@@ -17,10 +17,12 @@ namespace Assets.Scripts.AI.EnemyCode
 
         public List<EnemyFlyPoint> _connections;
 
+        GameObject[] allWaypoints;
+
         public void Awake()
         {
             //Garb all waypoiunts objects in scene
-            GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("FlyPoint");
+            allWaypoints = GameObject.FindGameObjectsWithTag("FlyPoint");
 
             //Create a list of waypoints I can refer to later.
             _connections = new List<EnemyFlyPoint>();
@@ -32,10 +34,11 @@ namespace Assets.Scripts.AI.EnemyCode
                 //We found a waypoint
                 if (nextWaypoint != null)
                 {
-                    if (Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= _connectivityRadius && nextWaypoint != this)
-                    {
-                        _connections.Add(nextWaypoint);
-                    }
+                    _connections.Add(nextWaypoint);
+                    //if (Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= _connectivityRadius && nextWaypoint != this)
+                    //{
+                    //    _connections.Add(nextWaypoint);
+                    //}
                 }
             }
         }

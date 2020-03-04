@@ -50,10 +50,8 @@ namespace Assets.Scripts.AI.EnemyCode
             AttachFlyPoints();
         }
 
-        
-
         public void Update()
-        {
+        { 
 
         }
 
