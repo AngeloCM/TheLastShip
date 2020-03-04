@@ -14,7 +14,8 @@ public enum ExecutionState
 public enum FSMStateType
 {
     IDLE,
-    FLY    
+    FLY,
+    ATTACK,
 };
 
 public abstract class AbstractFSMState : ScriptableObject

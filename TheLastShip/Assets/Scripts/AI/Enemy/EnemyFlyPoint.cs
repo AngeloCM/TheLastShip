@@ -40,6 +40,14 @@ namespace Assets.Scripts.AI.EnemyCode
             }
         }
 
+        void Update()
+        {
+            foreach (var point in _connections)
+            {
+                point.transform.position = point.transform.position;
+            }
+        }
+
         public virtual void OnDrawGizmos()
         {
             Gizmos.color = Color.red;

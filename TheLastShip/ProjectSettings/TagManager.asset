@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - CargoShip
+  - FlyPoint
+  - SwarmEnemy
   layers:
   - Default
   - TransparentFX
