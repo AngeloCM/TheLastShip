@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40360095967338024}
   m_LocalRotation: {x: 0.0823688, y: -0, z: -0, w: 0.99660194}
-  m_LocalPosition: {x: 0, y: 3.08, z: -2.29}
+  m_LocalPosition: {x: 0, y: 3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 40360096672153371}
@@ -58,7 +58,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10000
+  far clip plane: 150000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -217,11 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerShipModel: {fileID: 2080924786628954120}
   CameraGameObject: {fileID: 40360095967338024}
-  modelPosStraight: {x: 0, y: -1, z: 0}
-  modelPosBottom: {x: 0, y: -2, z: 0}
-  modelPosTop: {x: 0, y: 0, z: 0}
-  modelPosLeft: {x: -4, y: -1, z: 0}
-  modelPosRight: {x: 4, y: -1, z: 0}
+  modelPosStraight: {x: 0, y: 0, z: 0}
+  modelPosBottom: {x: 0, y: -1, z: 0}
+  modelPosTop: {x: 0, y: 1, z: 0}
+  modelPosLeft: {x: -4, y: 0, z: 0}
+  modelPosRight: {x: 4, y: 0, z: 0}
   cameraPosCoasting: {x: 0, y: 2, z: -8}
   cameraPosAccelerating: {x: 0, y: 2, z: -10}
   cameraPosDecelerating: {x: 0, y: 2, z: -7}
@@ -600,25 +600,10 @@ PrefabInstance:
       propertyPath: VelocityModule.inWorldSpace
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8097708785159328683, guid: 87af37ae6ac686b4bb207058cc48c201,
-        type: 3}
-      propertyPath: TrailModule.worldSpace
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9078156920932612756, guid: 87af37ae6ac686b4bb207058cc48c201,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9078156920932612756, guid: 87af37ae6ac686b4bb207058cc48c201,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9078156920932612756, guid: 87af37ae6ac686b4bb207058cc48c201,
-        type: 3}
-      propertyPath: scalingMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9078156920932612757, guid: 87af37ae6ac686b4bb207058cc48c201,
         type: 3}
