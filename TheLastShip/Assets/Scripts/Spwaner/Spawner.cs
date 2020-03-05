@@ -22,9 +22,12 @@ namespace Assets.Scripts.Spwaner
 
         int SpawnIndex;
 
-        private void Start()
+        private void Update()
         {
-            SpawnEnemy();
+            if (Input.GetKeyDown("space"))
+            {
+                SpawnEnemy();
+            }
         }
 
         void SpawnEnemy()
@@ -33,7 +36,6 @@ namespace Assets.Scripts.Spwaner
             {
                 SpawnIndex = UnityEngine.Random.Range(0, Spawn.Length);
                 GameObject enemy = Instantiate(SwarmEnemy_prefab, Spawn[SpawnIndex].transform.position, Quaternion.identity);
-                enemy.GetComponent<Enemy>().enabled = true;
             }        
         }
     }

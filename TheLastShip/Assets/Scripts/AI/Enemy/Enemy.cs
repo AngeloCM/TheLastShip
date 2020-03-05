@@ -12,12 +12,11 @@ namespace Assets.Scripts.AI.EnemyCode
 
     public class Enemy : MonoBehaviour
     {
-        [SerializeField]
-        EnemyFlyPoint[] _flyPoints;
+        [SerializeField, Tooltip("All waypoints that the enemy will follow.")]
+        public EnemyFlyPoint[] _flyPoints;
 
-        EnemyFlyPoint enemyFlyPoint;
+        GameObject[] allWaypoints;
 
-        NavMeshAgent _navMeshAgent;
         FiniteStateMachine _finiteStateMachine;
 
         [SerializeField, Tooltip("Reference to the Player")]
@@ -40,18 +39,19 @@ namespace Assets.Scripts.AI.EnemyCode
 
         public void Awake()
         {
-            _navMeshAgent = this.GetComponent<NavMeshAgent>();
             _finiteStateMachine = this.GetComponent<FiniteStateMachine>();
             PlayerReference = GameObject.FindGameObjectWithTag("Player");
+            
         }
 
         public void Start()
         {
+            allWaypoints = GameObject.FindGameObjectsWithTag("FlyPoint");
             AttachFlyPoints();
         }
 
         public void Update()
-        { 
+        {
 
         }
 
@@ -63,11 +63,11 @@ namespace Assets.Scripts.AI.EnemyCode
             }
         }
 
-        private void AttachFlyPoints()
+        public void AttachFlyPoints()
         {
-            for (int i = 0; i < _flyPoints.Length; i++)
+            for (int i = 0; i < allWaypoints.Length; i++)
             {
-                _flyPoints[i] = enemyFlyPoint._connections.ElementAt(i);
+                _flyPoints[i] = allWaypoints[i].GetComponent<EnemyFlyPoint>();
             }
         }
     }
