@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
 
@@ -37,7 +36,7 @@ public class IndicatorScript : MonoBehaviour
         {
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
-        AddCargoShipIndicatorToTargetList();
+            AddCargoShipIndicatorToTargetList();
         }
 
         // Start is called before the first frame update
