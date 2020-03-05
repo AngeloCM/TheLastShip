@@ -6,15 +6,31 @@ using UnityEngine.UI;
 public class PauseMenuFunctions : MonoBehaviour
 {
     [SerializeField]
-    private Button classicControlsButton;
+    private Button frontlineBetaButton;
 
     [SerializeField]
     private Toggle invertYLookToggle;
+
+    private PlayerController pCont;
+
+    private void Awake()
+    {
+        pCont = FindObjectOfType<PlayerController>();
+        pCont.CanMove = false;
+
+        Time.timeScale = 0f;
+
+        GameSettings.IsPaused = true;
+
+        frontlineBetaButton.Select();
+    }
 
     private void Update()
     {
         if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause"))
         {
+            pCont.CanMove = true;
+
             Time.timeScale = 1f;
 
             GameSettings.IsPaused = false;
@@ -25,11 +41,13 @@ public class PauseMenuFunctions : MonoBehaviour
 
     private void OnEnable()
     {
+        pCont.CanMove = false;
+
         Time.timeScale = 0f;
 
         GameSettings.IsPaused = true;
 
-        classicControlsButton.Select();
+        frontlineBetaButton.Select();
     }
 
     public void SetControlScheme(string scheme) // must use a string here in order to plug into Unity default OnClick function
