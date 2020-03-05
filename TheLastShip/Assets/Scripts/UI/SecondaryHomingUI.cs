@@ -33,7 +33,7 @@ public class SecondaryHomingUI : MonoBehaviour
     private void AttemptRetrieveTargetEnemy()
     {
         // Make sure the shot is ready to home and not fired
-        if (CurrentShot != null && CurrentShot.isActiveAndEnabled && CurrentShot.FullyCharged && !CurrentShot.Fired)
+        if (CurrentShot != null && CurrentShot.isActiveAndEnabled && !CurrentShot.Fired)
         {
             // Get the shot's target enemy
             targetEnemy = CurrentShot.TargetEnemy;
