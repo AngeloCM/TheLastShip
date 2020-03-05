@@ -6,12 +6,13 @@ public class EnemySpawnerShip : MonoBehaviour
 {
     public enum EnableState { Enabled, Disabled}
     public float DistanceFromShipNeededToSpawn;
-    public GameObject CargoShipReference;
+    private GameObject CargoShipReference;
     EnableState state;
     private List<GameObject> childList = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
+        CargoShipReference = GameObject.FindGameObjectWithTag("CargoShip");
         DisableAllChildSpawners();
     }
 
