@@ -15,11 +15,10 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField, Tooltip("All waypoints that the enemy will follow.")]
         public EnemyFlyPoint[] _flyPoints;
 
-        GameObject[] allWaypoints;
+        EnemyFlyPoint EnemyFlyPointReference;
 
         FiniteStateMachine _finiteStateMachine;
 
-        [SerializeField, Tooltip("Reference to the Player")]
         public GameObject PlayerReference;
 
         [SerializeField, Tooltip("The velocity of the enemy")]
@@ -40,19 +39,18 @@ namespace Assets.Scripts.AI.EnemyCode
         public void Awake()
         {
             _finiteStateMachine = this.GetComponent<FiniteStateMachine>();
+        }
+
+        void Start()
+        {
             PlayerReference = GameObject.FindGameObjectWithTag("Player");
-            
+            EnemyFlyPointReference = GameObject.FindGameObjectWithTag("FlyPoint").GetComponent<EnemyFlyPoint>();
+            AttachAllWaypoints();
         }
 
-        public void Start()
+        void Update()
         {
-            allWaypoints = GameObject.FindGameObjectsWithTag("FlyPoint");
-            AttachFlyPoints();
-        }
-
-        public void Update()
-        {
-
+            PlayerReference.transform.position = PlayerReference.transform.position;
         }
 
         public EnemyFlyPoint[] FlyPoints
@@ -63,11 +61,11 @@ namespace Assets.Scripts.AI.EnemyCode
             }
         }
 
-        public void AttachFlyPoints()
+        void AttachAllWaypoints()
         {
-            for (int i = 0; i < allWaypoints.Length; i++)
+            for (int i = 0; i < _flyPoints.Length; i++)
             {
-                _flyPoints[i] = allWaypoints[i].GetComponent<EnemyFlyPoint>();
+                _flyPoints[i] = EnemyFlyPointReference._connections.ElementAt(i).GetComponent<EnemyFlyPoint>();
             }
         }
     }

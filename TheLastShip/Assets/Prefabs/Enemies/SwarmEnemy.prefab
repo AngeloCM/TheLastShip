@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2160959878393208979}
   m_Layer: 0
   m_Name: SwarmEnemy
-  m_TagString: SwarmEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,11 +133,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   PlayerReference: {fileID: 0}
-  movSpeed: 100
+  movSpeed: 2
   totalDurationIdle: 0.5
   DistanceToTouchWaypoint: 2
   DistanceToAttackPlayer: 300

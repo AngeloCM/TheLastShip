@@ -15,7 +15,7 @@ namespace Assets.Scripts.AI.EnemyCode
         [SerializeField]
         protected float _connectivityRadius = 50f;
 
-        List<EnemyFlyPoint> _connections;
+        public List<EnemyFlyPoint> _connections;
 
         GameObject[] allWaypoints;
 
@@ -45,10 +45,10 @@ namespace Assets.Scripts.AI.EnemyCode
 
         void Update()
         {
-            foreach (var point in _connections)
-            {
-                point.transform.position = point.transform.position;
-            }
+            //foreach (var point in _connections)
+            //{
+            //    point.transform.position = point.transform.position;
+            //}
         }
 
         public virtual void OnDrawGizmos()
