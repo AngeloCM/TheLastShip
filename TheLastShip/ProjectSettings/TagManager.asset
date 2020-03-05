@@ -8,6 +8,7 @@ TagManager:
   - CargoShip
   - FlyPoint
   - SwarmEnemy
+  - PlayerShot
   layers:
   - Default
   - TransparentFX
