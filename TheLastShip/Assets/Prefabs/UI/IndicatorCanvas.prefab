@@ -147,11 +147,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b5d96790a0d8c44891bebf697d7a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDistanceForOnScreenIndicator: 250
   onScreenPrefab: {fileID: 4783050496167223994, guid: b881d4a4ff0f8c6438efac0c4771c8f7,
     type: 3}
   offScreenPrefab: {fileID: 4415204385407456704, guid: 75403ea49c85ae7438267b5842fa2c1a,
     type: 3}
   can: {fileID: 7217014022603601678}
-  enemyImage: {fileID: 21300000, guid: 6d7b5d72581e8ca48b333e83a25d1514, type: 3}
-  cargoImage: {fileID: 21300000, guid: 3db3669464633034ea94c397dabc719c, type: 3}
+  enemyOffScreenSprite: {fileID: 0}
+  cargoOffScreenSprite: {fileID: 0}
+  enemyOnScreenSprite: {fileID: 0}
+  cargoOnScreenSprite: {fileID: 0}
   radialDistanceForIcon: 0.6
