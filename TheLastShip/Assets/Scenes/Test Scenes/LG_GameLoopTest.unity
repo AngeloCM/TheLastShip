@@ -985,36 +985,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2118235748131280434, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: playerController
