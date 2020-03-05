@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 563335829225193393}
   - component: {fileID: 5172890834962063626}
   - component: {fileID: 3054097806766877964}
-  - component: {fileID: 4362036066240055063}
+  - component: {fileID: 2912885822192984764}
   m_Layer: 5
   m_Name: Secondary_Crosshair
   m_TagString: Untagged
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4362036066240055063
+--- !u!114 &2912885822192984764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,9 +169,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4510903492168992184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f9312df31da33640938cc514c1f7e5b, type: 3}
+  m_Script: {fileID: 11500000, guid: c765fcc172e649642a07b8f1f700dd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentShot: {fileID: 0}
 --- !u!1 &5665074602623035898
 GameObject:
   m_ObjectHideFlags: 0
