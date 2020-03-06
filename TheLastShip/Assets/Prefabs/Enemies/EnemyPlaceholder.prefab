@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604b89c69a42b9d47b39b468982bafe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 6
+  MaxHealth: 3
   CurrentHealth: 0
 --- !u!114 &7997607682363521337
 MonoBehaviour:
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc18d4c73734dc9458c0bcc69182e7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
-  damage: 40
+  moveSpeed: 42.04
+  damage: 38
   maxWanderDistance: 600
   maxAttackDistance: 340
 --- !u!54 &1376142649
@@ -215,8 +215,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 4
-  m_Height: 18
+  m_Radius: 8
+  m_Height: 22
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3131936608734847261
