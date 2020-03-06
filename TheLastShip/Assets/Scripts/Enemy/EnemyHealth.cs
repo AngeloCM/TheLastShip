@@ -10,10 +10,14 @@ public class EnemyHealth : MonoBehaviour
     [HideInInspector]
     public int CurrentHealth;
 
+    private TutorialManager tutMgr;
+
     // Start is called before the first frame update
     void Start()
     {
         CurrentHealth = MaxHealth;
+
+        tutMgr = FindObjectOfType<TutorialManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +25,10 @@ public class EnemyHealth : MonoBehaviour
     {
         if (CurrentHealth <= 0)
         {
-            // todo: Die -- should have animation/explosion/etc.
+            if (tutMgr != null && tutMgr.isActiveAndEnabled)
+            {
+                tutMgr.AccumulatedKills++;
+            }
 
             this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
             this.gameObject.SetActive(false);
