@@ -726,6 +726,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3273159490994920052, guid: 6e15e16cc90ece44281cc8cb454f6724,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273159490994920052, guid: 6e15e16cc90ece44281cc8cb454f6724,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273159490994920052, guid: 6e15e16cc90ece44281cc8cb454f6724,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273159492490626949, guid: 6e15e16cc90ece44281cc8cb454f6724,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4441926316476722547, guid: 6e15e16cc90ece44281cc8cb454f6724,
         type: 3}
       propertyPath: m_Name
