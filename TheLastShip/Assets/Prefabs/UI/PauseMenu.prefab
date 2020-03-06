@@ -640,10 +640,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -120, y: -60}
+  m_SizeDelta: {x: 450, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1391841599782190575
 CanvasRenderer:
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bf6727c2fc53f4aaf7d0821bd1d34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  classicControlsButton: {fileID: 863775960668154765}
+  frontlineBetaButton: {fileID: 5267378485038683168}
   invertYLookToggle: {fileID: 611469079}
 --- !u!1 &3286853790174406877
 GameObject:
