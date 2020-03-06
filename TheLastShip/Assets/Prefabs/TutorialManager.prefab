@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e13da3bf53b8d649aaed5628e2f8591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKills: 6
-  requiredDistanceFromCargo: 100
+  requiredKills: 60
+  requiredDistanceFromCargo: 130
   inactiveCargoGameObject: {fileID: 0}
+  objectiveText: {fileID: 0}
   AccumulatedKills: 0

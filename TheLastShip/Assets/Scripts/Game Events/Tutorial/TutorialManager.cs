@@ -44,6 +44,8 @@ public class TutorialManager : MonoBehaviour
 
             objectiveText.text = "Objective: Rendezvous with the Cargo Vessel";
 
+            IndicatorScript.AddCargoShipIndicatorToTargetList();
+
             cargoSpawned = true;
         }
 

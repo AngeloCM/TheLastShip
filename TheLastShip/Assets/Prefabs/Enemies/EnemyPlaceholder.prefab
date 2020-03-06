@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
-  damage: 42
+  damage: 40
   maxWanderDistance: 600
-  maxAttackDistance: 200
+  maxAttackDistance: 340
 --- !u!54 &1376142649
 Rigidbody:
   m_ObjectHideFlags: 0

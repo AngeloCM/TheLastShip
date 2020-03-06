@@ -76,7 +76,7 @@ public class IndicatorScript : MonoBehaviour
     }
 
 
-        private void AddCargoShipIndicatorToTargetList()
+        public static void AddCargoShipIndicatorToTargetList()
         {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CargoShip"))
             {
