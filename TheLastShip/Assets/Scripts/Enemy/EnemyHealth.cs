@@ -7,18 +7,19 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField, Tooltip("The maximum health this enemy has. Compare to player damage and edit this value on an enemy prefab."), Range(1, 500)]
     public int MaxHealth;
 
-    private int currentHealth;
+    [HideInInspector]
+    public int CurrentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = MaxHealth;
+        CurrentHealth = MaxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             // todo: Die -- should have animation/explosion/etc.
 
@@ -29,6 +30,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        currentHealth -= dmg;
+        CurrentHealth -= dmg;
     }
 }

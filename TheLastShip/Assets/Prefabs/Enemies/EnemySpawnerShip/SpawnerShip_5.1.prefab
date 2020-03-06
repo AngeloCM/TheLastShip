@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778145857074512379}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 108.4, z: 738.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce680777c5ae7e4b81aa355a98809fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceFromShipNeededToSpawn: 600.36
+  DistanceFromShipNeededToSpawn: 800
 --- !u!1001 &1778145856476726264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,6 +118,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1778145857074512380}
     m_Modifications:
+    - target: {fileID: 4166366222322835158, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
+        type: 3}
+      propertyPath: numOfSpawns
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4853276341505559406, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -193,6 +198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1778145857074512380}
     m_Modifications:
+    - target: {fileID: 4166366222322835158, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
+        type: 3}
+      propertyPath: numOfSpawns
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4853276341505559406, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -268,6 +278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1778145857074512380}
     m_Modifications:
+    - target: {fileID: 4166366222322835158, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
+        type: 3}
+      propertyPath: numOfSpawns
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4853276341505559406, guid: eb6dfe1250871dc44ac0c4726bdd0b03,
         type: 3}
       propertyPath: m_LocalPosition.x
