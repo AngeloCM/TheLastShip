@@ -1959,6 +1959,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7790302342832315349}
     m_Modifications:
+    - target: {fileID: 6989782686649623611, guid: a23f7172e05a16e47a1e5361c60b4bfc,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7147759047202128623, guid: a23f7172e05a16e47a1e5361c60b4bfc,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2129,6 +2134,11 @@ PrefabInstance:
       propertyPath: barManager
       value: 
       objectReference: {fileID: 3496147675528815819}
+    - target: {fileID: 7967431045894678041, guid: a23f7172e05a16e47a1e5361c60b4bfc,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23f7172e05a16e47a1e5361c60b4bfc, type: 3}
 --- !u!224 &3496147675115407164 stripped
