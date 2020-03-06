@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5114914583494561719}
   m_Layer: 0
   m_Name: PlayerShot
-  m_TagString: Untagged
+  m_TagString: PlayerShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcc1d95727d8974cb56abcfe62da0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotSpeed: 500
+  ShotSpeed: 775
   DespawnTime: 5
-  BasicShotDamage: 5
+  BasicShotDamage: 7
 --- !u!114 &-5114914583494561719
 MonoBehaviour:
   m_ObjectHideFlags: 0

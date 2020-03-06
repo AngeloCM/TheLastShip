@@ -38,17 +38,23 @@ public class DamageHandler : MonoBehaviour
         }
         else
         {
-            healthBar.Damage(dmg);
+            if (healthBar != null)
+            {
+                healthBar.Damage(dmg);
+            }
         }
 
         // Kill by calling DeathLossTrigger.Die on this game object if health <= 0
         // Note that this game object must have a DeathLossTrigger
-        if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0)
+        if (healthBar != null)
         {
+            if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0)
+            {
 
-            this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
+                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
 
-            this.GetComponent<DeathLossTrigger>().Die();
+                this.GetComponent<DeathLossTrigger>().Die();
+            }
         }
     }
 }

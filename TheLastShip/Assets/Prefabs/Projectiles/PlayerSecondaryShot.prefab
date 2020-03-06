@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9120989979327809954}
   m_Layer: 0
   m_Name: PlayerSecondaryShot
-  m_TagString: Untagged
+  m_TagString: PlayerShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   UnchargedShotDamage: 10
   ChargedShotDamage: 40
   ChargedShotExplodeScale: 30
-  homingStrength: 0.1
+  homingStrength: 0.24
   Fired: 0
   FullyCharged: 0
   ReadyToFire: 0

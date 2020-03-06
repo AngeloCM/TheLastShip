@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 public class IndicatorScript : MonoBehaviour
 {
 
@@ -18,8 +17,8 @@ public class IndicatorScript : MonoBehaviour
 
     private List<OnScreenIndicator> indicatorList = new List<OnScreenIndicator>();
     private List<OffScreenIndicator> offScreenList = new List<OffScreenIndicator>();
-    [SerializeField]
-    private Sprite enemyImage, cargoImage;
+    [SerializeField, Tooltip("The image must be type sprite, If it isn't a sprite already then click on the image you want and change its texture type in the Inspector to Sprite")]
+    private Sprite enemyOffScreenSprite, cargoOffScreenSprite, enemyOnScreenSprite, cargoOnScreenSprite;
 
     //public List<ShipIndicator> indicatorPool;
     //public List<ShipIndicatorArrow> arrowIndicatorPool;
@@ -37,7 +36,7 @@ public class IndicatorScript : MonoBehaviour
         {
             playerReference = GameObject.FindGameObjectWithTag("Player");
             TargetList = new List<GameObject>();
-        AddCargoShipIndicatorToTargetList();
+            AddCargoShipIndicatorToTargetList();
         }
 
         // Start is called before the first frame update
@@ -46,8 +45,11 @@ public class IndicatorScript : MonoBehaviour
             //StartSetIndicatorClamps();
 
             targetIndex = 0;
-        offScreenIndex = 0;
+            offScreenIndex = 0;
             targetValidated = TargetList.Count > 0;
+
+        //Change scale of sprite
+        
         }
 
         // Update is called once per frame
@@ -74,7 +76,7 @@ public class IndicatorScript : MonoBehaviour
     }
 
 
-        private void AddCargoShipIndicatorToTargetList()
+        public static void AddCargoShipIndicatorToTargetList()
         {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CargoShip"))
             {
@@ -101,7 +103,7 @@ public class IndicatorScript : MonoBehaviour
                     if(checkDistance >= minDistanceForOnScreenIndicator)
                     {
                     OnScreenIndicator indicator = acquireIndicators();
-                    //indicator.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
+                    indicator.GetComponentInChildren<Image>().sprite = OnScreenCheckTagForTexture(t);
                     indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
                     }
                 }
@@ -223,12 +225,25 @@ public class IndicatorScript : MonoBehaviour
 
         if(t.tag == "Enemy")
         {
-            return enemyImage;
+            return enemyOffScreenSprite;
         }
         else
         {
-            return cargoImage;
+            return cargoOffScreenSprite;
         }
+    }
+
+    private Sprite OnScreenCheckTagForTexture(GameObject t)
+    {
+        if(t.tag == "Enemy")
+        {
+            return enemyOnScreenSprite;
+        }
+        else
+        {
+            return cargoOnScreenSprite;
+        }
+        
     }
 
 

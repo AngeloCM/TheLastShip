@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/LG_DamageTesting.unity
     guid: 8cb0b2be1f4be5643968fa2e29fa4ee2
+  - enabled: 1
+    path: Assets/Scenes/In-build/Main Menu.unity
+    guid: 5ecc255ca2faed44aba0f064d4a25363
+  - enabled: 1
+    path: Assets/Scenes/In-build/Tutorial.unity
+    guid: 18d381360221c724f870b0aa840e3237
+  - enabled: 1
+    path: Assets/Scenes/In-build/Gameplay Loop.unity
+    guid: 23759256b36ea924b87fe27794736752
+  - enabled: 1
+    path: Assets/Scenes/In-build/Credits.unity
+    guid: 99735b292d508e14a9d0b000321ee11f
   m_configObjects: {}

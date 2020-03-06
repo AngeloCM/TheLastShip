@@ -93,6 +93,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameSettings.IsPaused)
+        {
+            CanMove = false;
+        }
+
         if (CanMove)
         {
             RotateShip();
@@ -101,81 +106,21 @@ public class PlayerController : MonoBehaviour
             {
                 AccelerateShipClassic();
 
-                if (Input.GetButton("Fire1") && !firing)
-                {
-                    firingPrimary = true;
-                }
-                if (Input.GetButtonUp("Fire1"))
-                {
-                    firing = false;
-                    firingPrimary = false;
-                    shotTimer = 0f;
-                }
-
-                if (Input.GetButton("Fire2") && !firing)
-                {
-                    chargingSecondary = true;
-                }
-                if (Input.GetButtonUp("Fire2") && currentChargeShot != null)
-                {
-                    ReleaseSecondaryFire();
-
-                    shotTimer = 0f;
-                }
+                CheckFireClassic();
             }
 
             else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontline)
             {
                 AccelerateShipFrontline();
 
-                if (Input.GetButton("FireFrontline") && !firing)
-                {
-                    firingPrimary = true;
-                }
-                if (Input.GetButtonUp("FireFrontline"))
-                {
-                    firing = false;
-                    firingPrimary = false;
-                    shotTimer = 0f;
-                }
-
-                if (Input.GetButton("AltFireFrontline") && !firing)
-                {
-                    chargingSecondary = true;
-                }
-                if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
-                {
-                    ReleaseSecondaryFire();
-
-                    shotTimer = 0f;
-                }
+                CheckFireFrontline();
             }
 
             else if (GameSettings.CurrentControlScheme == GameSettings.ControlScheme.frontlineBeta)
             {
                 AccelerateShipFrontlineBeta();
 
-                if (Input.GetButton("FireFrontline") && !firing) // Fire button is the same as frontline
-                {
-                    firingPrimary = true;
-                }
-                if (Input.GetButtonUp("FireFrontline"))
-                {
-                    firing = false;
-                    firingPrimary = false;
-                    shotTimer = 0f;
-                }
-
-                if (Input.GetButton("AltFireFrontline") && !firing)
-                {
-                    chargingSecondary = true;
-                }
-                if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
-                {
-                    ReleaseSecondaryFire();
-
-                    shotTimer = 0f;
-                }
+                CheckFireFrontline();
             }
 
             if (firingPrimary)
@@ -201,6 +146,56 @@ public class PlayerController : MonoBehaviour
         // adjusts engine sound according to CurrentSpeed
         AkSoundEngine.SetRTPCValue("Player_Speed", CurrentSpeed);
         // audio ckrueger ^^^
+    }
+
+    private void CheckFireFrontline()
+    {
+        if (Input.GetButton("FireFrontline") && !firing)
+        {
+            firingPrimary = true;
+        }
+        if (Input.GetButtonUp("FireFrontline"))
+        {
+            firing = false;
+            firingPrimary = false;
+            shotTimer = 0f;
+        }
+
+        if (Input.GetButton("AltFireFrontline") && !firing)
+        {
+            chargingSecondary = true;
+        }
+        if (Input.GetButtonUp("AltFireFrontline") && currentChargeShot != null)
+        {
+            ReleaseSecondaryFire();
+
+            shotTimer = 0f;
+        }
+    }
+
+    private void CheckFireClassic()
+    {
+        if (Input.GetButton("Fire1") && !firing)
+        {
+            firingPrimary = true;
+        }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            firing = false;
+            firingPrimary = false;
+            shotTimer = 0f;
+        }
+
+        if (Input.GetButton("Fire2") && !firing)
+        {
+            chargingSecondary = true;
+        }
+        if (Input.GetButtonUp("Fire2") && currentChargeShot != null)
+        {
+            ReleaseSecondaryFire();
+
+            shotTimer = 0f;
+        }
     }
 
     private void StopFiring()
