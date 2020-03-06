@@ -45,6 +45,7 @@ namespace Assets.Scripts.AI.EnemyCode
 
         void Update()
         {
+            //Update all the point.transform.position while for the Cargo that is moving.
             //foreach (var point in _connections)
             //{
             //    point.transform.position = point.transform.position;

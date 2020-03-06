@@ -23,6 +23,7 @@ namespace Assets.Scripts.AI
             _currentState = null;
 
             _fsmStates = new Dictionary<FSMStateType, AbstractFSMState>();
+
             Enemy enemy = this.GetComponent<Enemy>();
 
             foreach(AbstractFSMState state in _validStates)

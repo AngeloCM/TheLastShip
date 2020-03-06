@@ -25,7 +25,7 @@ namespace Assets.Scripts.AI.States
 
             if (EnteredState)
             {
-                Debug.Log("ENTERED IDLE STATE");
+                Debug.Log("ENTERED IDLE STATE " + _enemy.name);
                 _totalDuration = 0f;
             }
             
@@ -37,7 +37,7 @@ namespace Assets.Scripts.AI.States
             if (EnteredState)
             {
                 _totalDuration += Time.deltaTime;
-                //Debug.Log("UPDATING IDLE STATE: " + _totalDuration + " seconds.");
+                Debug.Log("UPDATING IDLE STATE: " + _totalDuration + " seconds.");
 
                 if (_totalDuration >= _enemy.totalDurationIdle)
                 {                  

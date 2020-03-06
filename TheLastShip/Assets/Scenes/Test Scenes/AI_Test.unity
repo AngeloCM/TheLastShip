@@ -278,6 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []
 --- !u!4 &303538645
 Transform:
   m_ObjectHideFlags: 0
@@ -286,7 +287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303538643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 261, y: 41.7, z: 708}
+  m_LocalPosition: {x: 261, y: 41.7, z: 421}
   m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
   m_Children: []
   m_Father: {fileID: 740126208}
@@ -337,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []
 --- !u!1 &578442670
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []
 --- !u!1 &620412935
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620412935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -226, y: -90, z: 457}
+  m_LocalPosition: {x: -226, y: -90, z: 170}
   m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
   m_Children: []
   m_Father: {fileID: 740126208}
@@ -427,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []
 --- !u!1 &740126207
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []
 --- !u!1001 &1095663190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,41 +615,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: PlayerReference
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2160959878393208980, guid: 7ab763648be19c549b9e527e497c472f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,225 +675,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwarmEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2160959878393208986, guid: 7ab763648be19c549b9e527e497c472f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
---- !u!1 &1182080834
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1182080835}
-  - component: {fileID: 1182080836}
-  m_Layer: 0
-  m_Name: Point1 (5)
-  m_TagString: FlyPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1182080835
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182080834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.5, y: 215, z: 457}
-  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
-  m_Children: []
-  m_Father: {fileID: 740126208}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1182080836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182080834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugDrawRadius: 25.62
-  _connectivityRadius: 50
---- !u!1 &1410115220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1410115221}
-  - component: {fileID: 1410115222}
-  m_Layer: 0
-  m_Name: Point1 (2)
-  m_TagString: FlyPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1410115221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410115220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 129, y: -67, z: -216.8}
-  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
-  m_Children: []
-  m_Father: {fileID: 740126208}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1410115222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410115220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugDrawRadius: 25.62
-  _connectivityRadius: 50
---- !u!1 &1481707885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1481707886}
-  - component: {fileID: 1481707887}
-  m_Layer: 0
-  m_Name: Point1 (6)
-  m_TagString: FlyPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1481707886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481707885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.5, y: 41.7, z: 671}
-  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
-  m_Children: []
-  m_Father: {fileID: 740126208}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1481707887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481707885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugDrawRadius: 25.62
-  _connectivityRadius: 50
---- !u!1 &1948588504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1948588505}
-  - component: {fileID: 1948588506}
-  m_Layer: 0
-  m_Name: Point1 (8)
-  m_TagString: FlyPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1948588505
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948588504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162, y: 190, z: 836}
-  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
-  m_Children: []
-  m_Father: {fileID: 740126208}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1948588506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948588504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugDrawRadius: 25.62
-  _connectivityRadius: 50
---- !u!1001 &2019146002
+--- !u!1001 &1160662083
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: _flyPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
         type: 3}
       propertyPath: PlayerReference
@@ -942,7 +707,7 @@ PrefabInstance:
     - target: {fileID: 2160959878393208980, guid: 7ab763648be19c549b9e527e497c472f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 583
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 2160959878393208980, guid: 7ab763648be19c549b9e527e497c472f,
         type: 3}
@@ -989,8 +754,197 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwarmEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2160959878393208986, guid: 7ab763648be19c549b9e527e497c472f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
+--- !u!1 &1182080834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182080835}
+  - component: {fileID: 1182080836}
+  m_Layer: 0
+  m_Name: Point1 (5)
+  m_TagString: FlyPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182080835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182080834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.5, y: 215, z: 170}
+  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
+  m_Children: []
+  m_Father: {fileID: 740126208}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182080836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182080834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugDrawRadius: 25.62
+  _connectivityRadius: 50
+  _connections: []
+--- !u!1 &1410115220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410115221}
+  - component: {fileID: 1410115222}
+  m_Layer: 0
+  m_Name: Point1 (2)
+  m_TagString: FlyPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1410115221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410115220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 129, y: -67, z: -216.8}
+  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
+  m_Children: []
+  m_Father: {fileID: 740126208}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1410115222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410115220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugDrawRadius: 25.62
+  _connectivityRadius: 50
+  _connections: []
+--- !u!1 &1481707885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481707886}
+  - component: {fileID: 1481707887}
+  m_Layer: 0
+  m_Name: Point1 (6)
+  m_TagString: FlyPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1481707886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481707885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.5, y: 41.7, z: 384}
+  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
+  m_Children: []
+  m_Father: {fileID: 740126208}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481707887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481707885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugDrawRadius: 25.62
+  _connectivityRadius: 50
+  _connections: []
+--- !u!1 &1948588504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948588505}
+  - component: {fileID: 1948588506}
+  m_Layer: 0
+  m_Name: Point1 (8)
+  m_TagString: FlyPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948588505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948588504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -162, y: 190, z: 549}
+  m_LocalScale: {x: 1.1271, y: 1.1271, z: 1.1271}
+  m_Children: []
+  m_Father: {fileID: 740126208}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948588506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948588504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437efa7bd59fbaa49bdee0547edb625b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugDrawRadius: 25.62
+  _connectivityRadius: 50
+  _connections: []
 --- !u!1 &2077107033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,3 +1102,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 25.62
   _connectivityRadius: 50
+  _connections: []

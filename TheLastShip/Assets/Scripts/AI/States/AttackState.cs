@@ -21,7 +21,7 @@ namespace Assets.Scripts.AI.States
 
             if (EnteredState)
             {
-                Debug.Log("ENTERED ATTACK STATE");
+                Debug.Log("ENTERED ATTACK STATE " + _enemy.gameObject.name);
                 updateTime = 0;
             }
 

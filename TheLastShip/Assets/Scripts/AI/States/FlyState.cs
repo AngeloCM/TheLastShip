@@ -54,7 +54,7 @@ namespace Assets.Scripts.AI.States
 
             if (EnteredState)
             {
-                Debug.Log("ENTERED FLY STATE");
+                Debug.Log("ENTERED FLY STATE " + _enemy.gameObject.name);
                 updateTime = 0f;
             }
 
