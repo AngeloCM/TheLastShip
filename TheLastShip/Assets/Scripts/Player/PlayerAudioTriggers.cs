@@ -10,9 +10,4 @@ public class PlayerAudioTriggers : MonoBehaviour
     {
         AkSoundEngine.PostEvent("plr_shield_damage", this.gameObject);
     }
-
-    public void PlaySoundHitmarker()
-    {
-        AkSoundEngine.PostEvent("hitmarker", this.gameObject);
-    }
 }

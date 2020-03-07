@@ -75,6 +75,8 @@ public class SecondaryShot : MonoBehaviour
 
         this.hasCollided = false;
         this.isExpanding = false;
+
+        PlaySoundSecondaryShotCharge();
     }
 
     // Update is called once per frame
@@ -92,9 +94,13 @@ public class SecondaryShot : MonoBehaviour
             else rb.velocity = Vector3.zero;
 
             UpdateCheckToDeactivate();
+            
+
+            StopSoundSecondaryShotCharge();
         }
         else if (Fired) 
         {
+            StopSoundSecondaryShotCharge();
             // Delete if not yet ready to fire, but player fired
             this.gameObject.SetActive(false);
         }
@@ -243,4 +249,16 @@ public class SecondaryShot : MonoBehaviour
 
         isExpanding = true;
     }
+
+    // audio vvv
+    private void PlaySoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge", gameObject);
+    }
+
+    private void StopSoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge_stop", gameObject);
+    }
+    // audio ^^^
 }
