@@ -46,6 +46,9 @@ public class SecondaryShot : MonoBehaviour
     private bool hasCollided;
     private bool isExpanding;
 
+    // audio
+    private bool hasPlayedSecondaryRelease;
+
     private float expansionRate = 1.1f; // The rate at which a fully charged shot expands on contact with first enemy. Ensure this is > 1
 
     private float postExpandLingerTime = 0.7f; // The time in seconds to linger when finished expanding
@@ -75,6 +78,7 @@ public class SecondaryShot : MonoBehaviour
 
         this.hasCollided = false;
         this.isExpanding = false;
+        this.hasPlayedSecondaryRelease = false;
 
         PlaySoundSecondaryShotCharge();
     }
@@ -87,6 +91,16 @@ public class SecondaryShot : MonoBehaviour
             // Detach this gameobject from the ShotTransform
             this.gameObject.transform.parent = null;
 
+            // audio vvv
+            StopSoundSecondaryShotCharge();
+
+            if (!hasPlayedSecondaryRelease)
+            {
+                PlaySoundSecondaryShotRelease();
+                hasPlayedSecondaryRelease = true;
+            }
+            // audio ^^^
+
             UpdateAttemptHomeOnEnemy();
 
             // Move forward unless the shot has collided with an enemy, in which case we want the shot to sit still and expand.
@@ -94,13 +108,13 @@ public class SecondaryShot : MonoBehaviour
             else rb.velocity = Vector3.zero;
 
             UpdateCheckToDeactivate();
-            
-
-            StopSoundSecondaryShotCharge();
         }
         else if (Fired) 
         {
+            // audio vvv
             StopSoundSecondaryShotCharge();
+            // audio ^^^
+
             // Delete if not yet ready to fire, but player fired
             this.gameObject.SetActive(false);
         }
@@ -259,6 +273,11 @@ public class SecondaryShot : MonoBehaviour
     private void StopSoundSecondaryShotCharge()
     {
         AkSoundEngine.PostEvent("plr_secondary_charge_stop", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotRelease()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_release", gameObject);
     }
     // audio ^^^
 }
