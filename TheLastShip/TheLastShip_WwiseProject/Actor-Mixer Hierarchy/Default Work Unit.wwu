@@ -538,6 +538,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="sx_hitmarker" ID="{BD4C8263-009C-4DCA-B99A-09FD181C7D1A}" ShortID="743767004">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53530E0F-64D1-41A6-AB80-7792DEE8EBEA}"/>

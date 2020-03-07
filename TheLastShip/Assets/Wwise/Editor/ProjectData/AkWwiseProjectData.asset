@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586188342330292951
+    m_lastTime: -8586180967876038895
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,8 +56,56 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586188349420515673
+    m_lastTime: -8586180967928095361
     List:
+    - name: cargo_engine
+      guid: fb3689a90f8f734893146b355c26ee10
+      id: 3221620188
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cargo_engine
+        ObjectType: 3
+      Path: Default Work Unit\cargo_engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: cargo_lose_ring
+      guid: a575c1741960bf4487ee4ca73b6927fa
+      id: 979060302
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cargo_lose_ring
+        ObjectType: 3
+      Path: Default Work Unit\cargo_lose_ring
+      maxAttenuation: 0
+      maxDuration: 15.212667
+      minDuration: 15.212667
+    - name: enemy_death
+      guid: 6407f8c0edd5ee4897db6a5a4c09e14a
+      id: 1205999388
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_death
+        ObjectType: 3
+      Path: Default Work Unit\enemy_death
+      maxAttenuation: 0
+      maxDuration: 1.572792
+      minDuration: 1.572792
+    - name: hitmarker
+      guid: 36d8d18389730b499002c6bd2ed2ba10
+      id: 3733553022
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: hitmarker
+        ObjectType: 3
+      Path: Default Work Unit\hitmarker
+      maxAttenuation: 0
+      maxDuration: 0.202875
+      minDuration: 0.202875
     - name: plr_engine
       guid: 6ccedd8e2cf6184db21868a6173f54b5
       id: 1670947946
@@ -94,6 +142,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.30966
       minDuration: 0.30522
+    - name: plr_rotate_left
+      guid: 01e03538b66ba740a2ecee259b205458
+      id: 1978619431
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_rotate_left
+        ObjectType: 3
+      Path: Default Work Unit\plr_rotate_left
+      maxAttenuation: 0
+      maxDuration: 0.355375
+      minDuration: 0.355375
+    - name: plr_rotate_right
+      guid: 2378414bc5af4942b6d91dc03dcb0988
+      id: 1320151434
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_rotate_right
+        ObjectType: 3
+      Path: Default Work Unit\plr_rotate_right
+      maxAttenuation: 0
+      maxDuration: 0.350417
+      minDuration: 0.350417
     - name: plr_secondary_charge
       guid: fd5e653ec68fb945bca2485694e14aa9
       id: 2898173329
@@ -118,6 +190,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: plr_secondary_release
+      guid: 9f1a9a382c749c4f8a647a32dae765bf
+      id: 3185663872
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_release
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_release
+      maxAttenuation: 0
+      maxDuration: 1.769438
+      minDuration: 1.769438
     - name: plr_shield_damage
       guid: 4875253ac3fb8a449c24669c8310a36c
       id: 3600127465
@@ -128,8 +212,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\plr_shield_damage
       maxAttenuation: 0
-      maxDuration: 1.038821
-      minDuration: 0.776795
+      maxDuration: 0.814792
+      minDuration: 0.525979
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
