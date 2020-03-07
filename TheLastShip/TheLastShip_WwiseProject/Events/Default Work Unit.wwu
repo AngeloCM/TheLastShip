@@ -102,7 +102,7 @@
 						<Action Name="" ID="{372C93A1-4073-452F-A43C-FAB855A5E9B2}" ShortID="138578957">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sx_env_cargo_ship_engine" ID="{80878A7A-BD00-4FB1-82F2-AE18BA2FC04F}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+									<ObjectRef Name="sx_env_cargo_ship_engine" ID="{940103E8-DF1B-418A-AF94-C3529F80D07F}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

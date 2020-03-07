@@ -1,0 +1,24 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "12",
+  "SoundbankVersion": "135",
+  "RootPaths": {
+   "ProjectRoot": "C:\\Users\\Cole Krueger\\Documents\\GitHub\\TheLastShip\\TheLastShip\\TheLastShip_WwiseProject\\",
+   "SourceFilesRoot": "C:\\Users\\Cole Krueger\\Documents\\GitHub\\TheLastShip\\TheLastShip\\TheLastShip_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "C:\\Users\\Cole Krueger\\Documents\\GitHub\\TheLastShip\\TheLastShip\\TheLastShip_WwiseProject\\GeneratedSoundBanks\\Windows\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "C:\\Users\\Cole Krueger\\Documents\\GitHub\\TheLastShip\\TheLastShip\\TheLastShip_WwiseProject\\GeneratedSoundBanks\\Windows"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Language": "SFX",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk"
+   }
+  ]
+ }
+}

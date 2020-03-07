@@ -21,7 +21,7 @@
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3221620188" Name="cargo_engine" ObjectPath="\Events\Default Work Unit\cargo_engine" DurationType="Infinite">
+				<Event Id="3221620188" Name="cargo_engine" ObjectPath="\Events\Default Work Unit\cargo_engine" MaxAttenuation="100.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1053073425" Language="SFX">
 							<ShortName>sx_env_cargo_ship_engine.wav</ShortName>

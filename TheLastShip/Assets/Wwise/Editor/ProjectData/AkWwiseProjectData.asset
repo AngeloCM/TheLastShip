@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586180967928095361
+    m_lastTime: -8586180465020719614
     List:
     - name: cargo_engine
       guid: fb3689a90f8f734893146b355c26ee10
@@ -67,7 +67,7 @@ MonoBehaviour:
       - ElementName: cargo_engine
         ObjectType: 3
       Path: Default Work Unit\cargo_engine
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: cargo_lose_ring
@@ -253,5 +253,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /TheLastShip_WwiseProject
+  - /TheLastShip_WwiseProject/Events
+  - /TheLastShip_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

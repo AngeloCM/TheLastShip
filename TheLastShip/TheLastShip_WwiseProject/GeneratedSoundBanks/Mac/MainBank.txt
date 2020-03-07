@@ -37,5 +37,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	851515682	sx_plr_rotate_right	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_rotate_right_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_plr_rotate_right		67344
 	868942418	sx_plr_main_cannon_2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_2		54688
 	929682366	sx_plr_shield_hit_1_v2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_1_v2		105584
-	1053073425	sx_env_cargo_ship_engine	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_env_cargo_ship_engine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_env_cargo_ship_engine		786436
+	1053073425	sx_env_cargo_ship_engine	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_env_cargo_ship_engine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_env_cargo_ship_engine		786000
 

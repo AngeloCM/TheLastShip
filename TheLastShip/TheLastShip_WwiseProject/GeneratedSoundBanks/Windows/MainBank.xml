@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="2880737896" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainBank</ObjectPath>
+			<ShortName>MainBank</ShortName>
+			<Path>MainBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3221620188" Name="cargo_engine" ObjectPath="\Events\Default Work Unit\cargo_engine" MaxAttenuation="100.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1053073425" Language="SFX">
+							<ShortName>sx_env_cargo_ship_engine.wav</ShortName>
+							<Path>SFX\sx_env_cargo_ship_engine_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="979060302" Name="cargo_lose_ring" ObjectPath="\Events\Default Work Unit\cargo_lose_ring" DurationType="OneShot" DurationMin="15.212667" DurationMax="15.212667">
+					<IncludedMemoryFiles>
+						<File Id="498860533" Language="SFX">
+							<ShortName>sx_SHIP LOSE RING.wav</ShortName>
+							<Path>SFX\sx_SHIP LOSE RING_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1205999388" Name="enemy_death" ObjectPath="\Events\Default Work Unit\enemy_death" DurationType="OneShot" DurationMin="1.572792" DurationMax="1.572792">
+					<IncludedMemoryFiles>
+						<File Id="294138716" Language="SFX">
+							<ShortName>sx_enemy_death.wav</ShortName>
+							<Path>SFX\sx_enemy_death_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3733553022" Name="hitmarker" ObjectPath="\Events\Default Work Unit\hitmarker" DurationType="OneShot" DurationMin="0.202875" DurationMax="0.202875">
+					<IncludedMemoryFiles>
+						<File Id="7247651" Language="SFX">
+							<ShortName>sx_hitmarker.wav</ShortName>
+							<Path>SFX\sx_hitmarker_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1670947946" Name="plr_engine" ObjectPath="\Events\Default Work Unit\plr_engine" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="16333983" Language="SFX">
+							<ShortName>sx_plr_engine_slower.wav</ShortName>
+							<Path>SFX\sx_plr_engine_slower_D79FB2B7.wem</Path>
+						</File>
+						<File Id="291291475" Language="SFX">
+							<ShortName>sx_plr_engine_whine.wav</ShortName>
+							<Path>SFX\sx_plr_engine_whine_D79FB2B7.wem</Path>
+						</File>
+						<File Id="828196131" Language="SFX">
+							<ShortName>sx_plr_engine_faster.wav</ShortName>
+							<Path>SFX\sx_plr_engine_faster_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="181840089" Name="plr_engine_stop" ObjectPath="\Events\Default Work Unit\plr_engine_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="614170710" Name="plr_primary_shoot" ObjectPath="\Events\Default Work Unit\plr_primary_shoot" DurationType="OneShot" DurationMin="0.305220" DurationMax="0.309660">
+					<IncludedMemoryFiles>
+						<File Id="259940942" Language="SFX">
+							<ShortName>sx_plr_main_cannon_5.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_5_10C4C929.wem</Path>
+						</File>
+						<File Id="270555747" Language="SFX">
+							<ShortName>sx_plr_main_cannon_4.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_4_10C4C929.wem</Path>
+						</File>
+						<File Id="341271279" Language="SFX">
+							<ShortName>sx_plr_main_cannon_3.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_3_10C4C929.wem</Path>
+						</File>
+						<File Id="402433319" Language="SFX">
+							<ShortName>sx_plr_main_cannon_1.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_1_10C4C929.wem</Path>
+						</File>
+						<File Id="868942418" Language="SFX">
+							<ShortName>sx_plr_main_cannon_2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1978619431" Name="plr_rotate_left" ObjectPath="\Events\Default Work Unit\plr_rotate_left" DurationType="OneShot" DurationMin="0.355375" DurationMax="0.355375">
+					<IncludedMemoryFiles>
+						<File Id="94222064" Language="SFX">
+							<ShortName>sx_plr_rotate_left.wav</ShortName>
+							<Path>SFX\sx_plr_rotate_left_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1320151434" Name="plr_rotate_right" ObjectPath="\Events\Default Work Unit\plr_rotate_right" DurationType="OneShot" DurationMin="0.350417" DurationMax="0.350417">
+					<IncludedMemoryFiles>
+						<File Id="851515682" Language="SFX">
+							<ShortName>sx_plr_rotate_right.wav</ShortName>
+							<Path>SFX\sx_plr_rotate_right_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2898173329" Name="plr_secondary_charge" ObjectPath="\Events\Default Work Unit\plr_secondary_charge" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="623822031" Language="SFX">
+							<ShortName>sx_plr_secondary_charge.wav</ShortName>
+							<Path>SFX\sx_plr_secondary_charge_10C4C929.wem</Path>
+						</File>
+						<File Id="695854333" Language="SFX">
+							<ShortName>sx_plr_secondary_loop.wav</ShortName>
+							<Path>SFX\sx_plr_secondary_loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="33059316" Name="plr_secondary_charge_stop" ObjectPath="\Events\Default Work Unit\plr_secondary_charge_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3185663872" Name="plr_secondary_release" ObjectPath="\Events\Default Work Unit\plr_secondary_release" DurationType="OneShot" DurationMin="1.769438" DurationMax="1.769438">
+					<IncludedMemoryFiles>
+						<File Id="222337875" Language="SFX">
+							<ShortName>sx_plr_secondary_release.wav</ShortName>
+							<Path>SFX\sx_plr_secondary_release_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" DurationType="OneShot" DurationMin="0.525979" DurationMax="0.814792">
+					<IncludedMemoryFiles>
+						<File Id="2866322" Language="SFX">
+							<ShortName>sx_plr_shield_hit_4_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_4_v2_10C4C929.wem</Path>
+						</File>
+						<File Id="288545317" Language="SFX">
+							<ShortName>sx_plr_shield_hit_3_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_3_v2_10C4C929.wem</Path>
+						</File>
+						<File Id="529713889" Language="SFX">
+							<ShortName>sx_plr_shield_hit_2_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_2_v2_10C4C929.wem</Path>
+						</File>
+						<File Id="929682366" Language="SFX">
+							<ShortName>sx_plr_shield_hit_1_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_1_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="1062779386" Name="Player_Speed" ObjectPath="\Game Parameters\Default Work Unit\Player_Speed"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

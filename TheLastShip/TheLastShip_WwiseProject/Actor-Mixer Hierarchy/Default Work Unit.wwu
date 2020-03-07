@@ -679,11 +679,64 @@
 						<ActiveSource Name="sx_SHIP LOSE RING" ID="{D18F5DD5-9F4C-49EC-A87A-61617651CE5F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="sx_env_cargo_ship_engine" ID="{80878A7A-BD00-4FB1-82F2-AE18BA2FC04F}" ShortID="675732035">
+				<Sound Name="sx_env_cargo_ship_engine" ID="{940103E8-DF1B-418A-AF94-C3529F80D07F}" ShortID="1072416022">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{6774B61C-20D7-41DB-917E-4FA18877C16A}" ShortID="736784793">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{98C341E6-3D40-49B9-9EEB-22D4BD7FED74}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53530E0F-64D1-41A6-AB80-7792DEE8EBEA}"/>
 						</Reference>
@@ -692,7 +745,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="sx_env_cargo_ship_engine" ID="{078EC0DA-88CF-498B-9398-FC248EE6F672}">
+						<AudioFileSource Name="sx_env_cargo_ship_engine" ID="{9918F4C2-C4AF-4778-971E-62B1BBB5F099}">
 							<Language>SFX</Language>
 							<AudioFile>sx_env_cargo_ship_engine.wav</AudioFile>
 							<MediaIDList>
@@ -701,7 +754,7 @@
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="sx_env_cargo_ship_engine" ID="{078EC0DA-88CF-498B-9398-FC248EE6F672}" Platform="Linked"/>
+						<ActiveSource Name="sx_env_cargo_ship_engine" ID="{9918F4C2-C4AF-4778-971E-62B1BBB5F099}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
