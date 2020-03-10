@@ -109,7 +109,7 @@ MonoBehaviour:
   _validStates:
   - {fileID: 11400000, guid: e4c904fa5833c884e8ada27f80456ba1, type: 2}
   - {fileID: 11400000, guid: d7e63dda1e0ec9b4fa6ff06473fb2466, type: 2}
-  - {fileID: 11400000, guid: fb632cad74376d74b98c0f13f2592bd5, type: 2}
+  - {fileID: 11400000, guid: ab7c761f9ac6f584c9bdd2cf2c245d0f, type: 2}
 --- !u!114 &2160959878393208979
 MonoBehaviour:
   m_ObjectHideFlags: 0

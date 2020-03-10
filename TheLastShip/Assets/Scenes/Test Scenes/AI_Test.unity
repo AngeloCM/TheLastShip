@@ -675,12 +675,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwarmEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2160959878393208986, guid: 7ab763648be19c549b9e527e497c472f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2160959878393208978, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
 --- !u!1001 &1160662083
 PrefabInstance:
@@ -689,6 +685,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2160959878393208978, guid: 7ab763648be19c549b9e527e497c472f,
+        type: 3}
+      propertyPath: _validStates.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ab7c761f9ac6f584c9bdd2cf2c245d0f,
+        type: 2}
     - target: {fileID: 2160959878393208979, guid: 7ab763648be19c549b9e527e497c472f,
         type: 3}
       propertyPath: PlayerReference
@@ -759,7 +761,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2160959878393208978, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab763648be19c549b9e527e497c472f, type: 3}
 --- !u!1 &1182080834
 GameObject:
