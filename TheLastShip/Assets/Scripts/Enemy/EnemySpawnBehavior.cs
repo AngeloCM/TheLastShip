@@ -43,7 +43,7 @@ public class EnemySpawnBehavior : MonoBehaviour
             {
                 for (int i = 0; i < numOfEnemiesPerSpawn; i++)
                 {
-                    IndicatorScript.TargetList.Add(Instantiate(enemyPrefab, this.transform.position + (UnityEngine.Random.onUnitSphere * 20), this.transform.rotation));
+                    IndicatorScript.TargetList.Add(Instantiate(enemyPrefab, this.transform.position + (UnityEngine.Random.onUnitSphere * 20), UnityEngine.Random.rotation));
                 }
 
                 wavesSpawned++;

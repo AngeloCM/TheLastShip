@@ -482,5 +482,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveTextToDisplay: 'Objective: Shoot the Planet to Play!'
   objectiveText: {fileID: 0}
-  SceneToLoad: Gameplay Loop
+  SceneToLoad: Tutorial
   CanLoadScene: 0
