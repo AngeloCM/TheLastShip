@@ -25,7 +25,7 @@ namespace Assets.Scripts.AI.States
 
             if (EnteredState)
             {
-                Debug.Log("ENTERED IDLE STATE");
+                Debug.Log("ENTERED IDLE STATE " + _enemy.name);
                 _totalDuration = 0f;
             }
             
@@ -40,15 +40,12 @@ namespace Assets.Scripts.AI.States
                 Debug.Log("UPDATING IDLE STATE: " + _totalDuration + " seconds.");
 
                 if (_totalDuration >= _enemy.totalDurationIdle)
+                {                  
+                    _fsm.EnterState(FSMStateType.FLY);  
+                }
+                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) <= _enemy.DistanceToAttackPlayer)
                 {
-                    if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) <= _enemy.DistanceToAttackPlayer)
-                    {
-                        _fsm.EnterState(FSMStateType.ATTACK);
-                    }
-                    else
-                    {
-                        _fsm.EnterState(FSMStateType.FLY);
-                    }
+                    _fsm.EnterState(FSMStateType.ATTACK);
                 }
             }
         }

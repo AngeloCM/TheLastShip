@@ -15,7 +15,7 @@ namespace Assets.Scripts.AI.States
     {
         EnemyFlyPoint[] _flyPoints;
         int _flyPointIndex;
-        float updateTime = 0f;
+        float updateTime;
 
         public override void OnEnable()
         {
@@ -49,7 +49,13 @@ namespace Assets.Scripts.AI.States
                     }
 
                     EnteredState = true;
-                }
+                } 
+            }
+
+            if (EnteredState)
+            {
+                Debug.Log("ENTERED FLY STATE " + _enemy.gameObject.name);
+                updateTime = 0f;
             }
 
             return EnteredState;
@@ -79,8 +85,8 @@ namespace Assets.Scripts.AI.States
 
         private void SetDestination(EnemyFlyPoint destination)
         {
+            Debug.Log("FLYING");
             _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, destination.transform.position, _enemy.movSpeed * updateTime);
-            updateTime = 0;
         }
 
         public override bool ExitState()

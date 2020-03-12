@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2160959878393208979}
   m_Layer: 0
   m_Name: SwarmEnemy
-  m_TagString: SwarmEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2160959878393208986}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.91, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 25.37, y: 25.37, z: 25.37}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   _validStates:
   - {fileID: 11400000, guid: e4c904fa5833c884e8ada27f80456ba1, type: 2}
   - {fileID: 11400000, guid: d7e63dda1e0ec9b4fa6ff06473fb2466, type: 2}
+  - {fileID: 11400000, guid: ab7c761f9ac6f584c9bdd2cf2c245d0f, type: 2}
 --- !u!114 &2160959878393208979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,5 +128,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movSpeed: 15
-  totalDurationIdle: 2
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PlayerReference: {fileID: 0}
+  movSpeed: 2
+  totalDurationIdle: 0.5
+  DistanceToTouchWaypoint: 2
+  DistanceToAttackPlayer: 300
+  DistanceToExplode: 50
