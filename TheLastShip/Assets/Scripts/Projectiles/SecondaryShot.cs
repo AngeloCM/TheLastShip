@@ -54,6 +54,8 @@ public class SecondaryShot : MonoBehaviour
     private float distanceFromEnemyLastFrame; // These two variables determine whether to stop homing because the shot is "past" the enemy
     private float currentDistanceFromEnemy;
 
+    private SecondaryHomingUI homingUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,8 @@ public class SecondaryShot : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
 
         enemiesDamaged = new List<GameObject>();
+
+        homingUI = FindObjectOfType<SecondaryHomingUI>();
         
         shotDir = this.transform.forward;
 
@@ -149,6 +153,8 @@ public class SecondaryShot : MonoBehaviour
                 if (hit.transform.root.gameObject.tag == "Enemy" || hit.transform.root.gameObject.tag == "enemy")
                 {
                     this.TargetEnemy = hit.transform.root.gameObject;
+
+                    GiveReferenceToHomingUI();
                 }
             }
         }
@@ -158,6 +164,11 @@ public class SecondaryShot : MonoBehaviour
         {
             TargetEnemy = null;
         }
+    }
+
+    private void GiveReferenceToHomingUI()
+    {
+        homingUI.CurrentShot = this;
     }
 
     private void UpdateAttemptHomeOnEnemy()

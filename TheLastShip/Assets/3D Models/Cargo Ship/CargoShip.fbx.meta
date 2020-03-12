@@ -3,10 +3,120 @@ guid: 5757d6cfd0e867245ad03ad4a7bfc192
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: armorPlate_MAT
+    second: {fileID: 2100000, guid: 72251ca2f3b82184f81030404c700994, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: beam_MAT
+    second: {fileID: 2100000, guid: 16c165f72d815074da4a0a600fb90a49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bodyConnect_MAT
+    second: {fileID: 2100000, guid: 89254fa14825b3344b3c5f27d4bc91f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_MAT
+    second: {fileID: 2100000, guid: 07c26641bfac94746aeb63676384972a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: braceClamp_MAT
+    second: {fileID: 2100000, guid: 564fdf0a0ea20cb4ca4a2a4e6567f3ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bracket_MAT
+    second: {fileID: 2100000, guid: c50c78ec8c8a74c429eaa0a43aa44a5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_MAT
+    second: {fileID: 2100000, guid: cacf095b4a6c601438db877bf017afc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cargoBox_MAT
+    second: {fileID: 2100000, guid: 41abb44ed517063469a7d6921f54ac92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frontBridge_MAT
+    second: {fileID: 2100000, guid: 49df1f0ae69cf784eaa2d61df10befb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frontFairing_MAT
+    second: {fileID: 2100000, guid: e0b1218ff77a9f74da848e90f93825ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frontThing_MAT
+    second: {fileID: 2100000, guid: 9a71f785d3abfa44fa82b730f3921eb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hullChunk_MAT
+    second: {fileID: 2100000, guid: eed2dd3430f500643b506a7d2a97c61c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: innerRing_MAT
+    second: {fileID: 2100000, guid: 908be9b892d61b8438d24ec180169d72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: joint_MAT
+    second: {fileID: 2100000, guid: 5fd3802b56ee2714f96601f056fea1ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outerRing_MAT
+    second: {fileID: 2100000, guid: 3c83b68d6eba0d64e888b6e44554b46e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rearBridge_MAT
+    second: {fileID: 2100000, guid: 600999a13b8e6a0489e6c1dbb704c288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: runwayBack_MAT
+    second: {fileID: 2100000, guid: 3f6c16b22cf08d546a9a205827274ae7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: runwayFront_MAT
+    second: {fileID: 2100000, guid: 14c41a4ebe4953f4fafac5287795a64c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: runway_MAT
+    second: {fileID: 2100000, guid: 279648bddc900924792035bdf69594fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: supportBeamThick_MAT
+    second: {fileID: 2100000, guid: fb2993261a5f7d347970f95fd75fc618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: thruster_MAT
+    second: {fileID: 2100000, guid: 6a8229b39bf925547bb0f0f17447fa67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window_MAT
+    second: {fileID: 2100000, guid: 8f9025e2941470245b5ed9abcf105dfa, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
