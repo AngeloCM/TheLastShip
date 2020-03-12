@@ -16,11 +16,18 @@ namespace Assets.Scripts.Spwaner
         [SerializeField, Tooltip("The amount of Enemies you want to respawn")]
         public int AmountOfEnemies = 5;
 
-
         [SerializeField]
         GameObject[] Spawn;
 
+        GameObject allEnemies;
+
         int SpawnIndex;
+
+        void Start()
+        {
+            allEnemies = GameObject.FindGameObjectWithTag("Enemies");
+        }
+
 
         private void Update()
         {
@@ -36,6 +43,7 @@ namespace Assets.Scripts.Spwaner
             {
                 SpawnIndex = UnityEngine.Random.Range(0, Spawn.Length);
                 GameObject enemy = Instantiate(SwarmEnemy_prefab, Spawn[SpawnIndex].transform.position, Quaternion.identity);
+                enemy.transform.parent = allEnemies.transform;
             }        
         }
     }
