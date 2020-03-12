@@ -128,7 +128,7 @@ MonoBehaviour:
   UnchargedShotDamage: 10
   ChargedShotDamage: 40
   ChargedShotExplodeScale: 30
-  homingStrength: 0.1
+  homingStrength: 0.24
   Fired: 0
   FullyCharged: 0
   ReadyToFire: 0

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShotSpeed: 775
   DespawnTime: 5
-  BasicShotDamage: 5
+  BasicShotDamage: 7
 --- !u!114 &-5114914583494561719
 MonoBehaviour:
   m_ObjectHideFlags: 0
