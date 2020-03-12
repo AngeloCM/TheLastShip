@@ -8,8 +8,6 @@ using UnityEngine.AI;
 
 namespace Assets.Scripts.AI.EnemyCode
 {
-    [RequireComponent(typeof(FiniteStateMachine))]
-
     public class Enemy : MonoBehaviour
     {
         [SerializeField, Tooltip("All waypoints that the enemy will follow.")]
@@ -38,7 +36,7 @@ namespace Assets.Scripts.AI.EnemyCode
 
         public void Awake()
         {
-            _finiteStateMachine = this.GetComponent<FiniteStateMachine>();
+            _finiteStateMachine = new FiniteStateMachine(this);
         }
 
         void Start()
@@ -51,6 +49,7 @@ namespace Assets.Scripts.AI.EnemyCode
         void Update()
         {
             PlayerReference.transform.position = PlayerReference.transform.position;
+            _finiteStateMachine.Update();
         }
 
         public EnemyFlyPoint[] FlyPoints

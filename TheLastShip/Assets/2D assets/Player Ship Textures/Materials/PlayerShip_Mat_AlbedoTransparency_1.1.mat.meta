@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TheLastShip/Assets/2D assets/Player Ship Textures/Materials/PlayerShip_Mat_AlbedoTransparency_1.1.mat.meta
 guid: 90ca3ffcee056b34da71a09c4e83c31d
+=======
+guid: ab7c761f9ac6f584c9bdd2cf2c245d0f
+>>>>>>> b0344b4b4327adfe85456f70ad1370a0a5368566:TheLastShip/Assets/FSMStates/AttackState.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
