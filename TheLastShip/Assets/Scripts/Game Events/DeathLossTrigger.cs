@@ -7,8 +7,19 @@ public class DeathLossTrigger : MonoBehaviour
 {
     public void Die()
     {
-        // TODO: Make explosion animation happen.
-        // Wait to reload scene, and use checkpoint data to reload at checkpoint.
+        this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
+
+        this.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        this.gameObject.GetComponentInChildren<MeshCollider>().enabled = false;
+        this.gameObject.GetComponent<PlayerController>().enabled = false;
+
+        StartCoroutine("ReloadSceneAfterSecond");
+    }
+
+    IEnumerator ReloadSceneAfterSecond()
+    {
+        yield return new WaitForSeconds(1f);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Will reload the current scene regardless of what it is
     }
 }

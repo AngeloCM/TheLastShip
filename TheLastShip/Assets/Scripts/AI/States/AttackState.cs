@@ -21,7 +21,8 @@ namespace Assets.Scripts.AI.States
 
             if (EnteredState)
             {
-                Debug.Log("ENTERED ATTACK STATE");
+                Debug.Log("ENTERED ATTACK STATE " + _enemy.gameObject.name);
+                updateTime = 0;
             }
 
             return EnteredState;
@@ -32,16 +33,15 @@ namespace Assets.Scripts.AI.States
             if (EnteredState)
             {
                 updateTime += Time.deltaTime;
-                _enemy.PlayerReference.transform.position = _enemy.PlayerReference.transform.position;
 
                 if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) > _enemy.DistanceToAttackPlayer)
                 {
                     _fsm.EnterState(FSMStateType.FLY);
                 }
-                else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < _enemy.DistanceToExplode)
-                {
-                    Destroy(_enemy.gameObject);
-                }
+                //else if (Vector3.Distance(_enemy.transform.position, _enemy.PlayerReference.transform.position) < _enemy.DistanceToExplode)
+                //{
+                //    Destroy(_enemy.gameObject);
+                //}
                 else
                 {
                     AttackPlayer();
@@ -53,8 +53,6 @@ namespace Assets.Scripts.AI.States
         {
             Debug.Log("ATTACKING!");
             _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, _enemy.PlayerReference.transform.position, _enemy.movSpeed * updateTime);
-            updateTime = 0;
-            
         }
 
         public override bool ExitState()
