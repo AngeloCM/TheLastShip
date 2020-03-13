@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2160959878393208986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.91, z: 0}
-  m_LocalScale: {x: 25.37, y: 25.37, z: 25.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7684084833880870073}
   m_Father: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   PlayerReference: {fileID: 0}
-  movSpeed: 2
+  movSpeed: 0.55
   totalDurationIdle: 0.5
   DistanceToTouchWaypoint: 2
   DistanceToAttackPlayer: 300
@@ -137,10 +137,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 1.3
+  m_Radius: 5.4560575
+  m_Height: 21.928192
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.8000002, y: -0.29259586, z: 0.24423027}
 --- !u!114 &2458516749738138257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,17 +233,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bd7f2a30f9a8ff348b7531d6694e9105,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.015
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bd7f2a30f9a8ff348b7531d6694e9105,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.015
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bd7f2a30f9a8ff348b7531d6694e9105,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.015
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: bd7f2a30f9a8ff348b7531d6694e9105,
         type: 3}

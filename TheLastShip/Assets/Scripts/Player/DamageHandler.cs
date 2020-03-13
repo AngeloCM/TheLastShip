@@ -11,6 +11,8 @@ public class DamageHandler : MonoBehaviour
     [SerializeField, Tooltip("The ShieldBar script component representing this ship's shields.")]
     private ShieldBar shieldBar;
 
+    private bool isDead = false;
+
     // Take damage. Should be called when hit with a projectile, etc.
     public void TakeDamage(int dmg)
     {
@@ -48,10 +50,9 @@ public class DamageHandler : MonoBehaviour
         // Note that this game object must have a DeathLossTrigger
         if (healthBar != null)
         {
-            if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0)
+            if (healthBar.gameObject.GetComponent<BarManager>().GetCurrentValue() <= 0 && !isDead)
             {
-
-                this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
+                isDead = true;
 
                 this.GetComponent<DeathLossTrigger>().Die();
             }
