@@ -610,7 +610,7 @@ PrefabInstance:
     - target: {fileID: 331263914186800612, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1837575711180118204, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
@@ -655,7 +655,7 @@ PrefabInstance:
     - target: {fileID: 5285501904807856603, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5285501904807856607, guid: 8f699671a30707247979ced4a346b720,
         type: 3}
@@ -1013,6 +1013,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerShip_5.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1778145857074512379, guid: ec7b5c7233f9ec74c805fd2e5396487d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1778145857074512380, guid: ec7b5c7233f9ec74c805fd2e5396487d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1090,7 +1095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &952421135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 150
+  CurrentHealth: 0
 --- !u!135 &952421137
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2287,7 +2293,7 @@ PrefabInstance:
     - target: {fileID: 4643391371824924918, guid: 0949e835f6f603848b54d290899ef9d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4643391371824924918, guid: 0949e835f6f603848b54d290899ef9d6,
         type: 3}
