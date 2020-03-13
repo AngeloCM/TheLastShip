@@ -108,10 +108,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   PlayerReference: {fileID: 0}
-  movSpeed: 0.55
+  movSpeed: 0.62
   totalDurationIdle: 0.5
   DistanceToTouchWaypoint: 2
-  DistanceToAttackPlayer: 300
+  DistanceToAttackPlayer: 350
   DistanceToExplode: 50
 --- !u!114 &628674750978811697
 MonoBehaviour:
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604b89c69a42b9d47b39b468982bafe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
+  MaxHealth: 4
   CurrentHealth: 0
 --- !u!136 &7694266232776223401
 CapsuleCollider:
