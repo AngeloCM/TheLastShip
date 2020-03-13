@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2956334849732120000}
   - component: {fileID: 6078738403072620534}
   - component: {fileID: 531580017778412303}
+  - component: {fileID: 6894427983173844804}
   m_Layer: 0
   m_Name: SmallRock_low
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6894427983173844804
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259781413487443923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4732937762076777578, guid: 7afdf048fe1f55248adeddf6c1853d2b, type: 3}
