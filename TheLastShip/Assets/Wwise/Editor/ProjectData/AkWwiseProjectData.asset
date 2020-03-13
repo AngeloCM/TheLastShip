@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586180465020719614
+    m_lastTime: -8586174922939225234
     List:
     - name: cargo_engine
       guid: fb3689a90f8f734893146b355c26ee10
@@ -67,7 +67,7 @@ MonoBehaviour:
       - ElementName: cargo_engine
         ObjectType: 3
       Path: Default Work Unit\cargo_engine
-      maxAttenuation: 100
+      maxAttenuation: 150
       maxDuration: -1
       minDuration: -1
     - name: cargo_lose_ring
@@ -92,8 +92,32 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\enemy_death
       maxAttenuation: 0
-      maxDuration: 1.572792
-      minDuration: 1.572792
+      maxDuration: 0.665521
+      minDuration: 0.665521
+    - name: explosion_1
+      guid: c9cfaaa2a0312b4ea6a387c763090550
+      id: 1278156266
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: explosion_1
+        ObjectType: 3
+      Path: Default Work Unit\explosion_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: explosion_2
+      guid: df93529ad738c844bd103e933b12570c
+      id: 1278156265
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: explosion_2
+        ObjectType: 3
+      Path: Default Work Unit\explosion_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: hitmarker
       guid: 36d8d18389730b499002c6bd2ed2ba10
       id: 3733553022
@@ -140,8 +164,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\plr_primary_shoot
       maxAttenuation: 0
-      maxDuration: 0.30966
-      minDuration: 0.30522
+      maxDuration: 0.632937
+      minDuration: 0.605753
     - name: plr_rotate_left
       guid: 01e03538b66ba740a2ecee259b205458
       id: 1978619431

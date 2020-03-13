@@ -225,9 +225,12 @@ public class SecondaryShot : MonoBehaviour
             // Deal damage to an enemy collided with. The rest depends on whether the projectile has already hit an enemy.
             if (other.transform.root.tag == "Enemy" || other.transform.root.tag == "enemy")
             {
+                // audio vvv
+                PlaySoundSecondaryShotExplode();
+                // audio ^^^
+
                 if (!enemiesDamaged.Contains(other.transform.root.gameObject)) // Make sure no enemy is damaged more than once using enemiesDamaged list
                 {
-
                     if (FullyCharged)
                     {
                         other.transform.root.GetComponent<EnemyHealth>().TakeDamage(ChargedShotDamage);
@@ -278,6 +281,11 @@ public class SecondaryShot : MonoBehaviour
     private void PlaySoundSecondaryShotRelease()
     {
         AkSoundEngine.PostEvent("plr_secondary_release", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotExplode()
+    {
+        AkSoundEngine.PostEvent("explosion_2", gameObject);
     }
     // audio ^^^
 }

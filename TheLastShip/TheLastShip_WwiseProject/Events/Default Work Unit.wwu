@@ -91,7 +91,7 @@
 						<Action Name="" ID="{0401443E-F2C4-4857-A826-0857745A29CF}" ShortID="497945069">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sx_enemy_death" ID="{9B18ABEB-7340-436B-88A0-0EABDC07C77B}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+									<ObjectRef Name="sx_enemy_death_v2" ID="{2A1FDD7E-6C4E-49AB-AE6F-CE33931408AC}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -147,6 +147,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sx_plr_rotate_right" ID="{615BDA82-FDEA-44FE-B84E-57F9F1EFA475}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="explosion_1" ID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}">
+					<ChildrenList>
+						<Action Name="" ID="{55330816-011D-4F7C-B6A3-BED6F176A50B}" ShortID="78722832">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_enemy_explode_primary" ID="{7522D429-4FE1-4794-A791-E555967AB575}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="explosion_2" ID="{9A5293DF-38D7-44C8-BD10-3E933B12570C}">
+					<ChildrenList>
+						<Action Name="" ID="{4D0E6F59-14BF-4E80-A21C-5D606AFEE435}" ShortID="659013142">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_enemy_explode_secondary" ID="{DC777A85-7549-473E-8697-DBF8D494E815}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
