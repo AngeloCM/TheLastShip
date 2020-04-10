@@ -130,28 +130,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="plr_rotate_left" ID="{3835E001-6BB6-40A7-A2EC-EE259B205458}">
-					<ChildrenList>
-						<Action Name="" ID="{D82D71AD-5352-4D89-9F99-7A3DDFBE586B}" ShortID="515650706">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sx_plr_rotate_left" ID="{C4989BA0-CBFE-4752-B1D0-4864484B9D73}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="plr_rotate_right" ID="{4B417823-AFC5-4249-B6D9-1DC03DCB0988}">
-					<ChildrenList>
-						<Action Name="" ID="{745B7C89-2FC5-4DE4-9BEB-2571D2B8DA47}" ShortID="788789769">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sx_plr_rotate_right" ID="{615BDA82-FDEA-44FE-B84E-57F9F1EFA475}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="explosion_1" ID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}">
 					<ChildrenList>
 						<Action Name="" ID="{55330816-011D-4F7C-B6A3-BED6F176A50B}" ShortID="78722832">

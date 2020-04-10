@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9077157744276110012}
   - component: {fileID: 6006256578817878888}
-  - component: {fileID: 8007899959514706213}
+  - component: {fileID: 5366580560385730594}
   m_Layer: 0
   m_Name: Engine Sound
   m_TagString: Untagged
@@ -54,7 +54,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &8007899959514706213
+--- !u!114 &5366580560385730594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44ddd05085251fe42936b415eb154cc7,
+    WwiseObjectReference: {fileID: 11400000, guid: 4fc443e576af2cc4e8bb6bd51cee2132,
       type: 2}
   useCallbacks: 0
   Callbacks: []

@@ -5,8 +5,6 @@
 			<ChildrenList>
 				<SoundBank Name="MainBank" ID="{69BB6FDE-8D73-4D5B-BC1D-34BB9584DF97}">
 					<ObjectInclusionList>
-						<ObjectRef Name="plr_rotate_left" ID="{3835E001-6BB6-40A7-A2EC-EE259B205458}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="plr_rotate_right" ID="{4B417823-AFC5-4249-B6D9-1DC03DCB0988}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_primary_shoot" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_shield_damage" ID="{3A257548-FBC3-448A-9C24-669C8310A36C}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="cargo_lose_ring" ID="{74C175A5-6019-44BF-87EE-4CA73B6927FA}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>

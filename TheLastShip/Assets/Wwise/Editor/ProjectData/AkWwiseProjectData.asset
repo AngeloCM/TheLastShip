@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 960c43bf3aa6e44d86656f77bcec1e15
     GuidInternal: 
-    m_lastTime: -8586196968352609426
+    m_lastTime: -8586189551905795169
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3443d6d83dfb6f4bbc7d26eb20fcfc58
     GuidInternal: 
-    m_lastTime: -8586196968352669444
+    m_lastTime: -8586189551905994641
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586180967876038895
+    m_lastTime: -8586150528880798163
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586174922939225234
+    m_lastTime: -8586150530235561182
     List:
     - name: cargo_engine
       guid: fb3689a90f8f734893146b355c26ee10
@@ -166,30 +166,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.632937
       minDuration: 0.605753
-    - name: plr_rotate_left
-      guid: 01e03538b66ba740a2ecee259b205458
-      id: 1978619431
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: plr_rotate_left
-        ObjectType: 3
-      Path: Default Work Unit\plr_rotate_left
-      maxAttenuation: 0
-      maxDuration: 0.355375
-      minDuration: 0.355375
-    - name: plr_rotate_right
-      guid: 2378414bc5af4942b6d91dc03dcb0988
-      id: 1320151434
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: plr_rotate_right
-        ObjectType: 3
-      Path: Default Work Unit\plr_rotate_right
-      maxAttenuation: 0
-      maxDuration: 0.350417
-      minDuration: 0.350417
     - name: plr_secondary_charge
       guid: fd5e653ec68fb945bca2485694e14aa9
       id: 2898173329
@@ -237,13 +213,13 @@ MonoBehaviour:
       Path: Default Work Unit\plr_shield_damage
       maxAttenuation: 0
       maxDuration: 0.814792
-      minDuration: 0.525979
+      minDuration: 0.512779
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3b741db44f968f41bb1ba71752cd7b03
     GuidInternal: 
-    m_lastTime: -8586188334682073779
+    m_lastTime: -8586186698373920667
     List:
     - name: Player_Speed
       guid: 4900e5ac92c90f46b35826c9c01dcc6b
@@ -259,25 +235,23 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 23fefae99adcf04f8742be9b26960cc2
     GuidInternal: 
-    m_lastTime: -8586196968350779089
+    m_lastTime: -8586189551905874798
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 97f7b21567fc2f4d9fc6822c06f9ab20
     GuidInternal: 
-    m_lastTime: -8586196968352239343
+    m_lastTime: -8586189551905854863
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 0c605c37ab9f8845a30a1aa52acc4185
     GuidInternal: 
-    m_lastTime: -8586196968351099159
+    m_lastTime: -8586189551905805106
     List: []
   ExpandedItems:
   - /TheLastShip_WwiseProject
-  - /TheLastShip_WwiseProject/Events
-  - /TheLastShip_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

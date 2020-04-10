@@ -576,68 +576,6 @@
 						<ActiveSource Name="sx_hitmarker" ID="{15A79080-9F97-4729-A867-CE21F3356D3A}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="sx_plr_rotate_left" ID="{C4989BA0-CBFE-4752-B1D0-4864484B9D73}" ShortID="917191124">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{6890C1F9-2160-44FB-9F7C-965E770A389D}"/>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53530E0F-64D1-41A6-AB80-7792DEE8EBEA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8D64334-FB3D-4B6F-BC7D-26EB20FCFC58}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sx_plr_rotate_left" ID="{534C17F4-FD75-4C18-9754-7E656FAABB43}">
-							<Language>SFX</Language>
-							<AudioFile>sx_plr_rotate_left.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="94222064"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sx_plr_rotate_left" ID="{534C17F4-FD75-4C18-9754-7E656FAABB43}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="sx_plr_rotate_right" ID="{615BDA82-FDEA-44FE-B84E-57F9F1EFA475}" ShortID="574662825">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{A4A4C6A7-520E-4C75-AE1B-D6820AFE4EB5}"/>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53530E0F-64D1-41A6-AB80-7792DEE8EBEA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8D64334-FB3D-4B6F-BC7D-26EB20FCFC58}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sx_plr_rotate_right" ID="{5720E5E7-7D20-48EF-9C60-2C74D387945F}">
-							<Language>SFX</Language>
-							<AudioFile>sx_plr_rotate_right.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="851515682"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sx_plr_rotate_right" ID="{5720E5E7-7D20-48EF-9C60-2C74D387945F}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="sx_plr_secondary_release" ID="{8D6152A9-CF31-456D-AAD1-12491B327E60}" ShortID="995030128">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>

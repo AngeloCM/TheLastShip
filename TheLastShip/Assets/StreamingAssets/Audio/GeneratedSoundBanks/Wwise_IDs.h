@@ -20,8 +20,6 @@ namespace AK
         static const AkUniqueID PLR_ENGINE = 1670947946U;
         static const AkUniqueID PLR_ENGINE_STOP = 181840089U;
         static const AkUniqueID PLR_PRIMARY_SHOOT = 614170710U;
-        static const AkUniqueID PLR_ROTATE_LEFT = 1978619431U;
-        static const AkUniqueID PLR_ROTATE_RIGHT = 1320151434U;
         static const AkUniqueID PLR_SECONDARY_CHARGE = 2898173329U;
         static const AkUniqueID PLR_SECONDARY_CHARGE_STOP = 33059316U;
         static const AkUniqueID PLR_SECONDARY_RELEASE = 3185663872U;

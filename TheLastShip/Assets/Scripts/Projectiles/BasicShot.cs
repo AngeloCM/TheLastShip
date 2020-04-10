@@ -88,6 +88,7 @@ public class BasicShot : MonoBehaviour
             }
         }
     }
+    // audio
     public void PlaySoundHitmarker()
     {
         AkSoundEngine.PostEvent("hitmarker", this.gameObject);

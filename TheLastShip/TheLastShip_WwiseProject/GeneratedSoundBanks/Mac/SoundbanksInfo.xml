@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -94,22 +94,6 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1978619431" Name="plr_rotate_left" ObjectPath="\Events\Default Work Unit\plr_rotate_left" GUID="{3835E001-6BB6-40A7-A2EC-EE259B205458}" DurationType="OneShot" DurationMin="0.355375" DurationMax="0.355375">
-					<IncludedMemoryFiles>
-						<File Id="94222064" Language="SFX">
-							<ShortName>sx_plr_rotate_left.wav</ShortName>
-							<Path>SFX\sx_plr_rotate_left_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1320151434" Name="plr_rotate_right" ObjectPath="\Events\Default Work Unit\plr_rotate_right" GUID="{4B417823-AFC5-4249-B6D9-1DC03DCB0988}" DurationType="OneShot" DurationMin="0.350417" DurationMax="0.350417">
-					<IncludedMemoryFiles>
-						<File Id="851515682" Language="SFX">
-							<ShortName>sx_plr_rotate_right.wav</ShortName>
-							<Path>SFX\sx_plr_rotate_right_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="2898173329" Name="plr_secondary_charge" ObjectPath="\Events\Default Work Unit\plr_secondary_charge" GUID="{3E655EFD-8FC6-45B9-BCA2-485694E14AA9}" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="623822031" Language="SFX">
@@ -131,7 +115,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" GUID="{3A257548-FBC3-448A-9C24-669C8310A36C}" DurationType="OneShot" DurationMin="0.525979" DurationMax="0.814792">
+				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" GUID="{3A257548-FBC3-448A-9C24-669C8310A36C}" DurationType="OneShot" DurationMin="0.512779" DurationMax="0.814792">
 					<IncludedMemoryFiles>
 						<File Id="2866322" Language="SFX">
 							<ShortName>sx_plr_shield_hit_4_v2.wav</ShortName>

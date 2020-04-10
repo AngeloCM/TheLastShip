@@ -446,7 +446,6 @@ public class PlayerController : MonoBehaviour
     private void PlaySoundPlayerEngine()
     {
         AkSoundEngine.PostEvent("plr_engine", gameObject);
-        Debug.Log("engine sound playing");
     }
 
     private void StopSoundPlayerEngine()
