@@ -16,7 +16,11 @@ namespace AK
         static const AkUniqueID CARGO_ENGINE = 3221620188U;
         static const AkUniqueID CARGO_LOSE_RING = 979060302U;
         static const AkUniqueID ENEMY_DEATH = 1205999388U;
+        static const AkUniqueID EXPLOSION_1 = 1278156266U;
+        static const AkUniqueID EXPLOSION_2 = 1278156265U;
         static const AkUniqueID HITMARKER = 3733553022U;
+        static const AkUniqueID MU_GAMEPLAY = 2103066614U;
+        static const AkUniqueID MU_MENU = 2548849335U;
         static const AkUniqueID PLR_ENGINE = 1670947946U;
         static const AkUniqueID PLR_ENGINE_STOP = 181840089U;
         static const AkUniqueID PLR_PRIMARY_SHOOT = 614170710U;

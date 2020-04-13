@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586150528880798163
+    m_lastTime: -8586148055408439282
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586150530235561182
+    m_lastTime: -8586148060072630159
     List:
     - name: cargo_engine
       guid: fb3689a90f8f734893146b355c26ee10
@@ -104,8 +104,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\explosion_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.572792
+      minDuration: 1.572792
     - name: explosion_2
       guid: df93529ad738c844bd103e933b12570c
       id: 1278156265
@@ -116,8 +116,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\explosion_2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.498646
+      minDuration: 3.498646
     - name: hitmarker
       guid: 36d8d18389730b499002c6bd2ed2ba10
       id: 3733553022
@@ -130,6 +130,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.202875
       minDuration: 0.202875
+    - name: mu_gameplay
+      guid: 077b5d5c7a981c4397c9948fed90658e
+      id: 2103066614
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mu_gameplay
+        ObjectType: 3
+      Path: Default Work Unit\mu_gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: mu_menu
+      guid: 8a2a38cebdce7745a6d8040df4406316
+      id: 2548849335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mu_menu
+        ObjectType: 3
+      Path: Default Work Unit\mu_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: plr_engine
       guid: 6ccedd8e2cf6184db21868a6173f54b5
       id: 1670947946
@@ -219,7 +243,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3b741db44f968f41bb1ba71752cd7b03
     GuidInternal: 
-    m_lastTime: -8586186698373920667
+    m_lastTime: -8586148099866564902
     List:
     - name: Player_Speed
       guid: 4900e5ac92c90f46b35826c9c01dcc6b
@@ -235,14 +259,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 23fefae99adcf04f8742be9b26960cc2
     GuidInternal: 
-    m_lastTime: -8586189551905874798
+    m_lastTime: -8586148060072450716
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 97f7b21567fc2f4d9fc6822c06f9ab20
     GuidInternal: 
-    m_lastTime: -8586189551905854863
+    m_lastTime: -8586148060223947846
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu

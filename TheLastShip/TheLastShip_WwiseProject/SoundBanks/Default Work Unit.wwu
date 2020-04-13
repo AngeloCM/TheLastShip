@@ -5,15 +5,19 @@
 			<ChildrenList>
 				<SoundBank Name="MainBank" ID="{69BB6FDE-8D73-4D5B-BC1D-34BB9584DF97}">
 					<ObjectInclusionList>
+						<ObjectRef Name="mu_gameplay" ID="{5C5D7B07-987A-431C-97C9-948FED90658E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_primary_shoot" ID="{203364C3-65BE-4410-894C-E6B81D34E78E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_shield_damage" ID="{3A257548-FBC3-448A-9C24-669C8310A36C}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="cargo_lose_ring" ID="{74C175A5-6019-44BF-87EE-4CA73B6927FA}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="explosion_2" ID="{9A5293DF-38D7-44C8-BD10-3E933B12570C}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="mu_menu" ID="{CE382A8A-CEBD-4577-A6D8-040DF4406316}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_secondary_charge" ID="{3E655EFD-8FC6-45B9-BCA2-485694E14AA9}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_secondary_charge_stop" ID="{820AFD46-A2A5-4610-A400-5F281FD601CA}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="cargo_engine" ID="{A98936FB-8F0F-4873-9314-6B355C26EE10}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="enemy_death" ID="{C0F80764-D5ED-48EE-97DB-6A5A4C09E14A}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="hitmarker" ID="{83D1D836-7389-490B-9002-C6BD2ED2BA10}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_engine" ID="{8EDDCE6C-F62C-4D18-B218-68A6173F54B5}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="explosion_1" ID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_engine_stop" ID="{B10A5410-4DB3-4EA7-9BD2-2DD82DD3CC0E}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plr_secondary_release" ID="{389A1A9F-742C-4F9C-8A64-7A32DAE765BF}" WorkUnitID="{60A3FAB5-AA1E-4496-9E1A-53D331CA064A}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

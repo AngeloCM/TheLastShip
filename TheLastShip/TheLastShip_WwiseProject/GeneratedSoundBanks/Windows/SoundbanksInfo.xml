@@ -45,11 +45,51 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1278156266" Name="explosion_1" ObjectPath="\Events\Default Work Unit\explosion_1" GUID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}" DurationType="OneShot" DurationMin="1.572792" DurationMax="1.572792">
+					<IncludedMemoryFiles>
+						<File Id="946476216" Language="SFX">
+							<ShortName>sx_enemy_explode_primary.wav</ShortName>
+							<Path>SFX\sx_enemy_explode_primary_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1278156265" Name="explosion_2" ObjectPath="\Events\Default Work Unit\explosion_2" GUID="{9A5293DF-38D7-44C8-BD10-3E933B12570C}" DurationType="OneShot" DurationMin="3.498646" DurationMax="3.498646">
+					<IncludedMemoryFiles>
+						<File Id="310215815" Language="SFX">
+							<ShortName>sx_enemy_explode_secondary.wav</ShortName>
+							<Path>SFX\sx_enemy_explode_secondary_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3733553022" Name="hitmarker" ObjectPath="\Events\Default Work Unit\hitmarker" GUID="{83D1D836-7389-490B-9002-C6BD2ED2BA10}" DurationType="OneShot" DurationMin="0.202875" DurationMax="0.202875">
 					<IncludedMemoryFiles>
 						<File Id="7247651" Language="SFX">
 							<ShortName>sx_hitmarker.wav</ShortName>
 							<Path>SFX\sx_hitmarker_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2103066614" Name="mu_gameplay" ObjectPath="\Events\Default Work Unit\mu_gameplay" GUID="{5C5D7B07-987A-431C-97C9-948FED90658E}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="822521400" Language="SFX">
+							<ShortName>TLS_Level_Loop.wav</ShortName>
+							<Path>SFX\TLS_Level_Loop_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1055317093" Language="SFX">
+							<ShortName>TLS_Level_Intro.wav</ShortName>
+							<Path>SFX\TLS_Level_Intro_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2548849335" Name="mu_menu" ObjectPath="\Events\Default Work Unit\mu_menu" GUID="{CE382A8A-CEBD-4577-A6D8-040DF4406316}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="61042985" Language="SFX">
+							<ShortName>TLS_Menu_Intro.wav</ShortName>
+							<Path>SFX\TLS_Menu_Intro_D79FB2B7.wem</Path>
+						</File>
+						<File Id="246021640" Language="SFX">
+							<ShortName>TLS_Menu_Loop.wav</ShortName>
+							<Path>SFX\TLS_Menu_Loop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
