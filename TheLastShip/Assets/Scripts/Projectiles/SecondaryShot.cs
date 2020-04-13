@@ -111,9 +111,8 @@ public class SecondaryShot : MonoBehaviour
         }
         else if (Fired) 
         {
-            // audio vvv
+            // audio
             StopSoundSecondaryShotCharge();
-            // audio ^^^
 
             // Delete if not yet ready to fire, but player fired
             this.gameObject.SetActive(false);
@@ -225,6 +224,8 @@ public class SecondaryShot : MonoBehaviour
             // Deal damage to an enemy collided with. The rest depends on whether the projectile has already hit an enemy.
             if (other.transform.root.tag == "Enemy" || other.transform.root.tag == "enemy")
             {
+                PlaySoundSecondaryShotExplosion();
+
                 if (!enemiesDamaged.Contains(other.transform.root.gameObject)) // Make sure no enemy is damaged more than once using enemiesDamaged list
                 {
                     if (FullyCharged)
@@ -263,7 +264,7 @@ public class SecondaryShot : MonoBehaviour
         isExpanding = true;
     }
 
-    // audio vvv
+    // audio
     private void PlaySoundSecondaryShotCharge()
     {
         AkSoundEngine.PostEvent("plr_secondary_charge", gameObject);
@@ -278,5 +279,9 @@ public class SecondaryShot : MonoBehaviour
     {
         AkSoundEngine.PostEvent("plr_secondary_release", gameObject);
     }
-    // audio ^^^
+
+    private void PlaySoundSecondaryShotExplosion()
+    {
+        AkSoundEngine.PostEvent("explosion_2", gameObject);
+    }
 }

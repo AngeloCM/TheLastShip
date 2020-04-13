@@ -32,9 +32,8 @@ public class EnemyHealth : MonoBehaviour
 
             this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
 
-            // audio vvv
+            // audio
             PlaySoundEnemyDeath();
-            // audio ^^^
 
             this.gameObject.SetActive(false);
         }
@@ -43,12 +42,18 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         CurrentHealth -= dmg;
+
+        // audio
+        PlaySoundHitmarker();
     }
 
-    // audio vvv
+    // audio
     void PlaySoundEnemyDeath()
     {
         AkSoundEngine.PostEvent("enemy_death", this.gameObject);
     }
-    // audio ^^^
+    public void PlaySoundHitmarker()
+    {
+        AkSoundEngine.PostEvent("hitmarker", this.gameObject);
+    }
 }
