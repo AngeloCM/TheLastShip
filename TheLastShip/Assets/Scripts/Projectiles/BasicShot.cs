@@ -65,6 +65,9 @@ public class BasicShot : MonoBehaviour
                 // TODO: Lessen enemy's health and only destroy if health <= 0
                 other.gameObject.GetComponent<EnemyHealth>().TakeDamage(BasicShotDamage);
 
+                // audio
+                PlaySoundPrimaryShotExplosion();
+
                 this.gameObject.GetComponent<ExplosionPlayer>().CreateExplosion();
                 this.gameObject.SetActive(false);
             }
@@ -83,5 +86,10 @@ public class BasicShot : MonoBehaviour
                 this.gameObject.SetActive(false);
             }
         }
+    }
+    // audio
+    private void PlaySoundPrimaryShotExplosion()
+    {
+        AkSoundEngine.PostEvent("explosion_1", this.gameObject);
     }
 }

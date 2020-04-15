@@ -75,6 +75,117 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="hitmarker" ID="{83D1D836-7389-490B-9002-C6BD2ED2BA10}">
+					<ChildrenList>
+						<Action Name="" ID="{E3DF440E-F706-434A-BCB8-FAC1757E94C9}" ShortID="601273822">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_hitmarker" ID="{BD4C8263-009C-4DCA-B99A-09FD181C7D1A}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="enemy_death" ID="{C0F80764-D5ED-48EE-97DB-6A5A4C09E14A}">
+					<ChildrenList>
+						<Action Name="" ID="{0401443E-F2C4-4857-A826-0857745A29CF}" ShortID="497945069">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_enemy_death_v2" ID="{2A1FDD7E-6C4E-49AB-AE6F-CE33931408AC}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="cargo_engine" ID="{A98936FB-8F0F-4873-9314-6B355C26EE10}">
+					<ChildrenList>
+						<Action Name="" ID="{372C93A1-4073-452F-A43C-FAB855A5E9B2}" ShortID="138578957">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_env_cargo_ship_engine" ID="{940103E8-DF1B-418A-AF94-C3529F80D07F}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="cargo_lose_ring" ID="{74C175A5-6019-44BF-87EE-4CA73B6927FA}">
+					<ChildrenList>
+						<Action Name="" ID="{3F07F7D2-F385-4BE9-B741-1B6440DAEED1}" ShortID="80864242">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_SHIP LOSE RING" ID="{ABC82F6C-37BE-4451-A059-62CF7E34910C}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plr_secondary_release" ID="{389A1A9F-742C-4F9C-8A64-7A32DAE765BF}">
+					<ChildrenList>
+						<Action Name="" ID="{E21EF03C-8BF9-4866-8709-BD3113C0B0BA}" ShortID="646787897">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_plr_secondary_release" ID="{8D6152A9-CF31-456D-AAD1-12491B327E60}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="explosion_1" ID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}">
+					<ChildrenList>
+						<Action Name="" ID="{55330816-011D-4F7C-B6A3-BED6F176A50B}" ShortID="78722832">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_enemy_explode_primary" ID="{7522D429-4FE1-4794-A791-E555967AB575}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="explosion_2" ID="{9A5293DF-38D7-44C8-BD10-3E933B12570C}">
+					<ChildrenList>
+						<Action Name="" ID="{4D0E6F59-14BF-4E80-A21C-5D606AFEE435}" ShortID="659013142">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sx_enemy_explode_secondary" ID="{DC777A85-7549-473E-8697-DBF8D494E815}" WorkUnitID="{C49B51BA-8CAA-4E30-A8BC-7D50C65797B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="mu_menu" ID="{CE382A8A-CEBD-4577-A6D8-040DF4406316}">
+					<ChildrenList>
+						<Action Name="" ID="{1BA270A2-457B-423F-828A-13AD5661BCAE}" ShortID="311637902">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{6B011EE5-EF5B-4A9F-8241-2731D4720559}" WorkUnitID="{1E85120E-7A58-4A63-B42F-89F8596B4B62}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="mu_gameplay" ID="{5C5D7B07-987A-431C-97C9-948FED90658E}">
+					<ChildrenList>
+						<Action Name="" ID="{E9B887AE-2874-4DD7-AEA7-23204A2AC59D}" ShortID="348794351">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{6B011EE5-EF5B-4A9F-8241-2731D4720559}" WorkUnitID="{1E85120E-7A58-4A63-B42F-89F8596B4B62}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B8BE2B4-D687-480B-B79A-B684884C692E}" ShortID="1002665635">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{84A5FDCC-0A72-4D9F-9212-32662920B369}" WorkUnitID="{1E85120E-7A58-4A63-B42F-89F8596B4B62}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

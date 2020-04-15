@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 960c43bf3aa6e44d86656f77bcec1e15
     GuidInternal: 
-    m_lastTime: -8586196968352609426
+    m_lastTime: -8586189551905795169
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3443d6d83dfb6f4bbc7d26eb20fcfc58
     GuidInternal: 
-    m_lastTime: -8586196968352669444
+    m_lastTime: -8586189551905994641
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 989f63c01c816449a9b9a69e7ee00514
     GuidInternal: 
-    m_lastTime: -8586188342330292951
+    m_lastTime: -8586148055408439282
     List:
     - name: MainBank
       guid: de6fbb69738d5b4dbc1d34bb9584df97
@@ -56,8 +56,104 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b5faa3601eaa96449e1a53d331ca064a
     GuidInternal: 
-    m_lastTime: -8586188349420515673
+    m_lastTime: -8586148030639857952
     List:
+    - name: cargo_engine
+      guid: fb3689a90f8f734893146b355c26ee10
+      id: 3221620188
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cargo_engine
+        ObjectType: 3
+      Path: Default Work Unit\cargo_engine
+      maxAttenuation: 150
+      maxDuration: -1
+      minDuration: -1
+    - name: cargo_lose_ring
+      guid: a575c1741960bf4487ee4ca73b6927fa
+      id: 979060302
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cargo_lose_ring
+        ObjectType: 3
+      Path: Default Work Unit\cargo_lose_ring
+      maxAttenuation: 0
+      maxDuration: 15.212667
+      minDuration: 15.212667
+    - name: enemy_death
+      guid: 6407f8c0edd5ee4897db6a5a4c09e14a
+      id: 1205999388
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_death
+        ObjectType: 3
+      Path: Default Work Unit\enemy_death
+      maxAttenuation: 0
+      maxDuration: 0.665521
+      minDuration: 0.665521
+    - name: explosion_1
+      guid: c9cfaaa2a0312b4ea6a387c763090550
+      id: 1278156266
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: explosion_1
+        ObjectType: 3
+      Path: Default Work Unit\explosion_1
+      maxAttenuation: 0
+      maxDuration: 1.572792
+      minDuration: 1.572792
+    - name: explosion_2
+      guid: df93529ad738c844bd103e933b12570c
+      id: 1278156265
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: explosion_2
+        ObjectType: 3
+      Path: Default Work Unit\explosion_2
+      maxAttenuation: 0
+      maxDuration: 3.498646
+      minDuration: 3.498646
+    - name: hitmarker
+      guid: 36d8d18389730b499002c6bd2ed2ba10
+      id: 3733553022
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: hitmarker
+        ObjectType: 3
+      Path: Default Work Unit\hitmarker
+      maxAttenuation: 0
+      maxDuration: 0.202875
+      minDuration: 0.202875
+    - name: mu_gameplay
+      guid: 077b5d5c7a981c4397c9948fed90658e
+      id: 2103066614
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mu_gameplay
+        ObjectType: 3
+      Path: Default Work Unit\mu_gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: mu_menu
+      guid: 8a2a38cebdce7745a6d8040df4406316
+      id: 2548849335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mu_menu
+        ObjectType: 3
+      Path: Default Work Unit\mu_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: plr_engine
       guid: 6ccedd8e2cf6184db21868a6173f54b5
       id: 1670947946
@@ -92,8 +188,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\plr_primary_shoot
       maxAttenuation: 0
-      maxDuration: 0.30966
-      minDuration: 0.30522
+      maxDuration: 0.632937
+      minDuration: 0.605753
     - name: plr_secondary_charge
       guid: fd5e653ec68fb945bca2485694e14aa9
       id: 2898173329
@@ -118,6 +214,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: plr_secondary_release
+      guid: 9f1a9a382c749c4f8a647a32dae765bf
+      id: 3185663872
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plr_secondary_release
+        ObjectType: 3
+      Path: Default Work Unit\plr_secondary_release
+      maxAttenuation: 0
+      maxDuration: 1.769438
+      minDuration: 1.769438
     - name: plr_shield_damage
       guid: 4875253ac3fb8a449c24669c8310a36c
       id: 3600127465
@@ -128,14 +236,14 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\plr_shield_damage
       maxAttenuation: 0
-      maxDuration: 1.038821
-      minDuration: 0.776795
+      maxDuration: 0.814792
+      minDuration: 0.512779
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3b741db44f968f41bb1ba71752cd7b03
     GuidInternal: 
-    m_lastTime: -8586188334682073779
+    m_lastTime: -8586148099866564902
     List:
     - name: Player_Speed
       guid: 4900e5ac92c90f46b35826c9c01dcc6b
@@ -151,21 +259,21 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 23fefae99adcf04f8742be9b26960cc2
     GuidInternal: 
-    m_lastTime: -8586196968350779089
+    m_lastTime: -8586148060072450716
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 97f7b21567fc2f4d9fc6822c06f9ab20
     GuidInternal: 
-    m_lastTime: -8586196968352239343
+    m_lastTime: -8586148060223947846
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 0c605c37ab9f8845a30a1aa52acc4185
     GuidInternal: 
-    m_lastTime: -8586196968351099159
+    m_lastTime: -8586189551905805106
     List: []
   ExpandedItems:
   - /TheLastShip_WwiseProject

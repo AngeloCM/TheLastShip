@@ -46,6 +46,9 @@ public class SecondaryShot : MonoBehaviour
     private bool hasCollided;
     private bool isExpanding;
 
+    // audio
+    private bool hasPlayedSecondaryRelease;
+
     private float expansionRate = 1.1f; // The rate at which a fully charged shot expands on contact with first enemy. Ensure this is > 1
 
     private float postExpandLingerTime = 0.7f; // The time in seconds to linger when finished expanding
@@ -75,6 +78,9 @@ public class SecondaryShot : MonoBehaviour
 
         this.hasCollided = false;
         this.isExpanding = false;
+        this.hasPlayedSecondaryRelease = false;
+
+        PlaySoundSecondaryShotCharge();
     }
 
     // Update is called once per frame
@@ -84,6 +90,16 @@ public class SecondaryShot : MonoBehaviour
         {
             // Detach this gameobject from the ShotTransform
             this.gameObject.transform.parent = null;
+
+            // audio vvv
+            StopSoundSecondaryShotCharge();
+
+            if (!hasPlayedSecondaryRelease)
+            {
+                PlaySoundSecondaryShotRelease();
+                hasPlayedSecondaryRelease = true;
+            }
+            // audio ^^^
 
             UpdateAttemptHomeOnEnemy();
 
@@ -95,6 +111,9 @@ public class SecondaryShot : MonoBehaviour
         }
         else if (Fired) 
         {
+            // audio
+            StopSoundSecondaryShotCharge();
+
             // Delete if not yet ready to fire, but player fired
             this.gameObject.SetActive(false);
         }
@@ -205,9 +224,10 @@ public class SecondaryShot : MonoBehaviour
             // Deal damage to an enemy collided with. The rest depends on whether the projectile has already hit an enemy.
             if (other.transform.root.tag == "Enemy" || other.transform.root.tag == "enemy")
             {
+                PlaySoundSecondaryShotExplosion();
+
                 if (!enemiesDamaged.Contains(other.transform.root.gameObject)) // Make sure no enemy is damaged more than once using enemiesDamaged list
                 {
-
                     if (FullyCharged)
                     {
                         other.transform.root.GetComponent<EnemyHealth>().TakeDamage(ChargedShotDamage);
@@ -242,5 +262,26 @@ public class SecondaryShot : MonoBehaviour
         hasCollided = true;
 
         isExpanding = true;
+    }
+
+    // audio
+    private void PlaySoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge", gameObject);
+    }
+
+    private void StopSoundSecondaryShotCharge()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_charge_stop", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotRelease()
+    {
+        AkSoundEngine.PostEvent("plr_secondary_release", gameObject);
+    }
+
+    private void PlaySoundSecondaryShotExplosion()
+    {
+        AkSoundEngine.PostEvent("explosion_2", gameObject);
     }
 }

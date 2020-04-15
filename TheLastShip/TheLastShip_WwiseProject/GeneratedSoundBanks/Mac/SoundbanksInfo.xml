@@ -1,27 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX">
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2880737896" Language="SFX">
+		<SoundBank Id="2880737896" GUID="{69BB6FDE-8D73-4D5B-BC1D-34BB9584DF97}" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainBank</ObjectPath>
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1670947946" Name="plr_engine" ObjectPath="\Events\Default Work Unit\plr_engine" DurationType="Infinite">
+				<Event Id="3221620188" Name="cargo_engine" ObjectPath="\Events\Default Work Unit\cargo_engine" GUID="{A98936FB-8F0F-4873-9314-6B355C26EE10}" MaxAttenuation="150.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1053073425" Language="SFX">
+							<ShortName>sx_env_cargo_ship_engine.wav</ShortName>
+							<Path>SFX\sx_env_cargo_ship_engine_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="979060302" Name="cargo_lose_ring" ObjectPath="\Events\Default Work Unit\cargo_lose_ring" GUID="{74C175A5-6019-44BF-87EE-4CA73B6927FA}" DurationType="OneShot" DurationMin="15.212667" DurationMax="15.212667">
+					<IncludedMemoryFiles>
+						<File Id="498860533" Language="SFX">
+							<ShortName>sx_SHIP LOSE RING.wav</ShortName>
+							<Path>SFX\sx_SHIP LOSE RING_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1205999388" Name="enemy_death" ObjectPath="\Events\Default Work Unit\enemy_death" GUID="{C0F80764-D5ED-48EE-97DB-6A5A4C09E14A}" DurationType="OneShot" DurationMin="0.665521" DurationMax="0.665521">
+					<IncludedMemoryFiles>
+						<File Id="221723558" Language="SFX">
+							<ShortName>sx_enemy_death_v2.wav</ShortName>
+							<Path>SFX\sx_enemy_death_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1278156266" Name="explosion_1" ObjectPath="\Events\Default Work Unit\explosion_1" GUID="{A2AACFC9-31A0-4E2B-A6A3-87C763090550}" DurationType="OneShot" DurationMin="1.572792" DurationMax="1.572792">
+					<IncludedMemoryFiles>
+						<File Id="946476216" Language="SFX">
+							<ShortName>sx_enemy_explode_primary.wav</ShortName>
+							<Path>SFX\sx_enemy_explode_primary_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1278156265" Name="explosion_2" ObjectPath="\Events\Default Work Unit\explosion_2" GUID="{9A5293DF-38D7-44C8-BD10-3E933B12570C}" DurationType="OneShot" DurationMin="3.498646" DurationMax="3.498646">
+					<IncludedMemoryFiles>
+						<File Id="310215815" Language="SFX">
+							<ShortName>sx_enemy_explode_secondary.wav</ShortName>
+							<Path>SFX\sx_enemy_explode_secondary_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3733553022" Name="hitmarker" ObjectPath="\Events\Default Work Unit\hitmarker" GUID="{83D1D836-7389-490B-9002-C6BD2ED2BA10}" DurationType="OneShot" DurationMin="0.202875" DurationMax="0.202875">
+					<IncludedMemoryFiles>
+						<File Id="7247651" Language="SFX">
+							<ShortName>sx_hitmarker.wav</ShortName>
+							<Path>SFX\sx_hitmarker_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2103066614" Name="mu_gameplay" ObjectPath="\Events\Default Work Unit\mu_gameplay" GUID="{5C5D7B07-987A-431C-97C9-948FED90658E}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="822521400" Language="SFX">
+							<ShortName>TLS_Level_Loop.wav</ShortName>
+							<Path>SFX\TLS_Level_Loop_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1055317093" Language="SFX">
+							<ShortName>TLS_Level_Intro.wav</ShortName>
+							<Path>SFX\TLS_Level_Intro_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2548849335" Name="mu_menu" ObjectPath="\Events\Default Work Unit\mu_menu" GUID="{CE382A8A-CEBD-4577-A6D8-040DF4406316}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="61042985" Language="SFX">
+							<ShortName>TLS_Menu_Intro.wav</ShortName>
+							<Path>SFX\TLS_Menu_Intro_D79FB2B7.wem</Path>
+						</File>
+						<File Id="246021640" Language="SFX">
+							<ShortName>TLS_Menu_Loop.wav</ShortName>
+							<Path>SFX\TLS_Menu_Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1670947946" Name="plr_engine" ObjectPath="\Events\Default Work Unit\plr_engine" GUID="{8EDDCE6C-F62C-4D18-B218-68A6173F54B5}" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="16333983" Language="SFX">
 							<ShortName>sx_plr_engine_slower.wav</ShortName>
@@ -37,32 +109,32 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="181840089" Name="plr_engine_stop" ObjectPath="\Events\Default Work Unit\plr_engine_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="614170710" Name="plr_primary_shoot" ObjectPath="\Events\Default Work Unit\plr_primary_shoot" DurationType="OneShot" DurationMin="0.305220" DurationMax="0.309660">
+				<Event Id="181840089" Name="plr_engine_stop" ObjectPath="\Events\Default Work Unit\plr_engine_stop" GUID="{B10A5410-4DB3-4EA7-9BD2-2DD82DD3CC0E}" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="614170710" Name="plr_primary_shoot" ObjectPath="\Events\Default Work Unit\plr_primary_shoot" GUID="{203364C3-65BE-4410-894C-E6B81D34E78E}" DurationType="OneShot" DurationMin="0.605753" DurationMax="0.632937">
 					<IncludedMemoryFiles>
-						<File Id="259940942" Language="SFX">
-							<ShortName>sx_plr_main_cannon_5.wav</ShortName>
-							<Path>SFX\sx_plr_main_cannon_5_10C4C929.wem</Path>
+						<File Id="338996680" Language="SFX">
+							<ShortName>sx_plr_main_cannon_5_v2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_5_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="270555747" Language="SFX">
-							<ShortName>sx_plr_main_cannon_4.wav</ShortName>
-							<Path>SFX\sx_plr_main_cannon_4_10C4C929.wem</Path>
+						<File Id="405735036" Language="SFX">
+							<ShortName>sx_plr_main_cannon_1_v2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_1_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="341271279" Language="SFX">
-							<ShortName>sx_plr_main_cannon_3.wav</ShortName>
-							<Path>SFX\sx_plr_main_cannon_3_10C4C929.wem</Path>
+						<File Id="616841172" Language="SFX">
+							<ShortName>sx_plr_main_cannon_4_v2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_4_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="402433319" Language="SFX">
-							<ShortName>sx_plr_main_cannon_1.wav</ShortName>
-							<Path>SFX\sx_plr_main_cannon_1_10C4C929.wem</Path>
+						<File Id="786186738" Language="SFX">
+							<ShortName>sx_plr_main_cannon_2_v2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_2_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="868942418" Language="SFX">
-							<ShortName>sx_plr_main_cannon_2.wav</ShortName>
-							<Path>SFX\sx_plr_main_cannon_2_10C4C929.wem</Path>
+						<File Id="884472115" Language="SFX">
+							<ShortName>sx_plr_main_cannon_3_v2.wav</ShortName>
+							<Path>SFX\sx_plr_main_cannon_3_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2898173329" Name="plr_secondary_charge" ObjectPath="\Events\Default Work Unit\plr_secondary_charge" DurationType="Infinite">
+				<Event Id="2898173329" Name="plr_secondary_charge" ObjectPath="\Events\Default Work Unit\plr_secondary_charge" GUID="{3E655EFD-8FC6-45B9-BCA2-485694E14AA9}" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="623822031" Language="SFX">
 							<ShortName>sx_plr_secondary_charge.wav</ShortName>
@@ -74,30 +146,38 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="33059316" Name="plr_secondary_charge_stop" ObjectPath="\Events\Default Work Unit\plr_secondary_charge_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" DurationType="OneShot" DurationMin="0.776795" DurationMax="1.038821">
+				<Event Id="33059316" Name="plr_secondary_charge_stop" ObjectPath="\Events\Default Work Unit\plr_secondary_charge_stop" GUID="{820AFD46-A2A5-4610-A400-5F281FD601CA}" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3185663872" Name="plr_secondary_release" ObjectPath="\Events\Default Work Unit\plr_secondary_release" GUID="{389A1A9F-742C-4F9C-8A64-7A32DAE765BF}" DurationType="OneShot" DurationMin="1.769438" DurationMax="1.769438">
 					<IncludedMemoryFiles>
-						<File Id="170695096" Language="SFX">
-							<ShortName>sx_plr_shield_hit_1.wav</ShortName>
-							<Path>SFX\sx_plr_shield_hit_1_10C4C929.wem</Path>
+						<File Id="222337875" Language="SFX">
+							<ShortName>sx_plr_secondary_release.wav</ShortName>
+							<Path>SFX\sx_plr_secondary_release_10C4C929.wem</Path>
 						</File>
-						<File Id="330943432" Language="SFX">
-							<ShortName>sx_plr_shield_hit_4.wav</ShortName>
-							<Path>SFX\sx_plr_shield_hit_4_10C4C929.wem</Path>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3600127465" Name="plr_shield_damage" ObjectPath="\Events\Default Work Unit\plr_shield_damage" GUID="{3A257548-FBC3-448A-9C24-669C8310A36C}" DurationType="OneShot" DurationMin="0.512779" DurationMax="0.814792">
+					<IncludedMemoryFiles>
+						<File Id="2866322" Language="SFX">
+							<ShortName>sx_plr_shield_hit_4_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_4_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="657373504" Language="SFX">
-							<ShortName>sx_plr_shield_hit_2.wav</ShortName>
-							<Path>SFX\sx_plr_shield_hit_2_10C4C929.wem</Path>
+						<File Id="288545317" Language="SFX">
+							<ShortName>sx_plr_shield_hit_3_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_3_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="1008552407" Language="SFX">
-							<ShortName>sx_plr_shield_hit_3.wav</ShortName>
-							<Path>SFX\sx_plr_shield_hit_3_10C4C929.wem</Path>
+						<File Id="529713889" Language="SFX">
+							<ShortName>sx_plr_shield_hit_2_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_2_v2_10C4C929.wem</Path>
+						</File>
+						<File Id="929682366" Language="SFX">
+							<ShortName>sx_plr_shield_hit_1_v2.wav</ShortName>
+							<Path>SFX\sx_plr_shield_hit_1_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<GameParameters>
-				<GameParameter Id="1062779386" Name="Player_Speed" ObjectPath="\Game Parameters\Default Work Unit\Player_Speed"/>
+				<GameParameter Id="1062779386" Name="Player_Speed" ObjectPath="\Game Parameters\Default Work Unit\Player_Speed" GUID="{ACE50049-C992-460F-B358-26C9C01DCC6B}"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>

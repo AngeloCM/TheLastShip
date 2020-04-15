@@ -2,26 +2,46 @@ Event	ID	Name			Wwise Object Path	Notes
 	33059316	plr_secondary_charge_stop			\Default Work Unit\plr_secondary_charge_stop	
 	181840089	plr_engine_stop			\Default Work Unit\plr_engine_stop	
 	614170710	plr_primary_shoot			\Default Work Unit\plr_primary_shoot	
+	979060302	cargo_lose_ring			\Default Work Unit\cargo_lose_ring	
+	1205999388	enemy_death			\Default Work Unit\enemy_death	
+	1278156265	explosion_2			\Default Work Unit\explosion_2	
+	1278156266	explosion_1			\Default Work Unit\explosion_1	
 	1670947946	plr_engine			\Default Work Unit\plr_engine	
+	2103066614	mu_gameplay			\Default Work Unit\mu_gameplay	
+	2548849335	mu_menu			\Default Work Unit\mu_menu	
 	2898173329	plr_secondary_charge			\Default Work Unit\plr_secondary_charge	
+	3185663872	plr_secondary_release			\Default Work Unit\plr_secondary_release	
+	3221620188	cargo_engine			\Default Work Unit\cargo_engine	
 	3600127465	plr_shield_damage			\Default Work Unit\plr_shield_damage	
+	3733553022	hitmarker			\Default Work Unit\hitmarker	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1062779386	Player_Speed			\Default Work Unit\Player_Speed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	16333983	sx_plr_engine_slower	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_slower_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_slower		1382752
-	170695096	sx_plr_shield_hit_1	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_1		176104
-	259940942	sx_plr_main_cannon_5	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_5		54688
-	270555747	sx_plr_main_cannon_4	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_4		54688
-	291291475	sx_plr_engine_whine	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_whine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_whine		491544
-	330943432	sx_plr_shield_hit_4	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_4		143240
-	341271279	sx_plr_main_cannon_3	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_3		54688
-	402433319	sx_plr_main_cannon_1	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_1		54688
-	623822031	sx_plr_secondary_charge	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_secondary_charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_charge		231424
-	657373504	sx_plr_shield_hit_2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_2		183312
-	695854333	sx_plr_secondary_loop	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_secondary_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_loop		234228
-	828196131	sx_plr_engine_faster	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_faster_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_faster		1382752
-	868942418	sx_plr_main_cannon_2	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_2		54688
-	1008552407	sx_plr_shield_hit_3	C:\Users\Cole Krueger\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_3		175540
+	2866322	sx_plr_shield_hit_4_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_4_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_4_v2		138720
+	7247651	sx_hitmarker	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_hitmarker_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_hitmarker		39016
+	16333983	sx_plr_engine_slower	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_slower_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_slower		1382752
+	61042985	TLS_Menu_Intro	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\TLS_Menu_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Menu\TLS_Menu_Intro\TLS_Menu_Intro		4278068
+	221723558	sx_enemy_death_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_enemy_death_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_enemy_death_v2		127844
+	222337875	sx_plr_secondary_release	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_secondary_release_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_plr_secondary_release		339796
+	246021640	TLS_Menu_Loop	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\TLS_Menu_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Menu\TLS_Menu_Loop\TLS_Menu_Loop		4019512
+	288545317	sx_plr_shield_hit_3_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_3_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_3_v2		125216
+	291291475	sx_plr_engine_whine	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_whine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_whine		491544
+	310215815	sx_enemy_explode_secondary	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_enemy_explode_secondary_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_enemy_explode_secondary		671804
+	338996680	sx_plr_main_cannon_5_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_5_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_5_v2		121588
+	405735036	sx_plr_main_cannon_1_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_1_v2		121588
+	498860533	sx_SHIP LOSE RING	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_SHIP LOSE RING_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_SHIP LOSE RING		2920896
+	529713889	sx_plr_shield_hit_2_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_2_v2		156504
+	616841172	sx_plr_main_cannon_4_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_4_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_4_v2		121588
+	623822031	sx_plr_secondary_charge	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_secondary_charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_charge		231424
+	695854333	sx_plr_secondary_loop	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_secondary_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Secondary Charge and Hold\sx_plr_secondary_loop		234228
+	786186738	sx_plr_main_cannon_2_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_2_v2		121588
+	822521400	TLS_Level_Loop	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\TLS_Level_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Gameplay\TLS_Level_Loop\TLS_Level_Loop		9961476
+	828196131	sx_plr_engine_faster	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_engine_faster_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine Speed\sx_plr_engine_faster		1382752
+	884472115	sx_plr_main_cannon_3_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_main_cannon_3_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Cannons\sx_plr_main_cannon_3_v2		121588
+	929682366	sx_plr_shield_hit_1_v2	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_plr_shield_hit_1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Hit\sx_plr_shield_hit_1_v2		105584
+	946476216	sx_enemy_explode_primary	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_enemy_explode_primary_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_enemy_explode_primary		302040
+	1053073425	sx_env_cargo_ship_engine	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\sx_env_cargo_ship_engine_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\sx_env_cargo_ship_engine		786000
+	1055317093	TLS_Level_Intro	C:\Users\krueg\Documents\GitHub\TheLastShip\TheLastShip\TheLastShip_WwiseProject\.cache\Mac\SFX\TLS_Level_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Gameplay\TLS_Level_Intro\TLS_Level_Intro		6469272
 
