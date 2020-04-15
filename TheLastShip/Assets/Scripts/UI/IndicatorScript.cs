@@ -7,6 +7,12 @@ public class IndicatorScript : MonoBehaviour
 
     [SerializeField]
     private float minDistanceForOnScreenIndicator = 250f;
+    [SerializeField]
+    private float scalingDistance = 1500f;
+    [SerializeField]
+    private float maxClampForScaling = 1.3f;
+    [SerializeField]
+    private float minClampForScaling = 0.2f;
     private GameObject playerReference;
 
     //public GameObject OnScreenIndicator;
@@ -95,16 +101,20 @@ public class IndicatorScript : MonoBehaviour
                 heading = t.transform.position - playerReference.GetComponentInChildren<Camera>().transform.position;
                 Vector3 screenPosition = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position);
                 float checkDistance = Vector3.Distance(playerReference.transform.position, t.transform.position);
+                float tempScale = Mathf.Abs(1.0f - Mathf.Clamp(Mathf.Abs(checkDistance / scalingDistance), minClampForScaling, maxClampForScaling));
+
+                Debug.Log("DISTANCECHECK" + tempScale);
                 if (screenPosition.z > 0 &&
                     screenPosition.x > 0 && screenPosition.x < Screen.width &&
                     screenPosition.y > 0 && screenPosition.y < Screen.height)
                 {
-                    Debug.Log(checkDistance);
                     if(checkDistance >= minDistanceForOnScreenIndicator)
                     {
-                    OnScreenIndicator indicator = acquireIndicators();
-                    indicator.GetComponentInChildren<Image>().sprite = OnScreenCheckTagForTexture(t);
-                    indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
+                        OnScreenIndicator indicator = acquireIndicators();
+                        indicator.GetComponentInChildren<Image>().sprite = OnScreenCheckTagForTexture(t);
+                        if(t.tag == "CargoShip")
+                        indicator.GetComponentInChildren<Image>().rectTransform.localScale = CheckScale(tempScale);
+                        indicator.GetComponentInChildren<Image>().transform.position = playerReference.GetComponentInChildren<Camera>().WorldToScreenPoint(t.transform.position + (Vector3.up * 10f));
                     }
                 }
 
@@ -146,11 +156,15 @@ public class IndicatorScript : MonoBehaviour
                     screenPosition += screenCenter;
 
 
-
+                    
 
                     OffScreenIndicator offScreen = acquireOffScreenIndicator();
                     offScreen.GetComponentInChildren<Image>().sprite = CheckWhatTagForTexture(t);
                     offScreen.GetComponentInChildren<Image>().transform.position = screenPosition;
+                    if(t.tag != "CargoShip")
+                    {
+                        offScreen.GetComponentInChildren<Image>().rectTransform.localScale = CheckScale(tempScale);
+                    }
                     offScreen.GetComponentInChildren<Image>().transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
 
 
@@ -220,6 +234,23 @@ public class IndicatorScript : MonoBehaviour
         }
     }
 
+    private Vector3 CheckScale(float checkScale)
+    {
+        
+        if (checkScale <= 0.2f)
+        {
+            return new Vector3(0.2f, 0.2f, 1f);
+        }
+        if (checkScale >= 0.9f)
+        {
+            return new Vector3(1.3f, 1.3f, 1f);
+        }
+        else
+        {
+            return new Vector3( 0.1f + checkScale, 0.1f +checkScale, 1);
+        }
+
+    }
     private Sprite CheckWhatTagForTexture(GameObject t)
     {
 
